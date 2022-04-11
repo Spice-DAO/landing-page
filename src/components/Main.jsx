@@ -20,7 +20,7 @@ const Main = () => {
       <div className="Main__text">
       <p> <b>Spice DAO </b> is a Web3 production studio publishing sci-fi animation and NFTs from established writers and artists.
       </p>
-      <p>The DAO was founded by 800+ pop culture enthusiasts who crowdfunded $12M to win the auction of the Dune Bible at Christie’s Paris in November 2021 for $3M.
+      <p>The DAO was founded by 800+ pop culture enthusiasts that crowdfunded $12M to win the auction of the Dune Bible at Christie’s Paris in November 2021 for $3M.
       </p>
       <p>We are currently producing an original animated limited series to be distributed by a streaming service and are opening an NFT studio that provides white glove service to high profile creators to develop strategy and concepts; design and build technology products; and advise on marketing campaigns to onboard the next million users to Web3.
       </p>

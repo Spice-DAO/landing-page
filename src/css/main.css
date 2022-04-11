@@ -93,6 +93,25 @@ p {
   }
 }
 
+.Main__text {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 48em) {
+  .Main__text {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .Main__text {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}
+
 .Main__logo {
   width: 12rem;
   margin: 2rem auto;

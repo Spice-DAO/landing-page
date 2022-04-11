@@ -27,6 +27,21 @@
         // }
     }
 
+    &__text {
+        margin-left: 5rem;
+        margin-right: 2rem;
+    
+        // @include respond(tablet){
+        //     margin-left: 0rem;
+        //     margin-right: 0rem;
+        // }
+
+        // @include repond(phone){
+        //     margin-left: 0rem;
+        //     margin-right: 0rem;
+        // }
+    }
+
     &__links {
         display: flex;
         justify-content: space-between;

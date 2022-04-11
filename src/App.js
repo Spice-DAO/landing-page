@@ -1,4 +1,4 @@
-import "./css/main.min.css";
+import "./css/main.css";
 
 import Main from "./components/Main";
 

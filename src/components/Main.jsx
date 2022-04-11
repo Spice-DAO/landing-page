@@ -17,6 +17,7 @@ const Main = () => {
         <a href="https://snapshot.org/#/dunedao.eth">Governance</a>
         <a href='#0' onClick={() => setMsg('Coming Soon')} >{msg}</a>
       </div>
+      <div className="Main__text">
       <p> <b>Spice DAO </b> is a Web3 production studio publishing sci-fi animation and NFTs from established writers and artists.
       </p>
       <p>The DAO was founded by 800+ pop culture enthusiasts who crowdfunded $12M to win the auction of the Dune Bible at Christie’s Paris in November 2021 for $3M.
@@ -25,6 +26,7 @@ const Main = () => {
       </p>
       <p>The DAO has been featured in The Guardian, The New Yorker, Financial Times, Business Insider, Wired Magazine and more mainstream news outlets. We have a combined following of 10K+ on social media.
       </p>  
+      </div>
       <div className="Main__social_icons">
       <a href="https://twitter.com/spicedao"> { <FontAwesomeIcon icon={ faTwitter } /> } </a>
       <a href="http://discord.gg/SPICEDAO">{ <FontAwesomeIcon icon={ faDiscord } /> }</a>

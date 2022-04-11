@@ -113,22 +113,25 @@ p {
 }
 
 .Main__logo {
-  width: 16rem;
-  margin: 1.5rem auto;
+  width: 18rem;
+  margin-bottom: 2rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 @media only screen and (max-width: 48em) {
   .Main__logo {
-    margin: 1rem auto;
     width: 12rem;
+    margin-bottom: 2rem;
+
   }
 }
 
 @media only screen and (max-width: 37.5em) {
   .Main__logo {
     width: 12rem;
+    margin-bottom: 2rem;
+
   }
 }
 

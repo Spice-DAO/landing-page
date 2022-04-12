@@ -19,6 +19,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
     "save-dev": "^0.0.1-security",
+    "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -29,7 +30,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "deploy-production": "react-scripts build && scp -r ./build/* root@67.205.129.95:/var/www/spicedao.xyz/html"
-
   },
   "eslintConfig": {
     "extends": [

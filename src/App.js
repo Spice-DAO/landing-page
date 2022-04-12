@@ -1,5 +1,5 @@
-import "./css/main.css";
-
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Main from "./components/Main";
 
 function App() {

@@ -20,24 +20,30 @@ import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
- 
+
     //This can be used to store the items that they have requested.
     //Can be kinda ugly and just track the shirt and hoodie numbers rather than any object orients stuff 
     //const [msg, setMsg] = useState('Shop Merch');
 
-  return (
-    <div className='NavContainer'>
-        <img className='Main__logo' src={logo} alt="Spice DAO logo" />
-        <NavLink to="/"><FaHome size={40} className='NavContainer__icons'/></NavLink>
-        <div>Home</div>
-        <FaShoppingBag size={40}  className='NavContainer__icons'/>
-        <div>Shop</div>
-        <FaShoppingCart size={40}  className='NavContainer__icons'/>
-        {/* DO AN INTERPOLATION BELOW TO GET THE NUMBER OF ITEMS */}
-        <div>Cart</div>
-    </div>
-  
-  )
+    return (
+        <div className='NavContainer'>
+            <img className='Nav__logo' src={logo} alt="Spice DAO logo" />
+            <div className='NavContainer__icon_group'>
+                <NavLink to="/"><FaHome size={40} className='NavContainer__icons' /></NavLink>
+                <span>Home</span>
+            </div>
+            <div className='NavContainer__icon_group'>
+            <NavLink to="/shop"><FaShoppingBag size={40} className='NavContainer__icons' /></NavLink>
+                <span>Shop</span>
+            </div>
+            <div className='NavContainer__icon_group'>
+            <NavLink to="/cart"><FaShoppingCart size={40} className='NavContainer__icons' /></NavLink>
+                {/* DO AN INTERPOLATION BELOW TO GET THE NUMBER OF ITEMS */}
+                <span>Cart</span>
+            </div>
+        </div>
+
+    )
 }
 
 export default NavBar

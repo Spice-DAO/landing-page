@@ -207,15 +207,19 @@ p {
   color: #228183;
 }
 
+.NavContainer__icon_group{
+  margin-bottom: 1rem;
+}
+
+
 .NavContainer {
   display: flex;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
   flex-direction: column;
-  border: 1px solid salmon;
   width: auto;
-  margin-top: 2rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  height: 100vh;
 }
 .NavContainer__icons {
   display: flex;
@@ -230,4 +234,35 @@ p {
 }
 .NavContainer__icons > *:hover {
   color: rgb(34, 129, 131);
+}
+
+.Nav__logo {
+  width: 15rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 48em) {
+  .Nav__logo {
+    width: 12rem;
+    margin-bottom: 2rem;
+
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .Nav__logo {
+    width: 12rem;
+    margin-bottom: 2rem;
+
+  }
+}
+
+.Shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

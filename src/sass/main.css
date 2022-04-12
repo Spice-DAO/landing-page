@@ -149,13 +149,11 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid salmon;
   width: auto;
 }
 .NavContainer__icons {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .NavContainer__icons > * {
   margin: 0.7rem;
@@ -167,4 +165,11 @@ p {
 .NavContainer__icons > *:hover {
   transform: scale(1.3);
   color: rgb(34, 129, 131);
+}
+
+.Shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

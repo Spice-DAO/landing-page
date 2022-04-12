@@ -13,8 +13,8 @@ const Cart = () => {
     //const [msg, setMsg] = useState('Shop Merch');
 
   return (
-    <div>
-      
+    <div className='Cart'>
+      <NavBar/>
     </div>
   )
 }

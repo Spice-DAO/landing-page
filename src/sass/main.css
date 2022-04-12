@@ -172,4 +172,11 @@ p {
   flex-direction: row;
   justify-content: start;
   width: 100%;
+}
+
+.Cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

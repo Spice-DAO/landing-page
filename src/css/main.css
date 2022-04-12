@@ -208,7 +208,7 @@ p {
 }
 
 .NavContainer__icon_group{
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 
@@ -261,6 +261,13 @@ p {
 }
 
 .Shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+}
+
+.Cart {
   display: flex;
   flex-direction: row;
   justify-content: start;

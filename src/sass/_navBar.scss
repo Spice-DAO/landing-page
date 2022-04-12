@@ -1,0 +1,63 @@
+.NavContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid salmon;
+    width: auto;
+    //Put in changes for small displays
+    // @include respond(tablet) {
+    //     width: 100%;
+    //     padding: 2.5rem;
+    // }
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >* {
+            margin: 0.7rem;
+            text-decoration: none;
+            transition: $transition;
+            font-size: 1.4rem;
+            color: $white;
+
+            &:hover {
+                transform: scale(1.3);
+                color: $green;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// .NavContainer{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     border: 1px solid salmon;
+//     width: auto;
+// }
+
+// .Nav__icons {
+//     display: flex;
+//     justify-content: center;
+//     margin-bottom: 2rem;
+//   }
+//   .Nav__icons > * {
+//     margin: 0.7rem;
+//     text-decoration: none;
+//     transition: all 0.3s ease-in-out;
+//     font-size: 1.4rem;
+//     color: #fff;
+//   }
+//   .Nav__icons > *:hover {
+//     transform: scale(1.3);
+//     color: rgb(34, 129, 131);
+//   }
+  

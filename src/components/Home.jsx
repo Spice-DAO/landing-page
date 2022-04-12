@@ -4,10 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faDiscord, faMedium } from '@fortawesome/free-brands-svg-icons'
 import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
 import logo from '../../src/logo2.png';
-import Shop from './Shop';
-import { Link } from "react-router-dom";
 
-import "../css/home.css";
 
 
 const Home = () => {
@@ -15,14 +12,14 @@ const Home = () => {
   const [msg, setMsg] = useState('Shop Merch');
 
   return (
-    <div className='Home'>
-      <img className='Home__logo' src={logo} alt="Spice DAO logo" />
-      <div className="Home__links">
+    <div className='Main'>
+      <img className='Main__logo' src={logo} alt="Spice DAO logo" />
+      <div className="Main__links">
         <a href="https://forum.spicedao.xyz/">Forum</a>
         <a href="https://snapshot.org/#/dunedao.eth">Governance</a>
         <NavLink to="/shop">{msg}</NavLink>
       </div>
-      <div className="Home__text">
+      <div className="Main__text">
       <p> <b>Spice DAO </b> is a Web3 production studio publishing sci-fi animation and NFTs from established writers and artists.
       </p>
       <p>The DAO was founded by 800+ pop culture enthusiasts that crowdfunded $12M to win the auction of the Dune Bible at Christie’s Paris in November 2021 for $3M.
@@ -32,7 +29,7 @@ const Home = () => {
       <p>The DAO has been featured in The Guardian, The New Yorker, Financial Times, Business Insider, Wired Magazine and more Homestream news outlets. We have a combined following of 10K+ on social media.
       </p>
       </div>
-      <div className="Home__social_icons">
+      <div className="Main__social_icons">
       <a href="https://twitter.com/spicedao"> { <FontAwesomeIcon icon={ faTwitter } /> } </a>
       <a href="http://discord.gg/SPICEDAO">{ <FontAwesomeIcon icon={ faDiscord } /> }</a>
       <a href="https://medium.com/@spicedao">{ <FontAwesomeIcon icon={ faMedium } /> }</a>

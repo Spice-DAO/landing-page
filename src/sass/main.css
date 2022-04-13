@@ -16,6 +16,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap");
 a,
 button {
   text-decoration: none;
@@ -66,9 +67,16 @@ p {
   text-align: left;
 }
 
+.Checkout {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+}
+
 .CheckoutContainer {
   display: flex;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   border: 1px solid red;
 }
@@ -233,7 +241,7 @@ p {
 .CustomCard {
   width: 20rem;
   height: 30rem;
-  background-color: #acc4b7 !important;
+  background-color: rgba(172, 196, 183, 0.5215686275) !important;
 }
 
 .Cart {

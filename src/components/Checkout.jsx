@@ -13,11 +13,12 @@ const Checkout = () => {
     //const [msg, setMsg] = useState('Shop Merch');
 
   return (
-    <div>
+    <div className='Checkout'>
       <NavBar />
+    <div className='CheckoutContainer'>
 
+    </div>
 
-      
     </div>
   
   )

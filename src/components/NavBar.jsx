@@ -18,7 +18,7 @@ import { NavLink } from 'react-router-dom';
 //Dont worry about mobile display right now we can get that later.
 //This needs to get some store values from app as well
 
-
+//take numbers as props
 const NavBar = () => {
 
     //This can be used to store the items that they have requested.
@@ -39,6 +39,7 @@ const NavBar = () => {
             <div className='NavContainer__icon_group'>
             <NavLink to="/cart"><FaShoppingCart size={40} className='NavContainer__icons' /></NavLink>
                 {/* DO AN INTERPOLATION BELOW TO GET THE NUMBER OF ITEMS */}
+                {/* Ternary for cart parenthesees */}
                 <span>Cart</span>
             </div>
         </div>

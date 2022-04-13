@@ -14,6 +14,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap");
 a,
 button {
@@ -218,7 +219,7 @@ p {
   align-items: center;
   flex-direction: column;
   width: auto;
-  margin-left: 1rem;
+  margin-left: 4rem;
   height: 100vh;
 }
 .NavContainer__icons {
@@ -238,7 +239,7 @@ p {
 
 .Nav__logo {
   width: 15rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -267,9 +268,65 @@ p {
   width: 100%;
 }
 
+.CardContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.TextCenter {
+  text-align: center;
+}
+
+.CustomCard {
+  width: 20rem;
+  height: 30rem;
+  background-color: #acc4b7 !important;
+}
+
+.ButtonSpacer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ButtonThemer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  font-weight: lighter;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.3rem;
+  color: rgb(34, 129, 131);
+  margin-bottom: 1rem;
+  text-decoration: none;
+  border: 1px solid #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.OppositeButtonThemer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  font-weight: lighter;
+  background-color: transparent !important;
+  border-radius: 10px;
+  padding: 0.3rem;
+  color: rgb(34, 129, 131);
+  margin-bottom: 1rem;
+  text-decoration: none;
+  border: 1px solid #fff;
+  transition: all 0.3s ease-in-out;
+}
+
 .Cart {
   display: flex;
   flex-direction: row;
   justify-content: start;
   width: 100%;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */

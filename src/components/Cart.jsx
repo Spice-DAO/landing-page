@@ -15,6 +15,9 @@ const Cart = () => {
   return (
     <div className='Cart'>
       <NavBar/>
+      <div className="CartContainer"> 
+      <div>Shopping Cart</div>
+      </div>
     </div>
   )
 }

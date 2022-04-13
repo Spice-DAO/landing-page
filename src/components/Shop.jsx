@@ -42,10 +42,10 @@ const Shop = () => {
               <div>Men's Medium</div>
               <div>Black</div>
               <div className='ButtonSpacer'>
-                <Button className='ButtonThemer'>Add To Cart</Button>
+                <button className='ButtonThemer'>Add To Cart</button>
                   {/* <a href='#2'>Add To Cart</a> */}
                   {/* <a href='#3'>Product Details</a> */}
-                  <Button className='OppositeButtonThemer'>Product Details</Button>
+                  <button className='OppositeButtonThemer'>Product Details</button>
                   </div>
             </Card.Body>
 
@@ -65,10 +65,10 @@ const Shop = () => {
                 <a href='#3'>Product Details</a>
               </div> */}
               <div className='ButtonSpacer'>
-                <Button className='ButtonThemer'>Add To Cart</Button>
+                <button className='ButtonThemer'>Add To Cart</button>
                   {/* <a href='#2'>Add To Cart</a> */}
                   {/* <a href='#3'>Product Details</a> */}
-                  <Button className='OppositeButtonThemer'>Product Details</Button>
+                  <button className='OppositeButtonThemer'>Product Details</button>
                   </div>
             </Card.Body>
           </div>

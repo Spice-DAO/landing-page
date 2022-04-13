@@ -4,7 +4,6 @@ import NavBar from "../components/NavBar"
 import { Card } from "react-bootstrap";
 import hoodie from '../../src/hoodie.png';
 import tshirt from '../../src/tshirtresize.png';
-import Button from "react-bootstrap/Button";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

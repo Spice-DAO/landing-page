@@ -245,8 +245,10 @@ p {
 
 .CartContainer {
   display: flex;
-  height: 100%;
+  flex-direction: column;
   width: 100%;
-  border: 1px solid red;
   height: 100vh;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border: 1px solid red;
 }/*# sourceMappingURL=main.css.map */

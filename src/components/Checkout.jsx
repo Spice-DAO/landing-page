@@ -13,7 +13,8 @@ const Checkout = () => {
     //const [msg, setMsg] = useState('Shop Merch');
 
   return (
-    <div className='Main'>
+    <div>
+      <NavBar />
 
 
       

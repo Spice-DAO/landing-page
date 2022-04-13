@@ -219,7 +219,7 @@ p {
   align-items: center;
   flex-direction: column;
   width: auto;
-  margin-left: 4rem;
+  margin-left: 5rem;
   height: 100vh;
 }
 .NavContainer__icons {
@@ -238,7 +238,7 @@ p {
 }
 
 .Nav__logo {
-  width: 15rem;
+  width: 12rem;
   margin-top: 4rem;
   margin-bottom: 2rem;
   -webkit-transition: all 0.3s ease-in-out;

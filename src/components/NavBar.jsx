@@ -29,18 +29,18 @@ const NavBar = () => {
         <div className='NavContainer'>
             <img className='Nav__logo' src={logo} alt="Spice DAO logo" />
             <div className='NavContainer__icon_group'>
-                <NavLink to="/"><FaHome size={40} className='NavContainer__icons' /></NavLink>
-                <span>Home</span>
+            <NavLink to="/"><FaHome size={37} className='NavContainer__icons' /></NavLink>
+            <span>Home</span>
             </div>
             <div className='NavContainer__icon_group'>
-            <NavLink to="/shop"><FaShoppingBag size={40} className='NavContainer__icons' /></NavLink>
-                <span>Shop</span>
+            <NavLink to="/shop"><FaShoppingBag size={37} className='NavContainer__icons' /></NavLink>
+            <span>Shop</span>
             </div>
             <div className='NavContainer__icon_group'>
-            <NavLink to="/cart"><FaShoppingCart size={40} className='NavContainer__icons' /></NavLink>
+            <NavLink to="/cart"><FaShoppingCart size={37} className='NavContainer__icons' /></NavLink>
                 {/* DO AN INTERPOLATION BELOW TO GET THE NUMBER OF ITEMS */}
                 {/* Ternary for cart parenthesees */}
-                <span>Cart</span>
+            <span>Cart</span>
             </div>
         </div>
 

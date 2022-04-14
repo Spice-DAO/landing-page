@@ -8,7 +8,7 @@ import tshirt from '../../src/tshirtresize.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const Shop = () => {
+const Shop = (props) => {
 
   //This can be used to store the items that they have requested.
   //Can be kinda ugly and just track the shirt and hoodie numbers rather than any object orients stuff 
@@ -30,7 +30,10 @@ const Shop = () => {
 
   return (
     <div className='Shop'>
-      <NavBar />
+      <NavBar
+      hoodieCount={props.hoodieCount}
+      tshirtCount={props.tshirtCount}
+      />
       <div className="CardContainer">
         <Card style={{ width: '20rem', height: "32rem" }} className="CustomCard">
           <Card.Img variant="top" src={hoodie} />
@@ -40,8 +43,9 @@ const Shop = () => {
               <div>25,000 $SPICE</div>
               <div>Men's Medium</div>
               <div>Black</div>
+              {console.log(props)}
               <div className='ButtonSpacer'>
-                <button className='ButtonThemer'>Add To Cart</button>
+                <button className='ButtonThemer' onClick={() => props.setHoodieCount(props.hoodieCount + 1)}>Add To Cart</button>
                   {/* <a href='#2'>Add To Cart</a> */}
                   {/* <a href='#3'>Product Details</a> */}
                   <button className='OppositeButtonThemer'>Product Details</button>

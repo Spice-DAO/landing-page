@@ -19,7 +19,7 @@ import { NavLink } from 'react-router-dom';
 //This needs to get some store values from app as well
 
 //take numbers as props
-const NavBar = () => {
+const NavBar = (props) => {
 
     //This can be used to store the items that they have requested.
     //Can be kinda ugly and just track the shirt and hoodie numbers rather than any object orients stuff 
@@ -40,7 +40,7 @@ const NavBar = () => {
             <NavLink to="/cart"><FaShoppingCart size={30} className='NavContainer__icons' /></NavLink>
                 {/* DO AN INTERPOLATION BELOW TO GET THE NUMBER OF ITEMS */}
                 {/* Ternary for cart parenthesees */}
-            Cart
+            {(props.hoodieCount + props.tshirtCount === 0) ? <div>Cart</div> : <div>Cart ({props.hoodieCount + props.tshirtCount})</div> }
             </div>
         </div>
 

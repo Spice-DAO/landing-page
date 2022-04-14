@@ -20,7 +20,6 @@ const Cart = () => {
       <div className="CartContainer">
         <div>Shopping Cart</div>
 
-
         <div>
           <div>Subtotal</div>
           <div>Shipping Costs Are Included</div>

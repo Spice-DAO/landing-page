@@ -361,4 +361,20 @@ p {
   margin-left: 4rem;
   margin-right: 4rem;
   border: 1px solid red;
+}
+
+.SubtotalContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.BottomContainer {
+  margin-top: auto;
+  margin-bottom: 5rem;
+}
+
+
+.ShoppingCartTextContainer {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=main.css.map */

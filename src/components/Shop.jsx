@@ -39,8 +39,8 @@ const Shop = (props) => {
           <Card.Img variant="top" src={hoodie} />
           <div className='TextCenter'>
             <Card.Body>
-              <Card.Title>Member T-Shirt</Card.Title>
-              <div>25,000 $SPICE</div>
+              <Card.Title>Member Hoodie</Card.Title>
+              <div>50,000 $SPICE</div>
               <div>Men's Medium</div>
               <div>Black</div>
               {console.log(props)}
@@ -68,7 +68,7 @@ const Shop = (props) => {
                 <a href='#3'>Product Details</a>
               </div> */}
               <div className='ButtonSpacer'>
-                <button className='ButtonThemer'>Add To Cart</button>
+              <button className='ButtonThemer' onClick={() => props.setTshirtCount(props.tshirtCount + 1)}>Add To Cart</button>
                   {/* <a href='#2'>Add To Cart</a> */}
                   {/* <a href='#3'>Product Details</a> */}
                   <button className='OppositeButtonThemer'>Product Details</button>

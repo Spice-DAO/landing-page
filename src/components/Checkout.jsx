@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import NavBar from "../components/NavBar"
 
 
-const Checkout = () => {
+const Checkout = (props) => {
  
     //This can be used to store the items that they have requested.
     //Can be kinda ugly and just track the shirt and hoodie numbers rather than any object orients stuff 
@@ -14,8 +14,10 @@ const Checkout = () => {
 
   return (
     <div className='Checkout'>
-      <NavBar />
-    <div className='CheckoutContainer'>
+      <NavBar
+      hoodieCount={props.hoodieCount}
+      tshirtCount={props.tshirtCount}
+      />    <div className='CheckoutContainer'>
 
     </div>
 

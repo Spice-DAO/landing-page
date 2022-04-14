@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
 // import logo from '../../src/logo2.png'
 
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
-const CartItem = () => {
+const CartItem = (props) => {
  
  //Small border on the bottom of eahc item.
 
@@ -19,10 +22,8 @@ const CartItem = () => {
 
   return (
     <div>
-
       psst im a cart item
     </div>
-  
   )
 }
 

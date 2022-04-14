@@ -8,20 +8,35 @@ import { NavLink } from 'react-router-dom';
 import CartItem from '../components/CartItem';
 
 
-const Cart = () => {
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
- 
+const Cart = (props) => {
+
+
   //Do a map for each group of items and display them on the site.
   //Do the money math with the loops
 
   return (
     <div className='Cart'>
-      <NavBar />
+      <NavBar
+        hoodieCount={props.hoodieCount}
+        tshirtCount={props.tshirtCount}
+      />
       <div className="CartContainer">
-        <div>Shopping Cart</div>
+        <div className="ShoppingCartTextContainer">Shopping Cart</div>
 
-        <div>
-          <div>Subtotal</div>
+        {/* Do a map over numbers to generate our card things */}
+        {Array.from(Array(props.hoodieCount).keys()).map(item => <CartItem/>)}
+        {Array.from(Array(props.tshirtCount).keys()).map(item => <CartItem/>)}
+
+        <div className='BottomContainer'>
+          {/* This must be a flex with space around. */}
+          <div className='SubtotalContainer'>
+            <div>Subtotal</div>
+            <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
+          </div>
           <div>Shipping Costs Are Included</div>
           <div className="Main__links">
             <NavLink to="/checkout" style={{ width: "100%" }}>Checkout</NavLink>

@@ -377,4 +377,23 @@ p {
 .ShoppingCartTextContainer {
   margin-top: 4rem;
   margin-bottom: 1rem;
+}
+
+.CartItemContainer {
+  display: flex;
+  border: 1px solid red;
+  height: 10rem;
+}
+
+
+.CartItemDetailsContainer {
+  display: flex;
+  margin-left: 5rem;
+  flex-direction: column;
+  width: 100%;
+}
+
+.CartItemSpacer {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */

@@ -274,4 +274,22 @@ p {
 .ShoppingCartTextContainer {
   margin-top: 4rem;
   margin-bottom: 1rem;
+}
+
+.CartItemContainer {
+  display: flex;
+  border: 1px solid red;
+  height: 7rem;
+}
+
+.CartItemDetailsContainer {
+  display: flex;
+  margin-left: 5rem;
+  flex-direction: column;
+  width: auto;
+}
+
+.CartItemSpacer {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */

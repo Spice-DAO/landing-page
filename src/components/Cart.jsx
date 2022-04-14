@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import NavBar from "../components/NavBar"
 import { NavLink } from 'react-router-dom';
 import CartItem from '../components/CartItem';
+import hoodie from '../../src/hoodie.png';
+import tshirt from '../../src/tshirtresize.png';
 
 
 function numberWithCommas(x) {
@@ -28,8 +30,8 @@ const Cart = (props) => {
         <div className="ShoppingCartTextContainer">Shopping Cart</div>
 
         {/* Do a map over numbers to generate our card things */}
-        {Array.from(Array(props.hoodieCount).keys()).map(item => <CartItem/>)}
-        {Array.from(Array(props.tshirtCount).keys()).map(item => <CartItem/>)}
+        {Array.from(Array(props.hoodieCount).keys()).map(item => <CartItem setCount={props.setHoodieCount} count={props.hoodieCount} cardImg={hoodie} itemName={"Member Hoodie"} itemCost={50000} itemColor={"Black"} itemSize={"Men's Medium"} />)}
+        {Array.from(Array(props.tshirtCount).keys()).map(item => <CartItem setCount={props.setTshirtCount} count={props.tshirtCount} cardImg={tshirt} itemName={"Member T-shirt"} itemCost={25000} itemColor={"Black"} itemSize={"Men's Medium"} />)}
 
         <div className='BottomContainer'>
           {/* This must be a flex with space around. */}

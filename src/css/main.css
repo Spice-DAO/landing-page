@@ -244,7 +244,7 @@ p {
 }
 
 .Nav__logo {
-  width: 12rem;
+  width: 11rem;
   margin-top: 4rem;
   margin-bottom: 2rem;
   -webkit-transition: all 0.3s ease-in-out;
@@ -360,7 +360,6 @@ p {
   height: 100vh;
   margin-left: 4rem;
   margin-right: 4rem;
-  border: 1px solid red;
 }
 
 .SubtotalContainer {
@@ -377,12 +376,28 @@ p {
 .ShoppingCartTextContainer {
   margin-top: 4rem;
   margin-bottom: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .CartItemContainer {
   display: flex;
-  border: 1px solid red;
-  height: 10rem;
+  height: 9rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #78a6a495;
+}
+
+.BoldMidText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.BiggerMediumText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 

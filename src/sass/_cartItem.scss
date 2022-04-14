@@ -1,7 +1,8 @@
 .CartItemContainer{
     display: flex;
-    border: 1px solid red;
-    height: 7rem;
+    height: 10rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid grey;
 }
 
 .CartItemDetailsContainer{
@@ -14,5 +15,5 @@
 .CartItemSpacer{
     display: flex;
     justify-content: space-between;
-    
+
 }

@@ -26,13 +26,13 @@ const CartItem = (props) => {
 
   return (
     <div className='CartItemContainer'>
-      <Card style={{ width: '12rem', height: "10rem" }}>
-        <Card.Img variant="top" src={props.cardImg} />
+      <Card style={{ width: '9rem', height: "8.5rem" }}>
+        <Card.Img variant="bottom" src={props.cardImg} />
       </Card>
         <div className="CartItemDetailsContainer">
           <div className='CartItemSpacer' style={{marginBottom: "1.5rem"}}>
-          <div>{props.itemName}</div>
-          <div>{numberWithCommas(props.itemCost)} $SPICE</div>
+          <div className='BoldMidText'>{props.itemName}</div>
+          <div className='BiggerMediumText'>{numberWithCommas(props.itemCost)} $SPICE</div>
           </div>
           <div className='CartItemSpacer'>
             <div>{props.itemColor}</div>

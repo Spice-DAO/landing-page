@@ -67,6 +67,18 @@ p {
   text-align: left;
 }
 
+.BoldMidText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20 px;
+  font-weight: bold;
+}
+
+.BiggerMediumText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20 px;
+  font-weight: medium;
+}
+
 .Checkout {
   display: flex;
   flex-direction: row;
@@ -274,12 +286,16 @@ p {
 .ShoppingCartTextContainer {
   margin-top: 4rem;
   margin-bottom: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .CartItemContainer {
   display: flex;
-  border: 1px solid red;
-  height: 7rem;
+  height: 10rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid grey;
 }
 
 .CartItemDetailsContainer {

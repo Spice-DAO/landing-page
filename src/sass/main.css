@@ -292,7 +292,7 @@ p {
 .CustomCard {
   width: 20rem;
   height: 30rem;
-  background-color: rgba(172, 196, 183, 0.5215686275) !important;
+  background-color: rgba(172, 196, 183, 0.4392156863) !important;
 }
 
 .Cart {
@@ -370,4 +370,9 @@ p {
   display: flex;
   flex-direction: row;
   width: 100%;
+}
+
+.ShopItemContainer {
+  display: flex;
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

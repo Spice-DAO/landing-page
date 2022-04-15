@@ -483,4 +483,10 @@ p {
   margin-bottom: 0.5rem;
 }
 
+
+.ShopItemContainer {
+  display: flex;
+  height: 100vh;
+}
+
 /*# sourceMappingURL=main.css.map */

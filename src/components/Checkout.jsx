@@ -35,7 +35,7 @@ const Checkout = (props) => {
     discord: '',
     hoodieCount: props.hoodieCount,
     tshirtCount: props.tshirtCount,
-    totalCost: ((props.hoodieCount * 50000) + (props.tshirtCount * 25000)),
+    totalCost: numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000)),
   });
 
   const templateID = "template_tx2r16l";
@@ -51,38 +51,6 @@ const Checkout = (props) => {
   function getFullname(){
     return inputs.fullname;
   }
-
-  // function handleSubmit() {
-  //   console.log(inputs.fullname);
-  //   console.log(inputs.txn);
-  //   console.log(inputs.address);
-  //   console.log(inputs.postalCode);
-  //   console.log(inputs.city);
-  //   console.log(inputs.country);
-  //   console.log(inputs.twitter);
-  //   console.log(inputs.discord);
-  //   if (inputs.fullname === "" ||
-  //     inputs.fullname === undefined ||
-  //     inputs.txn === "" ||
-  //     inputs.txn === undefined ||
-
-  //     inputs.address === "" ||
-  //     inputs.address === undefined ||
-
-  //     inputs.postalCode === "" ||
-  //     inputs.postalCode === undefined ||
-
-  //     inputs.city === "" ||
-  //     inputs.city === undefined ||
-
-  //     inputs.country === "" ||
-  //     inputs.country === undefined
-  //     ) {
-  //     alert("Please Fill Out Required Fields and Resubmit")
-  //   } else {
-  //     setMsg("Order Submittied")
-  //   }
-  // }
 
   const handleSubmit = (event) => {
     if (inputs.fullname === "" ||

@@ -8,6 +8,7 @@ import { NavLink } from 'react-router-dom';
 import { Card } from "react-bootstrap";
 import CheckoutItem from '../components/CheckoutItem';
 import CustomInput from '../components/CustomInput';
+import { send } from 'emailjs-com';
 
 import hoodie from '../../src/hoodie.png';
 import tshirt from '../../src/tshirtresize.png';
@@ -23,23 +24,67 @@ const Checkout = (props) => {
   const [inputs, setInputs] = useState({});
   const [msg, setMsg] = useState('Checkout');
 
+  const [toSend, setToSend] = useState({
+    fullname: '',
+    txn: '',
+    address: '',
+    postalCode: '',
+    city: '',
+    country: '',
+    twitter: '',
+    discord: '',
+    hoodieCount: props.hoodieCount,
+    tshirtCount: props.tshirtCount,
+    totalCost: ((props.hoodieCount * 50000) + (props.tshirtCount * 25000)),
+  });
+
+  const templateID = "template_tx2r16l";
 
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    console.log("CHANGED::", name, value);
     setInputs(values => ({ ...values, [name]: value }))
+    setToSend({ ...toSend, [event.target.name]: event.target.value });
+
   }
 
-  function handleSubmit() {
-    console.log(inputs.fullname);
-    console.log(inputs.txn);
-    console.log(inputs.address);
-    console.log(inputs.postalCode);
-    console.log(inputs.city);
-    console.log(inputs.country);
-    console.log(inputs.twitter);
-    console.log(inputs.discord);
+  function getFullname(){
+    return inputs.fullname;
+  }
+
+  // function handleSubmit() {
+  //   console.log(inputs.fullname);
+  //   console.log(inputs.txn);
+  //   console.log(inputs.address);
+  //   console.log(inputs.postalCode);
+  //   console.log(inputs.city);
+  //   console.log(inputs.country);
+  //   console.log(inputs.twitter);
+  //   console.log(inputs.discord);
+  //   if (inputs.fullname === "" ||
+  //     inputs.fullname === undefined ||
+  //     inputs.txn === "" ||
+  //     inputs.txn === undefined ||
+
+  //     inputs.address === "" ||
+  //     inputs.address === undefined ||
+
+  //     inputs.postalCode === "" ||
+  //     inputs.postalCode === undefined ||
+
+  //     inputs.city === "" ||
+  //     inputs.city === undefined ||
+
+  //     inputs.country === "" ||
+  //     inputs.country === undefined
+  //     ) {
+  //     alert("Please Fill Out Required Fields and Resubmit")
+  //   } else {
+  //     setMsg("Order Submittied")
+  //   }
+  // }
+
+  const handleSubmit = (event) => {
     if (inputs.fullname === "" ||
       inputs.fullname === undefined ||
       inputs.txn === "" ||
@@ -59,15 +104,32 @@ const Checkout = (props) => {
       ) {
       alert("Please Fill Out Required Fields and Resubmit")
     } else {
-      setMsg("Order Submittied")
+      setMsg("Submitting Order");
+
+      send(
+        "service_epu7tsc",
+        templateID,
+        toSend,
+        "83UFMfSgMOuGdFG5Q"
+      )
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          setMsg("Order Submittied");
+
+        })
+        .catch((err) => {
+          console.log('FAILED...', err);
+          setMsg("Order Failed Please Try Again");
+        });
+
+      //Figure out if both twitter and discord are needed for this
+      //setToSend({ ...toSend, twitter: inputs.twitter });
+      //setToSend({ ...toSend, discord: inputs.discord });
+      //alert(inputs);
     }
 
   }
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   alert(inputs);
-  // }
 
 
 
@@ -86,9 +148,10 @@ const Checkout = (props) => {
           <Card><div>Thanks For Your Purchase</div></Card>
 
           <div>Checkout</div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className='CheckoutRowFlex'>
               <CustomInput label="Name" name="fullname" input={inputs.fullname} override="" change={handleChange} />
+              <div style={{marginLeft:'1rem', marginRight:'1rem'}}></div>
               <CustomInput label="Transaction Number" name="txn" input={inputs.txn} override="" change={handleChange} />
               {/* <form><input className='CleanForm' type="text"></input></form> */}
             </div>
@@ -97,11 +160,14 @@ const Checkout = (props) => {
             </div>
             <div className='CheckoutRowFlex'>
               <CustomInput label="Postal Code" name="postalCode" input={inputs.postalCode} override="" change={handleChange} />
+              <div style={{marginLeft:'1rem', marginRight:'1rem'}}></div>
               <CustomInput label="City" name="city" input={inputs.city} override="" change={handleChange} />
+              <div style={{marginLeft:'1rem', marginRight:'1rem'}}></div>
               <CustomInput label="Country" name="country" input={inputs.country} override="" change={handleChange} />
             </div>
             <div className='CheckoutRowFlex'>
               <CustomInput label="Twitter" name="twitter" input={inputs.twitter} override="@" change={handleChange} />
+              <div style={{marginLeft:'1rem', marginRight:'1rem'}}></div>
               <CustomInput label="Discord" name="discord" input={inputs.discord} override="" change={handleChange} />
             </div>
           </form>
@@ -109,7 +175,7 @@ const Checkout = (props) => {
           {/*         <a href='#0' onClick={() => setMsg('Coming Soon')} >{msg}</a>
  */}
           <div className="Main__links">
-            <a href='#0' style={{ width: "100%" }} onClick={() => handleSubmit()}>{msg}</a>
+            <button type='submit' style={{ width: "100%" }} onClick={() => handleSubmit()}>{msg}</button>
           </div>
 
 

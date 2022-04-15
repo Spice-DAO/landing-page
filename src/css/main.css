@@ -347,14 +347,16 @@ p {
   flex-direction: column;
   height: 100vh;
   width: 60vw;
-  border: 1px solid red;
+  margin-left: 4rem;
+  margin-right: 4rem;
+
 }
 
 .CheckoutDetailsContainer {
   display: flex;
   width: 20vw;
   flex-direction: column;
-  border: 1px solid greenyellow;
+  margin-right: 4rem;
 }
 
 .CheckoutRowFlex {

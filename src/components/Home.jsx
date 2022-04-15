@@ -32,7 +32,7 @@ const Home = () => {
       <div className="Main__social_icons">
       <a href="https://twitter.com/spicedao"> { <FontAwesomeIcon icon={ faTwitter } /> } </a>
       <a href="http://discord.gg/SPICEDAO">{ <FontAwesomeIcon icon={ faDiscord } /> }</a>
-      <a href="https://medium.com/@spicedao">{ <FontAwesomeIcon icon={ faMedium } /> }</a>
+      <a href="https://medium.com/@TheSpiceDao">{ <FontAwesomeIcon icon={ faMedium } /> }</a>
       <a href="mailto:team@spicedao.xyz">< FaEnvelope/></a>
     </div>
     {/* <Shop /> */}

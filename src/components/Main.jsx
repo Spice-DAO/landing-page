@@ -26,8 +26,6 @@ const Main = () => {
               hoodieCount={hoodieCount}
               tshirtCount={tshirtCount} />} />
       <Route path='/checkout' element={<Checkout 
-              setHoodieCount={setHoodieCount}
-              setTshirtCount={setTshirtCount}
               hoodieCount={hoodieCount}
               tshirtCount={tshirtCount} />} />
     </Routes>

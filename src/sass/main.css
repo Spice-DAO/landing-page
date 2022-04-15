@@ -79,6 +79,10 @@ p {
   font-weight: medium;
 }
 
+.BorderBottom {
+  border-bottom: 1px solid grey;
+}
+
 .Checkout {
   display: flex;
   flex-direction: row;
@@ -86,11 +90,38 @@ p {
   width: 100%;
 }
 
-.CheckoutContainer {
+.CheckoutInputContainer {
   display: flex;
+  flex-direction: column;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   border: 1px solid red;
+}
+
+.CheckoutDetailsContainer {
+  display: flex;
+  width: 20vw;
+  flex-direction: column;
+  border: 1px solid greenyellow;
+}
+
+.CheckoutRowFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+}
+
+.CheckoutRowFlexBorder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  border-bottom: 1px solid grey;
+}
+
+.CleanForm {
+  background-color: transparent !important;
 }
 
 .Main {
@@ -291,6 +322,13 @@ p {
   font-weight: bold;
 }
 
+.ScrollBox {
+  height: auto;
+  width: auto;
+  overflow-y: auto;
+  padding-left: 1rem;
+}
+
 .CartItemContainer {
   display: flex;
   height: 10rem;
@@ -308,4 +346,15 @@ p {
 .CartItemSpacer {
   display: flex;
   justify-content: space-between;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.CheckoutItemContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */

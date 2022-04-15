@@ -30,8 +30,10 @@ const Cart = (props) => {
         <div className="ShoppingCartTextContainer">Shopping Cart</div>
 
         {/* Do a map over numbers to generate our card things */}
+        <div className='ScrollBox'>
         {Array.from(Array(props.hoodieCount).keys()).map(item => <CartItem setCount={props.setHoodieCount} count={props.hoodieCount} cardImg={hoodie} itemName={"Member Hoodie"} itemCost={50000} itemColor={"Black"} itemSize={"Men's Medium"} />)}
         {Array.from(Array(props.tshirtCount).keys()).map(item => <CartItem setCount={props.setTshirtCount} count={props.tshirtCount} cardImg={tshirt} itemName={"Member T-shirt"} itemCost={25000} itemColor={"Black"} itemSize={"Men's Medium"} />)}
+        </div>
 
         <div className='BottomContainer'>
           {/* This must be a flex with space around. */}

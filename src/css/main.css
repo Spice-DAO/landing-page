@@ -246,7 +246,7 @@ p {
 .Nav__logo {
   width: 11rem;
   margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -331,6 +331,10 @@ p {
   transition: all 0.3s ease-in-out;
 }
 
+.BorderBottom {
+  border-bottom: 1px solid grey;
+}
+
 .Checkout {
   display: flex;
   flex-direction: row;
@@ -338,11 +342,34 @@ p {
   width: 100%;
 }
 
-.CheckoutContainer {
+.CheckoutInputContainer {
   display: flex;
+  flex-direction: column;
   height: 100vh;
-  width: 100%;
+  width: 60vw;
   border: 1px solid red;
+}
+
+.CheckoutDetailsContainer {
+  display: flex;
+  width: 20vw;
+  flex-direction: column;
+  border: 1px solid greenyellow;
+}
+
+.CheckoutRowFlex {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.CheckoutRowFlexBorder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  border-bottom: 1px solid grey;
 }
 
 
@@ -400,6 +427,12 @@ p {
   font-weight: 500;
 }
 
+.ScrollBox {
+  height: auto;
+  width: auto;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
 
 .CartItemDetailsContainer {
   display: flex;
@@ -411,4 +444,15 @@ p {
 .CartItemSpacer {
   display: flex;
   justify-content: space-between;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.CheckoutItemContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/*# sourceMappingURL=main.css.map */

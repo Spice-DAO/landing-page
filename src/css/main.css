@@ -372,6 +372,22 @@ p {
   border-bottom: 1px solid grey;
 }
 
+.CleanForm {
+  background-color: inherit !important;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  outline: none;
+  width: 100%;
+}
+
+.CustomInputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
 .Cart {
   display: flex;

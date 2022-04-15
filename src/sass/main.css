@@ -121,7 +121,14 @@ p {
 }
 
 .CleanForm {
-  background-color: transparent !important;
+  background-color: inherit !important;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  outline: none;
+  width: 100%;
 }
 
 .Main {
@@ -357,4 +364,9 @@ p {
   margin-bottom: 0.5rem;
 }
 
-/*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+.CustomInputContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */

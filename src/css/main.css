@@ -288,12 +288,12 @@ p {
   text-align: center;
 }
 
-.CustomCard {
+.CustomCard{
   width: 20rem;
   height: 30rem;
-  background-color: rgba(172, 196, 183, 0.43) !important;
+  border-radius: 1rem;
+  background-color: #acc4b770 !important;
 }
-
 
 .ButtonSpacer {
   margin-top: 1rem;

@@ -110,6 +110,9 @@ const Checkout = (props) => {
       <NavBar
         hoodieCount={props.hoodieCount}
         tshirtCount={props.tshirtCount}
+        homeColor={"#ffffff65"}
+        bagColor={"#ffffff65"}
+        cartColor={"#ffffff"}
       />
       <div className='CheckoutInputContainer'>
         <div></div><NavLink to="/shop">&lt; Back To cart</NavLink><div>

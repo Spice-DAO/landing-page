@@ -88,7 +88,7 @@ const Hoodie = (props) => {
           </div>
 
           <div style={{marginTop: "1.25rem"}}>
-            <div className='LargeMediumText' style={{marginBottom: "0.35rem"}}>
+            <div className='LargeMediumText' style={{marginBottom: "0.4rem"}}>
               Quantity
             </div>
             <div className='ShopItemDetailFlex'>
@@ -99,7 +99,7 @@ const Hoodie = (props) => {
           </div>
 
 
-          <div className="Main__links"style={{ marginTop: "2rem", marginLeft:"-2rem", width:"50rem", height: "3.7rem" }}>
+          <div className="Main__links"style={{ marginTop: "2rem", width:"50rem", height: "3.7rem" }}>
             <button onClick={() => handleAdd()}>Add to Cart</button>
           </div>
 

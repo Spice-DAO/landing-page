@@ -20,7 +20,7 @@ function numberWithCommas(x) {
 
 const Checkout = (props) => {
   const [inputs, setInputs] = useState({});
-  const [msg, setMsg] = useState('Checkout');
+  const [msg, setMsg] = useState('Save and continue');
 
   const [toSend, setToSend] = useState({
     fullname: '',
@@ -152,7 +152,7 @@ const Checkout = (props) => {
           {/*         <a href='#0' onClick={() => setMsg('Coming Soon')} >{msg}</a>
  */}
           <div className="Main__links">
-            <button type='submit' style={{ width: "100%"}} onClick={() => handleSubmit()}>{msg}</button>
+            <button type='submit'  style={{ width: "100%", padding: "0.5rem", fontWeight: "500"}} onClick={() => handleSubmit()}>{msg}</button>
           </div>
 
 

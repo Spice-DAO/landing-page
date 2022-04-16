@@ -49,7 +49,7 @@ const Cart = (props) => {
           </div>
           <div style={{fontWeight:"500", marginBottom: "1rem"}}>Shipping Costs Are Included</div>
           <div className="Main__links">
-            <NavLink to="/checkout" style={{ width: "100%" }}>Checkout</NavLink>
+            <NavLink to="/checkout" style={{ width: "100%", padding: "0.5rem", fontWeight: "500"}}>Checkout</NavLink>
           </div>
         </div>
       </div>

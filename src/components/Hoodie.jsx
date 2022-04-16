@@ -7,6 +7,7 @@ import NavBar from "../components/NavBar"
 import { NavLink } from 'react-router-dom';
 
 import hoodie from '../../src/hoodie.png';
+import hoodieBack from '../../src/hoodieBack.png';
 
 
 function numberWithCommas(x) {
@@ -16,13 +17,19 @@ function numberWithCommas(x) {
 const Hoodie = (props) => {
 
   const [activeImage, setActiveImage] = useState(hoodie);
-  // const [inActiveImage, setinActiveImage] = useState(hoodieBack);
+  const [inActiveImage, setinActiveImage] = useState(hoodieBack);
+  const [viewActive, setViewActive] = useState(true);
 
   const [tempCount, setTempCount] = useState(0);
 
   function handleAdd() {
     props.setHoodieCount(tempCount + props.hoodieCount);
     setTempCount(0);
+  };
+
+  function swapImages(a, b){
+    setActiveImage(a);
+    setinActiveImage(b);
   };
 
   // onClick={() => props.setHoodieCount(props.hoodieCount + 1)}
@@ -42,10 +49,10 @@ const Hoodie = (props) => {
       <div className='ShopItemDetails' >
         <div className='ShopItemsCardContainer'>
           <div className="ShopItemBigCard">
-            <img src={activeImage} style={{ height: "30rem" }} className="ObjectFitContain"></img>
+            <img src={viewActive? hoodie : hoodieBack} style={{ height: "30rem" }} className="ObjectFitContain" onClick={() => setViewActive(!viewActive)} ></img>
           </div>
           <div className="ShopItemSmallCard">
-            <img src={activeImage} style={{ height: "11.5rem" }} className="ObjectFitContain"></img>
+            <img src={viewActive? hoodieBack : hoodie} style={{ height: "11.5rem" }}  className="ObjectFitContain" onClick={() => setViewActive(!viewActive)}></img>
           </div>
         </div>
 

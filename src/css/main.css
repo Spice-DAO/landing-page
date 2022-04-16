@@ -510,11 +510,12 @@ background: linear-gradient(0deg, rgba(234,216,180,1) 2%, rgba(142,176,157,1) 11
 .SubtotalContainer {
   display: flex;
   justify-content: space-between;
+  margin-top: 1.5rem;
 }
 
 .BottomContainer {
   margin-top: auto;
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
 }
 
 

@@ -28,6 +28,7 @@ const NavBar = (props) => {
     return (
         <div className='NavContainer'>
             <img className='Nav__logo' src={logo} alt="Spice DAO logo" />
+            <div className='NavContainer__icon_container'>
             <div className='NavContainer__icon_group'>
             <NavLink to="/"><FaHome size={30} className='NavContainer__icons' style={{color: props.homeColor}}  /></NavLink>
             <div style={{color: props.homeColor, fontWeight: "400", fontSize:"15px"}}>Home</div>
@@ -41,6 +42,7 @@ const NavBar = (props) => {
                 {/* DO AN INTERPOLATION BELOW TO GET THE NUMBER OF ITEMS */}
                 {/* Ternary for cart parenthesees */}
             {(props.hoodieCount + props.tshirtCount === 0) ? <div style={{color: props.cartColor, fontWeight: "400", fontSize:"15px"}}>Cart</div> : <div style={{color: props.cartColor, fontWeight: "400", fontSize:"15px"}}>Cart ({props.hoodieCount + props.tshirtCount})</div> }
+            </div>
             </div>
         </div>
 

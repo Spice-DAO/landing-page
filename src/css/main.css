@@ -345,7 +345,7 @@ p {
 }
 
 .BorderBottom {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #FFFFFF90;
 }
 
 .Checkout {
@@ -363,7 +363,7 @@ p {
   flex-direction: column;
   height: 100vh;
   width: 100rem;
-  margin-left: 15rem;
+  margin-left: 10rem;
   margin-right: 5rem;
 }
 
@@ -409,7 +409,8 @@ p {
   flex-direction: row;
   justify-content: space-between;
   width: auto;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #FFFFFF90;
+
 }
 
 .CleanForm {
@@ -475,7 +476,7 @@ p {
   display: flex;
   height: 9rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #78a6a495;
+  border-bottom: 1px solid #FFFFFF90;
 }
 
 

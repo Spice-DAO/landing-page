@@ -27,7 +27,7 @@ const Hoodie = (props) => {
     setTempCount(0);
   };
 
-  function swapImages(a, b){
+  function swapImages(a, b) {
     setActiveImage(a);
     setinActiveImage(b);
   };
@@ -47,53 +47,54 @@ const Hoodie = (props) => {
 
       />
       <div className='ShopItemDetails' >
-        <div className='ShopItemsCardContainer'>
+        <div className='ShopItemCardContainer'>
           <div className="ShopItemBigCard">
-            <img src={viewActive? hoodie : hoodieBack} style={{ height: "30rem" }} className="ObjectFitContain" onClick={() => setViewActive(!viewActive)} ></img>
+            <img src={viewActive ? hoodie : hoodieBack} style={{ height: "30rem" }} className="ObjectFitContain" onClick={() => setViewActive(!viewActive)} ></img>
           </div>
           <div className="ShopItemSmallCard">
-            <img src={viewActive? hoodieBack : hoodie} style={{ height: "11.5rem" }}  className="ObjectFitContain" onClick={() => setViewActive(!viewActive)}></img>
+            <img src={viewActive ? hoodieBack : hoodie} style={{ height: "11.5rem" }} className="ObjectFitContain" onClick={() => setViewActive(!viewActive)}></img>
           </div>
         </div>
 
 
         <div className='ShopItemTextContainer'>
-          <NavLink to="/shop" style={{ marginTop: "7rem", textAlign: 'left' }}>&lt; Back To cart</NavLink>
-          <div>Spice DAO Hoodie</div>
-          <div>50,000 $SPICE</div>
-          <div>Quality and feel of Carhartt brand. 320 GSM. Thick and warm. 100% Cotton.
-            Generous fit with a larger silhouette. Good for layering. Oil-based screen print graphic to ensure longevity.</div>
+          <NavLink to="/shop" style={{ marginTop: "10rem", marginBottom: "1rem", textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink>
 
-          <div className='ShopItemDetailFlex'>
+          <div className='BoldBigText' style={{ marginBottom: "0.75rem" }}>Spice DAO Hoodie</div>
+          <div className='LargeMediumText' style={{ marginBottom: "1.5rem" }}>50,000 $SPICE</div>
+          <div className='DescriptionText'>Quality and feel of Carhartt brand. 320 GSM. Thick and warm. 100% Cotton.
+          </div>
+          <div className='DescriptionText'>Generous fit with a larger silhouette. Good for layering.</div> <div className='DescriptionText'>Oil-based screen print graphic to ensure longevity.</div>
 
-
-            <div>
-              <div>
+          <div className='ShopItemDetailFlex' style={{ marginTop: "1.7rem" }}>
+            <div >
+              <div className='LargeMediumText'>
                 Color
               </div>
               <div className='ShopItemDetailFlex'>
-                <div className="ShopItemCircleOuter"><div className='ShopItemCircleInner'></div></div>  <div style={{marginRight: "2rem"}}>(only)</div>
+                <div className="ShopItemCircleOuter"><div className='ShopItemCircleInner'></div></div>  <div style={{ marginRight: "2rem", fontSize:"18px"}}>(only)</div>
               </div>
             </div>
 
             <div>
-              <div>
+              <div className='LargeMediumText'>
                 Size
               </div>
               <div className='ShopItemDetailFlex'>
-                <div className='ShopItemTinyCard'>M</div> (only)
+                <div className='ShopItemTinyCard' style={{ marginRight: "0.5rem" }}>M</div> 
+                <div style={{fontSize: "18px"}}>(only)</div>
               </div>
             </div>
           </div>
 
-          <div>
-            <div>
+          <div style={{marginTop: "2rem"}}>
+            <div className='LargeMediumText'>
               Quantity
             </div>
             <div className='ShopItemDetailFlex'>
-              <div className='ShopItemTinyCard' style={{marginRight: "1rem"}}  onClick={() => ((tempCount + props.hoodieCount) > 0) ? setTempCount(tempCount - 1) : setTempCount(tempCount)}>-</div>
-              {tempCount + props.hoodieCount} 
-              <div className='ShopItemTinyCard' style={{marginLeft: "1rem"}} onClick={() => setTempCount(tempCount + 1)}>+</div>
+              <div className='ShopItemTinyCard' style={{ marginRight: "1rem" }} onClick={() => ((tempCount + props.hoodieCount) > 0) ? setTempCount(tempCount - 1) : setTempCount(tempCount)}>-</div>
+              <div className='BiggerMediumText'>{tempCount + props.hoodieCount}</div>
+              <div className='ShopItemTinyCard' style={{ marginLeft: "1rem" }} onClick={() => setTempCount(tempCount + 1)}>+</div>
             </div>
           </div>
 

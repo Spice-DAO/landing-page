@@ -443,6 +443,26 @@ p {
   border-bottom: 1px solid #78a6a495;
 }
 
+.BoldBigText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.LargeMediumText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.DescriptionText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+
 .BoldMidText {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
@@ -498,14 +518,13 @@ p {
 
 .ShopItemBigCard {
   height: 30rem;
-  width: 35rem;
+  width: 30rem;
   background-color: #fff;
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 4rem;
-  margin-left: 4rem;
+  margin-left: 8rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -519,7 +538,7 @@ p {
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
-  margin-left: 4rem;
+  margin-left: 8rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -527,13 +546,14 @@ p {
   display: flex;
   height: 100vh;
   flex-direction: column;
+  justify-content: center;
 }
 
 .ShopItemTextContainer {
   display: flex;
   height: 100vh;
   flex-direction: column;
-  margin-left: 4rem;
+  margin-left: 3rem;
   margin-right: 4rem;
 }
 
@@ -545,7 +565,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.1rem;
+  border-radius: 0.4rem;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -562,7 +582,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .ShopItemCircleInner{

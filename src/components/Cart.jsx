@@ -24,6 +24,7 @@ const Cart = (props) => {
   return (
     
     <div className='Cart'>
+
       <NavBar
         hoodieCount={props.hoodieCount}
         tshirtCount={props.tshirtCount}
@@ -46,7 +47,7 @@ const Cart = (props) => {
             <div className='BoldMidText'>Subtotal</div>
             <div className='BiggerMediumText'>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
           </div>
-          <div style={{marginBottom: "1rem"}}>Shipping Costs Are Included</div>
+          <div style={{fontWeight:"500", marginBottom: "1rem"}}>Shipping Costs Are Included</div>
           <div className="Main__links">
             <NavLink to="/checkout" style={{ width: "100%" }}>Checkout</NavLink>
           </div>

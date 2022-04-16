@@ -25,7 +25,7 @@ const CartItem = (props) => {
       <div className='CartItemCard'> <img src={props.cardImg}></img>  </div>
 
         <div className="CartItemDetailsContainer">
-          <div className='CartItemSpacer' style={{marginBottom: "1.5rem"}}>
+          <div className='CartItemSpacer' style={{marginBottom: "1rem"}}>
           <div className='BoldMidText'>{props.itemName}</div>
           <div className='BiggerMediumText'>{numberWithCommas(props.itemCost)} $SPICE</div>
           </div>

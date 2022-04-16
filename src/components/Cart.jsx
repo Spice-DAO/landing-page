@@ -24,7 +24,7 @@ const Cart = (props) => {
   return (
     
     <div className='Cart'>
-
+      <div className='ShopNavFix'>
       <NavBar
         hoodieCount={props.hoodieCount}
         tshirtCount={props.tshirtCount}
@@ -32,6 +32,7 @@ const Cart = (props) => {
         bagColor={"#ffffff65"}
         cartColor={"#ffffff"}
       />
+      </div>
       <div className="CartContainer">
         <div className="ShoppingCartTextContainer">Shopping Cart</div>
 

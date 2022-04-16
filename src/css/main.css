@@ -355,15 +355,14 @@ p {
 
 @media only screen and (max-width: 48em) {
   .Nav__logo {
-    width: 12rem;
+    width: 10rem;
     margin-bottom: 2rem;
-
   }
 }
 
 @media only screen and (max-width: 37.5em) {
   .Nav__logo {
-    width: 12rem;
+    width: 10rem;
     margin-bottom: 2rem;
 
   }
@@ -677,7 +676,7 @@ p {
   height: 100vh;
   margin-left: 6rem;
   margin-right: 8rem;
-  
+
 }
 
 @media only screen and (max-width: 48em) {
@@ -685,7 +684,8 @@ p {
     margin-left: 5%;
     margin-right: 0rem;
     width: 90%;
-    margin-top: -4.5rem;
+    height:75vh;
+    margin-top: 0rem;
   }
 }
 
@@ -695,7 +695,8 @@ p {
     margin-left: 5%;
     margin-right: 0rem;
     width: 90%;
-    margin-top: -4.5rem;
+    height: 75vh;
+    padding-top: 0rem;
 
   }
 }
@@ -719,6 +720,19 @@ p {
   font-size: 32px;
   font-weight: bold;
 }
+
+@media only screen and (max-width: 48em) {
+  .ShoppingCartTextContainer {
+    margin-top: 0rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .ShoppingCartTextContainer {
+    margin-top: 0rem;
+  }
+}
+
 
 .CartItemContainer {
   display: flex;

@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
 // import logo from '../../src/logo2.png'
 
-
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -15,13 +14,10 @@ const CheckoutItem = (props) => {
 
   return (
     <div className="CheckoutItemContainer">
-              <div className='CheckoutItemCard'> <img src={props.cardImg}></img>  </div>
-
-
-
+      <div className='CheckoutItemCard'> <img src={props.cardImg} className="ObjectFitContain"></img>  </div>
         {/* Details  */}
       <div>
-          <div>{props.itemName}</div>
+          <div style={{fontWeight: "bold"}}>{props.itemName}</div>
           <div>Color: Black</div>
           <div>Size: Men's Medium</div>
           <div>Quantity: {props.itemCount} @ {props.itemCost} $SPICE </div>

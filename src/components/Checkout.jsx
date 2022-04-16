@@ -10,7 +10,7 @@ import CustomInput from '../components/CustomInput';
 import { send } from 'emailjs-com';
 
 import hoodie from '../../src/hoodie.png';
-import tshirt from '../../src/tshirtresize.png';
+import tshirt from '../../src/tshirtresize2.png';
 
 
 function numberWithCommas(x) {
@@ -161,19 +161,19 @@ const Checkout = (props) => {
 
 
       <div className='CheckoutDetailsContainer'>
-        <div className='Bold24Text'>In your cart</div>
-        <div className='CheckoutRowFlex'>
+        <div className='Bold24Text' style={{marginBottom:"1.5rem"}}>In your cart</div>
+        <div className='CheckoutItemRowFlex'>
           <div>Subtotal</div>
           <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
         </div>
-        <div className='CheckoutRowFlex'>
+        <div className='CheckoutItemRowFlex'>
 
           <div>Estimated Shipping Costs</div>
           <div>FREE</div>
         </div>
 
-        <div className='CheckoutRowFlexBorder'>
-          <div>TOTAL</div>
+        <div className='CheckoutItemRowFlexBorder'>
+          <div className='BoldMidText'>TOTAL</div>
           <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
         </div>
 

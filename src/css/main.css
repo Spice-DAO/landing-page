@@ -362,16 +362,16 @@ p {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  width: 100rem;
   margin-left: 15rem;
-  margin-right: 15rem;
+  margin-right: 5rem;
 }
 
 .CheckoutDetailsContainer {
   display: flex;
-  width: 70rem;
+  width: 50rem;
   flex-direction: column;
-  margin-right: 10rem;
+  margin-right: 15rem;
   margin-top: 8rem;
 }
 
@@ -553,21 +553,46 @@ p {
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #FFFFFF90;
 }
 
 .CheckoutItemCard {
   display: flex;
   width: 7rem;
-  height: 7rem;
+  height: 6.5rem;
   justify-content: center;
-  align-items: center;
   -o-object-fit: contain;
   object-fit: contain;
   background-color: #FFF;
   border-radius: 1rem;
+  margin-right: 2.75rem;
+  padding-bottom: 1rem;
+}
+
+.CheckoutItemRowFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.CheckoutItemRowFlexBorder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #FFFFFF90;
 }
 
 

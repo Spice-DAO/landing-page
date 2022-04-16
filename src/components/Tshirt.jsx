@@ -62,7 +62,7 @@ const Tshirt = (props) => {
           <div className='DescriptionText'>Relaxed fit with a roomy silhouette.</div>
           <div className='DescriptionText'>Oil-based screen print graphic to ensure longevity.</div>
 
-          <div className='ShopItemDetailFlex' style={{ marginTop: "1.7rem" }}>
+          <div className='ShopItemDetailFlex' style={{ marginTop: "1rem" }}>
             <div >
               <div className='LargeMediumText'>
                 Color
@@ -83,7 +83,7 @@ const Tshirt = (props) => {
             </div>
           </div>
 
-          <div style={{marginTop: "2rem"}}>
+          <div style={{marginTop: "1.25rem"}}>
             <div className='LargeMediumText'>
               Quantity
             </div>

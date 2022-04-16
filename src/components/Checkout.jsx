@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faTwitter, faDiscord, faMedium } from '@fortawesome/free-brands-svg-icons'
 // import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
@@ -21,6 +21,28 @@ function numberWithCommas(x) {
 const Checkout = (props) => {
   const [inputs, setInputs] = useState({});
   const [msg, setMsg] = useState('Save and continue');
+
+  const [windowDimenion, detectHW] = useState({
+    winWidth: window.innerWidth,
+    winHeight: window.innerHeight,
+  })
+
+  const detectSize = () => {
+    detectHW({
+      winWidth: window.innerWidth,
+      winHeight: window.innerHeight,
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', detectSize)
+
+    return () => {
+      window.removeEventListener('resize', detectSize)
+    }
+  }, [windowDimenion])
+
+
 
   const [toSend, setToSend] = useState({
     fullname: '',
@@ -105,26 +127,60 @@ const Checkout = (props) => {
 
   return (
     <div className='Checkout'>
+
+
       <div className="ShopNavFix">
-      <NavBar
-        hoodieCount={props.hoodieCount}
-        tshirtCount={props.tshirtCount}
-        homeColor={"#ffffff65"}
-        bagColor={"#ffffff65"}
-        cartColor={"#ffffff"}
-      />
+        <NavBar
+          hoodieCount={props.hoodieCount}
+          tshirtCount={props.tshirtCount}
+          homeColor={"#ffffff65"}
+          bagColor={"#ffffff65"}
+          cartColor={"#ffffff"}
+        />
       </div>
       <div className='CheckoutInputContainer'>
 
         <div className="CheckoutInputSpacer">
 
-          <NavLink to="/shop" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink>
+          {windowDimenion.winWidth > 700 ? <NavLink to="/shop" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink> : <div></div>}
+
+          {/* <NavLink to="/shop" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink> */}
           <div className='CheckoutThanksContainer'>
             <div className='LargeMediumText'>Thanks for your purchase!</div>
             <div style={{ marginTop: "1rem", fontWeight: "400" }}>Please send the total amount of your order in $SPICE to the DAO:</div>
             <div style={{ marginTop: "1rem", fontWeight: "800" }}>[multisig alpha numeric address]</div>
             <div style={{ marginTop: "1rem", fontWeight: "400" }}>Copy and paste the transaction number into the field below.</div>
           </div>
+
+          {windowDimenion.winWidth < 700 ?
+
+<div className='CheckoutDetailsContainer'>
+  <div className='Bold24Text' style={{ marginBottom: "1.5rem" }}>In your cart</div>
+  <div className='CheckoutItemRowFlex'>
+    <div>Subtotal</div>
+    <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
+  </div>
+  <div className='CheckoutItemRowFlex'>
+
+    <div>Estimated Shipping Costs</div>
+    <div>FREE</div>
+  </div>
+
+  <div className='CheckoutItemRowFlexBorder'>
+    <div className='BoldMidText'>TOTAL</div>
+    <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
+  </div>
+
+  {/* Two ternarys here on if hoodieCount != 0 */}
+  {props.hoodieCount === 0 ? <div></div> : <CheckoutItem cardImg={hoodie} itemName={"Member Hoodie"} itemCount={props.hoodieCount} itemCost={50000} />}
+  {/* Add Grey Line here */}
+  {props.tshirtCount === 0 ? <div></div> : <CheckoutItem cardImg={tshirt} itemName={"Member T-Shirt"} itemCount={props.tshirtCount} itemCost={25000} />}
+  {/* Add Grey Line here */}
+</div>
+
+:
+
+<div></div>}
 
           <div className='BoldBigText' style={{ marginBottom: "1rem" }}>Checkout</div>
           <form onSubmit={handleSubmit}>
@@ -154,37 +210,42 @@ const Checkout = (props) => {
           {/*         <a href='#0' onClick={() => setMsg('Coming Soon')} >{msg}</a>
  */}
           <div className="Main__links">
-            <button type='submit'  style={{ width: "100%", padding: "0.5rem", fontWeight: "500"}} onClick={() => handleSubmit()}>{msg}</button>
+            <button type='submit' style={{ width: "100%", padding: "0.5rem", fontWeight: "500" }} onClick={() => handleSubmit()}>{msg}</button>
           </div>
 
 
         </div>
       </div>
 
+      {windowDimenion.winWidth > 700 ?
 
-      <div className='CheckoutDetailsContainer'>
-        <div className='Bold24Text' style={{ marginBottom: "1.5rem" }}>In your cart</div>
-        <div className='CheckoutItemRowFlex'>
-          <div>Subtotal</div>
-          <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
+        <div className='CheckoutDetailsContainer'>
+          <div className='Bold24Text' style={{ marginBottom: "1.5rem" }}>In your cart</div>
+          <div className='CheckoutItemRowFlex'>
+            <div>Subtotal</div>
+            <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
+          </div>
+          <div className='CheckoutItemRowFlex'>
+
+            <div>Estimated Shipping Costs</div>
+            <div>FREE</div>
+          </div>
+
+          <div className='CheckoutItemRowFlexBorder'>
+            <div className='BoldMidText'>TOTAL</div>
+            <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
+          </div>
+
+          {/* Two ternarys here on if hoodieCount != 0 */}
+          {props.hoodieCount === 0 ? <div></div> : <CheckoutItem cardImg={hoodie} itemName={"Member Hoodie"} itemCount={props.hoodieCount} itemCost={50000} />}
+          {/* Add Grey Line here */}
+          {props.tshirtCount === 0 ? <div></div> : <CheckoutItem cardImg={tshirt} itemName={"Member T-Shirt"} itemCount={props.tshirtCount} itemCost={25000} />}
+          {/* Add Grey Line here */}
         </div>
-        <div className='CheckoutItemRowFlex'>
 
-          <div>Estimated Shipping Costs</div>
-          <div>FREE</div>
-        </div>
+        :
 
-        <div className='CheckoutItemRowFlexBorder'>
-          <div className='BoldMidText'>TOTAL</div>
-          <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
-        </div>
-
-        {/* Two ternarys here on if hoodieCount != 0 */}
-        {props.hoodieCount === 0 ? <div></div> : <CheckoutItem cardImg={hoodie} itemName={"Member Hoodie"} itemCount={props.hoodieCount} itemCost={50000} />}
-        {/* Add Grey Line here */}
-        {props.tshirtCount === 0 ? <div></div> : <CheckoutItem cardImg={tshirt} itemName={"Member T-Shirt"} itemCount={props.tshirtCount} itemCost={25000} />}
-        {/* Add Grey Line here */}
-      </div>
+        <div></div>}
 
     </div>
 

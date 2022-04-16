@@ -152,7 +152,7 @@ const Checkout = (props) => {
           {/*         <a href='#0' onClick={() => setMsg('Coming Soon')} >{msg}</a>
  */}
           <div className="Main__links">
-            <button type='submit' style={{ width: "100%" }} onClick={() => handleSubmit()}>{msg}</button>
+            <button type='submit' style={{ width: "100%"}} onClick={() => handleSubmit()}>{msg}</button>
           </div>
 
 

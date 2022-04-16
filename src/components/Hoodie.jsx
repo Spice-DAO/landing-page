@@ -68,7 +68,7 @@ const Hoodie = (props) => {
 
           <div className='ShopItemDetailFlex' style={{ marginTop: "1rem" }}>
             <div >
-              <div className='LargeMediumText'>
+              <div className='LargeMediumText' style={{marginBottom: "0.35rem"}}>
                 Color
               </div>
               <div className='ShopItemDetailFlex'>
@@ -77,7 +77,7 @@ const Hoodie = (props) => {
             </div>
 
             <div>
-              <div className='LargeMediumText'>
+              <div className='LargeMediumText' style={{marginBottom: "0.35rem"}}>
                 Size
               </div>
               <div className='ShopItemDetailFlex'>
@@ -88,18 +88,18 @@ const Hoodie = (props) => {
           </div>
 
           <div style={{marginTop: "1.25rem"}}>
-            <div className='LargeMediumText'>
+            <div className='LargeMediumText' style={{marginBottom: "0.35rem"}}>
               Quantity
             </div>
             <div className='ShopItemDetailFlex'>
-              <div className='ShopItemTinyCard' style={{ marginRight: "1rem" }} onClick={() => ((tempCount + props.hoodieCount) > 0) ? setTempCount(tempCount - 1) : setTempCount(tempCount)}>-</div>
+              <div className='ShopItemTinyCard' style={{ marginRight: "1.25rem" }} onClick={() => ((tempCount + props.hoodieCount) > 0) ? setTempCount(tempCount - 1) : setTempCount(tempCount)}>-</div>
               <div className='BiggerMediumText'>{tempCount + props.hoodieCount}</div>
-              <div className='ShopItemTinyCard' style={{ marginLeft: "1rem" }} onClick={() => setTempCount(tempCount + 1)}>+</div>
+              <div className='ShopItemTinyCard' style={{ marginLeft: "1.25rem" }} onClick={() => setTempCount(tempCount + 1)}>+</div>
             </div>
           </div>
 
 
-          <div className="Main__links" style={{ marginTop: "2rem" }}>
+          <div className="Main__links"style={{ marginTop: "2rem", marginLeft:"-2rem", width:"50rem", height: "3.7rem" }}>
             <button onClick={() => handleAdd()}>Add to Cart</button>
           </div>
 

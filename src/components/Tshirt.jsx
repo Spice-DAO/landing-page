@@ -64,7 +64,7 @@ const Tshirt = (props) => {
 
           <div className='ShopItemDetailFlex' style={{ marginTop: "1rem" }}>
             <div >
-              <div className='LargeMediumText'>
+              <div className='LargeMediumText' style={{marginBottom: "0.35rem"}}>
                 Color
               </div>
               <div className='ShopItemDetailFlex'>
@@ -73,7 +73,7 @@ const Tshirt = (props) => {
             </div>
 
             <div>
-              <div className='LargeMediumText'>
+              <div className='LargeMediumText' style={{marginBottom: "0.35rem"}}>
                 Size
               </div>
               <div className='ShopItemDetailFlex'>
@@ -84,19 +84,19 @@ const Tshirt = (props) => {
           </div>
 
           <div style={{marginTop: "1.25rem"}}>
-            <div className='LargeMediumText'>
+            <div className='LargeMediumText' style={{marginBottom: "0.35rem"}}>
               Quantity
             </div>
             <div className='ShopItemDetailFlex'>
-              <div className='ShopItemTinyCard' style={{ marginRight: "1rem" }} onClick={() => ((tempCount + props.tshirtCount) > 0) ? setTempCount(tempCount - 1) : setTempCount(tempCount)}>-</div>
+              <div className='ShopItemTinyCard' style={{ marginRight: "1.25rem" }} onClick={() => ((tempCount + props.tshirtCount) > 0) ? setTempCount(tempCount - 1) : setTempCount(tempCount)}>-</div>
               <div className='BiggerMediumText'>{tempCount + props.tshirtCount}</div>
-              <div className='ShopItemTinyCard' style={{ marginLeft: "1rem" }} onClick={() => setTempCount(tempCount + 1)}>+</div>
+              <div className='ShopItemTinyCard' style={{ marginLeft: "1.25rem" }} onClick={() => setTempCount(tempCount + 1)}>+</div>
             </div>
           </div>
 
 
-          <div className="Main__links" style={{ marginTop: "2rem" }}>
-            <button onClick={() => handleAdd()}>Add to Cart</button>
+          <div className="Main__links" style={{ marginTop: "2rem", marginLeft:"-2rem", width:"50rem", height: "3.7rem" }}>
+            <button onClick={() => handleAdd()}>Add to cart</button>
           </div>
 
         </div>

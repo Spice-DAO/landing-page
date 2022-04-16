@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className='Main'>
       <img className='Main__logo' src={logo} alt="Spice DAO logo" />
-      <div className="Main__links">
+      <div className="Landing__links">
         <a href="https://forum.spicedao.xyz/">Forum</a>
         <a href="https://snapshot.org/#/dunedao.eth">Governance</a>
         <NavLink to="/shop">{msg}</NavLink>

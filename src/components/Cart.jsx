@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useStat, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faTwitter, faDiscord, faMedium } from '@fortawesome/free-brands-svg-icons'
 // import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
@@ -14,13 +14,15 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-const Cart = (props) => {
 
+
+const Cart = (props) => {
 
   //Do a map for each group of items and display them on the site.
   //Do the money math with the loops
 
   return (
+    
     <div className='Cart'>
       <NavBar
         hoodieCount={props.hoodieCount}

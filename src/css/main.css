@@ -16,6 +16,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap");
+
 a,
 button {
   text-decoration: none;
@@ -27,7 +28,7 @@ button {
   margin: 0;
   border: none;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -42,16 +43,17 @@ body {
   line-height: 1.5;
 }
 
+
 .App {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   min-height: 100vh;
 }
 
@@ -79,11 +81,11 @@ p {
 .Main {
   width: 50%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -141,20 +143,20 @@ p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 37.5em) {
   .Main__links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
-.Main__links > * {
+.Main__links>* {
   background-color: #fff;
   border-radius: 10px;
   padding: .3rem;
@@ -168,16 +170,16 @@ p {
 }
 
 @media only screen and (max-width: 37.5em) {
-  .Main__links > * {
+  .Main__links>* {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 100%;
   }
 }
 
-.Main__links > *:hover {
+.Main__links>*:hover {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
@@ -188,12 +190,12 @@ p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
-.Main__social_icons > * {
+.Main__social_icons>* {
   margin: .7rem;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
@@ -202,13 +204,13 @@ p {
   color: #fff;
 }
 
-.Main__social_icons > *:hover {
+.Main__social_icons>*:hover {
   -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  transform: scale(1.3);
   color: #228183;
 }
 
-.NavContainer__icon_group{
+.NavContainer__icon_group {
   margin-bottom: 1.5rem;
   height: auto;
   display: flex;
@@ -227,6 +229,7 @@ p {
   margin-left: 5rem;
   height: 100vh;
 }
+
 /* .NavContainer__icons {
   display: flex;
   justify-content: center;
@@ -288,7 +291,7 @@ p {
   text-align: center;
 }
 
-.CustomCard{
+.CustomCard {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -298,7 +301,7 @@ p {
   margin: 2rem;
 }
 
-.ObjectFitContain{
+.ObjectFitContain {
   object-fit: contain;
   margin-top: 1rem;
 }
@@ -334,7 +337,7 @@ p {
   border-radius: 10px;
   padding: 0.3rem;
   color: rgb(34, 129, 131);
-  margin-right:2rem;
+  margin-right: 2rem;
   margin-bottom: 1rem;
   text-decoration: none;
   border: 1px solid #fff;
@@ -406,6 +409,8 @@ p {
   flex-direction: row;
   justify-content: start;
   width: 100%;
+  background: rgb(245, 221, 183);
+  background: linear-gradient(0deg, rgba(245, 221, 183, 1) 0%, rgba(131, 171, 155, 1) 9%, rgba(62, 141, 138, 1) 52%, rgba(34, 129, 131, 1) 86%);
 }
 
 .CartContainer {
@@ -526,7 +531,7 @@ p {
   justify-content: center;
   margin-left: 8rem;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .ShopItemSmallCard {
@@ -540,8 +545,9 @@ p {
   margin-top: 2rem;
   margin-left: 8rem;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
+
 .ShopItemCardContainer {
   display: flex;
   height: 100vh;
@@ -561,7 +567,7 @@ p {
   background-color: #fff;
   color: #000;
   height: 30px;
-  width:  30px;
+  width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -574,7 +580,7 @@ p {
   user-select: none;
 }
 
-.ShopItemCircleOuter{
+.ShopItemCircleOuter {
   border: 2px solid black;
   height: 33px;
   width: 33px;
@@ -585,7 +591,7 @@ p {
   margin-right: 0.5rem;
 }
 
-.ShopItemCircleInner{
+.ShopItemCircleInner {
   background-color: #000;
   height: 25px;
   width: 25px;

@@ -105,6 +105,7 @@ const Checkout = (props) => {
 
   return (
     <div className='Checkout'>
+      <div className="ShopNavFix">
       <NavBar
         hoodieCount={props.hoodieCount}
         tshirtCount={props.tshirtCount}
@@ -112,9 +113,10 @@ const Checkout = (props) => {
         bagColor={"#ffffff65"}
         cartColor={"#ffffff"}
       />
+      </div>
       <div className='CheckoutInputContainer'>
 
-        <div style={{ marginTop: "6rem" }}>
+        <div className="CheckoutInputSpacer">
 
           <NavLink to="/shop" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink>
           <div className='CheckoutThanksContainer'>

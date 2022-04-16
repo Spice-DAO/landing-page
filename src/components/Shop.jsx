@@ -18,14 +18,15 @@ const Shop = (props) => {
 
   return (
     <div className='Shop'>
+      <div className='ShopNavFix'>
       <NavBar
         hoodieCount={props.hoodieCount}
         tshirtCount={props.tshirtCount}
         homeColor={"#ffffff65"}
         bagColor={"#ffffff"}
         cartColor={"#ffffff65"}
-
       />
+      </div>
       <div className="CardContainer">
 
         <div className="CustomCard">

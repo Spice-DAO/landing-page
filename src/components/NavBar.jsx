@@ -30,17 +30,17 @@ const NavBar = (props) => {
             <img className='Nav__logo' src={logo} alt="Spice DAO logo" />
             <div className='NavContainer__icon_group'>
             <NavLink to="/"><FaHome size={30} className='NavContainer__icons' style={{color: props.homeColor}}  /></NavLink>
-            <div style={{color: props.homeColor}}>Home</div>
+            <div style={{color: props.homeColor, fontWeight: "400", fontSize:"15px"}}>Home</div>
             </div>
             <div className='NavContainer__icon_group'>
             <NavLink to="/shop"><FaShoppingBag size={30} style={{color: props.bagColor}} /></NavLink>
-            <div style={{color: props.bagColor}}> Shop</div>
+            <div style={{color: props.bagColor, fontWeight: "400", fontSize:"15px"}}> Shop</div>
             </div>
             <div className='NavContainer__icon_group'>
             <NavLink to="/cart"><FaShoppingCart size={30} className='NavContainer__icons' style={{color: props.cartColor}} /></NavLink>
                 {/* DO AN INTERPOLATION BELOW TO GET THE NUMBER OF ITEMS */}
                 {/* Ternary for cart parenthesees */}
-            {(props.hoodieCount + props.tshirtCount === 0) ? <div style={{color: props.cartColor}}>Cart</div> : <div style={{color: props.cartColor}}>Cart ({props.hoodieCount + props.tshirtCount})</div> }
+            {(props.hoodieCount + props.tshirtCount === 0) ? <div style={{color: props.cartColor, fontWeight: "400", fontSize:"15px"}}>Cart</div> : <div style={{color: props.cartColor, fontWeight: "400", fontSize:"15px"}}>Cart ({props.hoodieCount + props.tshirtCount})</div> }
             </div>
         </div>
 

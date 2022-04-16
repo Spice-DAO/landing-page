@@ -18,9 +18,9 @@ const CheckoutItem = (props) => {
         {/* Details  */}
       <div>
           <div style={{fontWeight: "bold"}}>{props.itemName}</div>
-          <div>Color: Black</div>
+          <div >Color: Black</div>
           <div>Size: Men's Medium</div>
-          <div>Quantity: {props.itemCount} @ {props.itemCost} $SPICE </div>
+          <div>Quantity: {props.itemCount} @ {numberWithCommas(props.itemCost)} $SPICE </div>
       </div>
     </div>
   )

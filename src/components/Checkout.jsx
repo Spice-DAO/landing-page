@@ -48,7 +48,7 @@ const Checkout = (props) => {
 
   }
 
-  function getFullname(){
+  function getFullname() {
     return inputs.fullname;
   }
 
@@ -69,7 +69,7 @@ const Checkout = (props) => {
 
       inputs.country === "" ||
       inputs.country === undefined
-      ) {
+    ) {
       alert("Please Fill Out Required Fields and Resubmit")
     } else {
       setMsg("Submitting Order");
@@ -115,14 +115,17 @@ const Checkout = (props) => {
         cartColor={"#ffffff"}
       />
       <div className='CheckoutInputContainer'>
-        <div></div><NavLink to="/shop" style={{textAlign: "left"}}>&lt; Back To cart</NavLink><div>
+
+        <div>
+
+          <NavLink to="/shop" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink>
           <Card><div>Thanks For Your Purchase</div></Card>
 
           <div>Checkout</div>
           <form onSubmit={handleSubmit}>
             <div className='CheckoutRowFlex'>
               <CustomInput label="Name" name="fullname" input={inputs.fullname} override="" change={handleChange} />
-              <div style={{marginLeft:'1rem', marginRight:'1rem'}}></div>
+              <div style={{ marginLeft: '1rem', marginRight: '1rem' }}></div>
               <CustomInput label="Transaction Number" name="txn" input={inputs.txn} override="" change={handleChange} />
               {/* <form><input className='CleanForm' type="text"></input></form> */}
             </div>
@@ -131,14 +134,14 @@ const Checkout = (props) => {
             </div>
             <div className='CheckoutRowFlex'>
               <CustomInput label="Postal Code" name="postalCode" input={inputs.postalCode} override="" change={handleChange} />
-              <div style={{marginLeft:'1rem', marginRight:'1rem'}}></div>
+              <div style={{ marginLeft: '1rem', marginRight: '1rem' }}></div>
               <CustomInput label="City" name="city" input={inputs.city} override="" change={handleChange} />
-              <div style={{marginLeft:'1rem', marginRight:'1rem'}}></div>
+              <div style={{ marginLeft: '1rem', marginRight: '1rem' }}></div>
               <CustomInput label="Country" name="country" input={inputs.country} override="" change={handleChange} />
             </div>
             <div className='CheckoutRowFlex'>
               <CustomInput label="Twitter" name="twitter" input={inputs.twitter} override="@" change={handleChange} />
-              <div style={{marginLeft:'1rem', marginRight:'1rem'}}></div>
+              <div style={{ marginLeft: '1rem', marginRight: '1rem' }}></div>
               <CustomInput label="Discord" name="discord" input={inputs.discord} override="" change={handleChange} />
             </div>
           </form>

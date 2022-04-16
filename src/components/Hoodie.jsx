@@ -65,7 +65,7 @@ const Hoodie = (props) => {
                 Color
               </div>
               <div className='ShopItemDetailFlex'>
-                <div className="ShopItemCircleOuter"><div className='ShopItemCircleInner'></div></div>  (only)
+                <div className="ShopItemCircleOuter"><div className='ShopItemCircleInner'></div></div>  <div style={{marginRight: "2rem"}}>(only)</div>
               </div>
             </div>
 

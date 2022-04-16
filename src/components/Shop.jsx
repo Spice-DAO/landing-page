@@ -59,6 +59,7 @@ const Shop = (props) => {
 
           <div className='ButtonSpacer'>
           <div className="Main__links" style={{ marginTop: "auto", width:"100%", justifyContent: "space-around" }}>
+            
               <a href="#0" className='ShopButtonStyle' onClick={() => props.setTshirtCount(props.tshirtCount + 1)}>Add To Cart</a>
               <NavLink to="/tshirt" className='ShopButtonStyle'>Product Details</NavLink>
             </div>

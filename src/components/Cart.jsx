@@ -14,8 +14,6 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-
-
 const Cart = (props) => {
 
   //Do a map for each group of items and display them on the site.

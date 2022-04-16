@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faTwitter, faDiscord, faMedium } from '@fortawesome/free-brands-svg-icons'
 // import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
@@ -27,10 +27,29 @@ const Hoodie = (props) => {
     setTempCount(0);
   };
 
-  function swapImages(a, b) {
-    setActiveImage(a);
-    setinActiveImage(b);
-  };
+
+  const [windowDimenion, detectHW] = useState({
+    winWidth: window.innerWidth,
+    winHeight: window.innerHeight,
+  })
+
+  const detectSize = () => {
+    detectHW({
+      winWidth: window.innerWidth,
+      winHeight: window.innerHeight,
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', detectSize)
+
+    return () => {
+      window.removeEventListener('resize', detectSize)
+    }
+  }, [windowDimenion])
+
+
+
 
   // onClick={() => props.setHoodieCount(props.hoodieCount + 1)}
 
@@ -39,14 +58,13 @@ const Hoodie = (props) => {
   return (
     <div className="ShopItemContainer">
       <div className='ShopNavFix'>
-      <NavBar
-        hoodieCount={props.hoodieCount}
-        tshirtCount={props.tshirtCount}
-        homeColor={"#ffffff65"}
-        bagColor={"#ffffff"}
-        cartColor={"#ffffff65"}
-
-      />
+        <NavBar
+          hoodieCount={props.hoodieCount}
+          tshirtCount={props.tshirtCount}
+          homeColor={"#ffffff65"}
+          bagColor={"#ffffff"}
+          cartColor={"#ffffff65"}
+        />
       </div>
       <div className='ShopItemDetails' >
         <div className='ShopItemCardContainer'>
@@ -60,7 +78,7 @@ const Hoodie = (props) => {
 
 
         <div className='ShopItemTextContainer'>
-          <NavLink to="/shop" style={{ marginTop: "10rem", marginBottom: "1rem", textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink>
+          {windowDimenion.winWidth > 700 ? <NavLink to="/shop" style={{ marginTop: "10rem", marginBottom: "1rem", textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink> : <div></div>}
 
           <div className='BoldBigText' style={{ marginBottom: "0.75rem" }}>Spice DAO Hoodie</div>
           <div className='LargeMediumText' style={{ marginBottom: "1.5rem" }}>50,000 $SPICE</div>
@@ -70,27 +88,27 @@ const Hoodie = (props) => {
 
           <div className='ShopItemDetailFlex' style={{ marginTop: "1rem" }}>
             <div >
-              <div className='LargeMediumText' style={{marginBottom: "0.35rem"}}>
+              <div className='LargeMediumText' style={{ marginBottom: "0.35rem" }}>
                 Color
               </div>
               <div className='ShopItemDetailFlex'>
-                <div className="ShopItemCircleOuter"><div className='ShopItemCircleInner'></div></div>  <div style={{ marginRight: "2rem", fontSize:"18px"}}>(only)</div>
+                <div className="ShopItemCircleOuter"><div className='ShopItemCircleInner'></div></div>  <div style={{ marginRight: "2rem", fontSize: "18px" }}>(only)</div>
               </div>
             </div>
 
             <div>
-              <div className='LargeMediumText' style={{marginBottom: "0.35rem"}}>
+              <div className='LargeMediumText' style={{ marginBottom: "0.35rem" }}>
                 Size
               </div>
               <div className='ShopItemDetailFlex'>
-                <div className='ShopItemTinyCard' style={{ marginRight: "0.5rem" }}>M</div> 
-                <div style={{fontSize: "18px"}}>(only)</div>
+                <div className='ShopItemTinyCard' style={{ marginRight: "0.5rem" }}>M</div>
+                <div style={{ fontSize: "18px" }}>(only)</div>
               </div>
             </div>
           </div>
 
-          <div style={{marginTop: "1.25rem"}}>
-            <div className='LargeMediumText' style={{marginBottom: "0.4rem"}}>
+          <div style={{ marginTop: "1.25rem" }}>
+            <div className='LargeMediumText' style={{ marginBottom: "0.4rem" }}>
               Quantity
             </div>
             <div className='ShopItemDetailFlex'>
@@ -100,10 +118,17 @@ const Hoodie = (props) => {
             </div>
           </div>
 
+          {windowDimenion.winWidth > 700 ?
+            <div className="Main__links" style={{ marginTop: "2rem", width: "50rem", height: "3.7rem" }}>
+              <button onClick={() => handleAdd()}>Add to Cart</button>
+            </div>
 
-          <div className="Main__links"style={{ marginTop: "2rem", width:"50rem", height: "3.7rem" }}>
-            <button onClick={() => handleAdd()}>Add to Cart</button>
-          </div>
+            :
+
+            <div className="Main__links" style={{ marginTop: "2rem", textAlign:'center',  alignContent:"center", height: "3.7rem" }}>
+              <a href="#0" style={{fontWeight: "500"}} onClick={() => handleAdd()}>Add to Cart</a>
+            </div>
+          }
 
         </div>
       </div>

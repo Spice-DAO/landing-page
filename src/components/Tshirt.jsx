@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faTwitter, faDiscord, faMedium } from '@fortawesome/free-brands-svg-icons'
 // import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
@@ -27,6 +27,28 @@ const Tshirt = (props) => {
     setTempCount(0);
   };
 
+  const [windowDimenion, detectHW] = useState({
+    winWidth: window.innerWidth,
+    winHeight: window.innerHeight,
+  })
+
+  const detectSize = () => {
+    detectHW({
+      winWidth: window.innerWidth,
+      winHeight: window.innerHeight,
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', detectSize)
+
+    return () => {
+      window.removeEventListener('resize', detectSize)
+    }
+  }, [windowDimenion])
+
+
+
   // onClick={() => props.setHoodieCount(props.hoodieCount + 1)}
 
   // Largely going to mirror cards in construction
@@ -53,7 +75,8 @@ const Tshirt = (props) => {
 
 
         <div className='ShopItemTextContainer'>
-          <NavLink to="/shop" style={{ marginTop: "10rem", marginBottom: "1rem", textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink>
+        {windowDimenion.winWidth > 700 ? <NavLink to="/shop" style={{ marginTop: "10rem", marginBottom: "1rem", textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink> : <div></div>}
+
 
           <div className='BoldBigText' style={{ marginBottom: "0.75rem" }}>Spice DAO T-Shirt</div>
           <div className='LargeMediumText' style={{ marginBottom: "1.5rem" }}>25,000 $SPICE</div>
@@ -95,10 +118,18 @@ const Tshirt = (props) => {
           </div>
 
 
-          <div className="Main__links" style={{ marginTop: "2rem", width:"50rem", height: "3.7rem" }}>
-            <button onClick={() => handleAdd()}>Add to cart</button>
-          </div>
+          {windowDimenion.winWidth > 700 ?
+            <div className="Main__links" style={{ marginTop: "2rem", width: "50rem", height: "3.7rem" }}>
+              <button onClick={() => handleAdd()}>Add to Cart</button>
+            </div>
 
+            :
+
+            <div className="Main__links" style={{ marginTop: "2rem", textAlign:'center',  alignContent:"center", height: "3.7rem" }}>
+              <a href="#0" style={{fontWeight: "500"}} onClick={() => handleAdd()}>Add to Cart</a>
+            </div>
+          }
+          
         </div>
       </div>
     </div>

@@ -345,6 +345,7 @@ p {
 .CustomCard {
   display: flex;
   flex-direction: column;
+  text-align: center;
   border-radius: 1rem;
   background-color: #acc4b770 !important;
   align-items: center;

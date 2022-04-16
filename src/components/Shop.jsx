@@ -38,9 +38,9 @@ const Shop = (props) => {
 
           <div className='ButtonSpacer'>
 
-            <div className="Main__links" style={{ marginTop: "auto" }}>
-              <a href="#0" style={{ width: "7rem", height: "2.5rem" }} onClick={() => props.setHoodieCount(props.hoodieCount + 1)}>Add To Cart</a>
-              <NavLink to="/hoodie" style={{ width: "8rem", height: "2.5rem", marginLeft: "2rem" }}>Product Details</NavLink>
+            <div className="Main__links" style={{ marginTop: "auto", width:"100%", justifyContent: "space-around" }}>
+              <a href="#0" style={{ width: "7.7rem", height: "2.5rem" }} onClick={() => props.setHoodieCount(props.hoodieCount + 1)}>Add To Cart</a>
+              <NavLink to="/hoodie" style={{ width: "7.7rem", height: "2.5rem"}}>Product Details</NavLink>
             </div>
             {/* <a href='#2'>Add To Cart</a> */}
             {/* <a href='#3'>Product Details</a> */}
@@ -58,9 +58,9 @@ const Shop = (props) => {
           <div style={{ marginTop: "1rem" }}>Black</div>
 
           <div className='ButtonSpacer'>
-          <div className="Main__links" style={{ marginTop: "auto" }}>
-              <a href="#0" style={{ width: "7rem", height: "2.5rem" }} onClick={() => props.setTshirtCount(props.tshirtCount + 1)}>Add To Cart</a>
-              <NavLink to="/tshirt" style={{ width: "8rem", height: "2.5rem", marginLeft: "2rem" }}>Product Details</NavLink>
+          <div className="Main__links" style={{ marginTop: "auto", width:"100%", justifyContent: "space-around" }}>
+              <a href="#0" style={{ width: "7.7rem", height: "2.5rem" }} onClick={() => props.setTshirtCount(props.tshirtCount + 1)}>Add To Cart</a>
+              <NavLink to="/tshirt" style={{ width: "7.7rem", height: "2.5rem" }}>Product Details</NavLink>
             </div>
           </div>
 

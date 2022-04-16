@@ -119,12 +119,12 @@ const Checkout = (props) => {
           <NavLink to="/shop" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink>
           <div className='CheckoutThanksContainer'>
             <div className='LargeMediumText'>Thanks for your purchase!</div>
-            <div style={{ marginTop: "1rem" }}>Please send the total amount of your order in $SPICE to the DAO:</div>
-            <div style={{ marginTop: "1rem" }}>[multisig alpha numeric address]</div>
-            <div style={{ marginTop: "1rem" }}>Copy and paste the transaction number into the field below.</div>
+            <div style={{ marginTop: "1rem", fontWeight: "400" }}>Please send the total amount of your order in $SPICE to the DAO:</div>
+            <div style={{ marginTop: "1rem", fontWeight: "800" }}>[multisig alpha numeric address]</div>
+            <div style={{ marginTop: "1rem", fontWeight: "400" }}>Copy and paste the transaction number into the field below.</div>
           </div>
 
-          <div className='BoldBigText' style={{marginBottom:"1rem"}}>Checkout</div>
+          <div className='BoldBigText' style={{ marginBottom: "1rem" }}>Checkout</div>
           <form onSubmit={handleSubmit}>
             <div className='CheckoutRowFlex'>
               <CustomInput label="Name" name="fullname" input={inputs.fullname} override="" change={handleChange} />
@@ -161,7 +161,7 @@ const Checkout = (props) => {
 
 
       <div className='CheckoutDetailsContainer'>
-        <div className='Bold24Text' style={{marginBottom:"1.5rem"}}>In your cart</div>
+        <div className='Bold24Text' style={{ marginBottom: "1.5rem" }}>In your cart</div>
         <div className='CheckoutItemRowFlex'>
           <div>Subtotal</div>
           <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>

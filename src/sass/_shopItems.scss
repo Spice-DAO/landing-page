@@ -38,8 +38,43 @@
     flex-direction: column;
   }
 
-  .ShopItemTextContainer{
+  .ShopItemTextContainer {
     display: flex;
     height: 100vh;
     flex-direction: column;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .ShopItemTinyCard{
+    background-color: #fff;
+    color: #000;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.1rem;
+  }
+
+  .ShopItemCircleOuter{
+    border: 2px solid black;
+    height: 33px;
+    width: 33px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ShopItemCircleInner{
+    background-color: #000;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+  }
+
+  .ShopItemDetailFlex{
+      display: flex;
+      justify-content: space-between;
   }

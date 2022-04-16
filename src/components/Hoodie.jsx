@@ -66,7 +66,7 @@ const Hoodie = (props) => {
           </div>
           <div className='DescriptionText'>Generous fit with a larger silhouette. Good for layering.</div> <div className='DescriptionText'>Oil-based screen print graphic to ensure longevity.</div>
 
-          <div className='ShopItemDetailFlex' style={{ marginTop: "1.7rem" }}>
+          <div className='ShopItemDetailFlex' style={{ marginTop: "1rem" }}>
             <div >
               <div className='LargeMediumText'>
                 Color
@@ -87,7 +87,7 @@ const Hoodie = (props) => {
             </div>
           </div>
 
-          <div style={{marginTop: "2rem"}}>
+          <div style={{marginTop: "1.25rem"}}>
             <div className='LargeMediumText'>
               Quantity
             </div>

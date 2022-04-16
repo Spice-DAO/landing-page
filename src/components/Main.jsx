@@ -5,6 +5,8 @@ import Home from '../components/Home';
 import Shop from '../components/Shop';
 import Cart from "../components/Cart";
 import Checkout from "../components/Checkout";
+import Hoodie from "../components/Hoodie"
+import Tshirt from "../components/Tshirt"
 
 const Main = () => {
 
@@ -28,6 +30,23 @@ const Main = () => {
       <Route path='/checkout' element={<Checkout 
               hoodieCount={hoodieCount}
               tshirtCount={tshirtCount} />} />
+              
+      <Route path="/hoodie" element={
+        <Hoodie
+        setHoodieCount={setHoodieCount}
+        hoodieCount={hoodieCount}
+        tshirtCount={tshirtCount}
+
+        />} />
+      
+      <Route path="/tshirt" element={
+        <Tshirt
+        setTshirtCount={setTshirtCount}
+        hoodieCount={hoodieCount}
+        tshirtCount={tshirtCount}
+        />} />
+      
+
     </Routes>
   );
 }

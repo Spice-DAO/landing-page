@@ -115,7 +115,7 @@ const Checkout = (props) => {
         cartColor={"#ffffff"}
       />
       <div className='CheckoutInputContainer'>
-        <div></div><NavLink to="/shop">&lt; Back To cart</NavLink><div>
+        <div></div><NavLink to="/shop" style={{textAlign: "left"}}>&lt; Back To cart</NavLink><div>
           <Card><div>Thanks For Your Purchase</div></Card>
 
           <div>Checkout</div>

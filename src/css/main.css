@@ -41,6 +41,8 @@ body {
   color: #fff;
   font-weight: lighter;
   line-height: 1.5;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -282,7 +284,7 @@ p {
     flex-direction: row;
     justify-content: space-around;
     width: 50vw;
-    padding-right: 0.6rem;
+    align-items: center;
   }
 }
 
@@ -292,7 +294,7 @@ p {
     flex-direction: row;
     justify-content: space-around;
     width: 50vw;
-    padding-right: 0.6rem;
+    align-items: center;
   }
 }
 
@@ -346,6 +348,7 @@ p {
   width: 11rem;
   margin-top: 4rem;
   margin-bottom: 3rem;
+  justify-content: center;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -392,6 +395,19 @@ p {
   }
 }
 
+
+@media only screen and (max-width: 48em) {
+  .ShopNavFix{
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .ShopNavFix{
+    margin-top: 2rem;
+
+  }
+}
 
 .CardContainer {
   display: flex;
@@ -800,11 +816,47 @@ background: linear-gradient(0deg, rgba(234,216,180,1) 2%, rgba(142,176,157,1) 11
   width: 100%;
 }
 
+@media only screen and (max-width: 48em) {
+  .ShopItemContainer {
+    flex-direction: column;
+    height: 200vh;
+
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .ShopItemContainer {
+    flex-direction: column;
+    height: 200vh;
+
+  }
+}
+
+
+
+
 .ShopItemDetails {
   display: flex;
   height: 100vh;
   width: 100%;
 }
+
+@media only screen and (max-width: 48em) {
+  .ShopItemDetails {
+    flex-direction: column;
+    height: auto;
+    width: auto;
+
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .ShopItemDetails {
+    flex-direction: column;
+    width: auto;
+  }
+}
+
 
 .ShopItemBigCard {
   height: 30rem;
@@ -814,7 +866,6 @@ background: linear-gradient(0deg, rgba(234,216,180,1) 2%, rgba(142,176,157,1) 11
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 8rem;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -828,7 +879,6 @@ background: linear-gradient(0deg, rgba(234,216,180,1) 2%, rgba(142,176,157,1) 11
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
-  margin-left: 8rem;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -836,8 +886,27 @@ background: linear-gradient(0deg, rgba(234,216,180,1) 2%, rgba(142,176,157,1) 11
 .ShopItemCardContainer {
   display: flex;
   height: 100vh;
+  margin-left: 8rem;
   flex-direction: column;
   justify-content: center;
+}
+
+
+@media only screen and (max-width: 48em) {
+  .ShopItemCardContainer {
+    margin-left: 0rem;
+    align-items: center;
+  }
+  
+}
+
+@media only screen and (max-width: 37.5em) {
+  .ShopItemCardContainer {
+    margin-left: 0rem;
+    align-items: center;
+
+  }
+  
 }
 
 .ShopItemTextContainer {
@@ -846,6 +915,25 @@ background: linear-gradient(0deg, rgba(234,216,180,1) 2%, rgba(142,176,157,1) 11
   flex-direction: column;
   margin-left: 3rem;
   margin-right: 4rem;
+}
+
+
+@media only screen and (max-width: 48em) {
+  .ShopItemTextContainer { 
+    margin-top: -12rem;
+    height: auto;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .ShopItemTextContainer {
+    margin-top: -12rem;
+    height: auto;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 }
 
 .ShopItemTinyCard {

@@ -38,6 +38,7 @@ const Hoodie = (props) => {
 
   return (
     <div className="ShopItemContainer">
+      <div className='ShopNavFix'>
       <NavBar
         hoodieCount={props.hoodieCount}
         tshirtCount={props.tshirtCount}
@@ -46,6 +47,7 @@ const Hoodie = (props) => {
         cartColor={"#ffffff65"}
 
       />
+      </div>
       <div className='ShopItemDetails' >
         <div className='ShopItemCardContainer'>
           <div className="ShopItemBigCard">

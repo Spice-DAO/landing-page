@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import NavBar from "../components/NavBar"
-import { Card } from "react-bootstrap";
 import hoodie from '../../src/hoodie.png';
 import tshirt from '../../src/tshirtresize2.png';
 

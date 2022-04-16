@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import logo from '../../src/logo2.png'
 import NavBar from "../components/NavBar"
 import { NavLink } from 'react-router-dom';
-import { Card } from "react-bootstrap";
 import CheckoutItem from '../components/CheckoutItem';
 import CustomInput from '../components/CustomInput';
 import { send } from 'emailjs-com';
@@ -13,7 +12,6 @@ import { send } from 'emailjs-com';
 import hoodie from '../../src/hoodie.png';
 import tshirt from '../../src/tshirtresize.png';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -116,12 +114,17 @@ const Checkout = (props) => {
       />
       <div className='CheckoutInputContainer'>
 
-        <div>
+        <div style={{ marginTop: "6rem" }}>
 
           <NavLink to="/shop" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink>
-          <Card><div>Thanks For Your Purchase</div></Card>
+          <div className='CheckoutThanksContainer'>
+            <div className='LargeMediumText'>Thanks for your purchase!</div>
+            <div style={{ marginTop: "1rem" }}>Please send the total amount of your order in $SPICE to the DAO:</div>
+            <div style={{ marginTop: "1rem" }}>[multisig alpha numeric address]</div>
+            <div style={{ marginTop: "1rem" }}>Copy and paste the transaction number into the field below.</div>
+          </div>
 
-          <div>Checkout</div>
+          <div className='BoldBigText' style={{marginBottom:"1rem"}}>Checkout</div>
           <form onSubmit={handleSubmit}>
             <div className='CheckoutRowFlex'>
               <CustomInput label="Name" name="fullname" input={inputs.fullname} override="" change={handleChange} />
@@ -158,7 +161,7 @@ const Checkout = (props) => {
 
 
       <div className='CheckoutDetailsContainer'>
-        <div>In your cart</div>
+        <div className='Bold24Text'>In your cart</div>
         <div className='CheckoutRowFlex'>
           <div>Subtotal</div>
           <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>

@@ -79,6 +79,12 @@ p {
   font-weight: medium;
 }
 
+.Bold24Text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .BoldMidText {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -100,6 +106,8 @@ p {
   flex-direction: row;
   justify-content: start;
   width: 100%;
+  background: rgb(245, 221, 183);
+  background: linear-gradient(0deg, rgb(245, 221, 183) 0%, rgb(131, 171, 155) 9%, rgb(62, 141, 138) 52%, rgb(34, 129, 131) 86%);
 }
 
 .CheckoutInputContainer {
@@ -107,15 +115,37 @@ p {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.CheckoutCenter {
+  display: flex;
+  width: 100%;
+  height: 65%;
+  justify-content: center;
+}
+
+.CheckoutThanksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #3c8083;
+  width: 100%;
+  height: 40%;
+  margin-top: 1rem;
+  background: rgb(220, 235, 231);
+  background: linear-gradient(0deg, rgb(220, 235, 231) 6%, rgb(167, 237, 239) 82%);
+  border-radius: 1rem;
 }
 
 .CheckoutDetailsContainer {
   display: flex;
-  width: 20vw;
+  width: 70rem;
   flex-direction: column;
-  margin-right: 4rem;
+  margin-right: 10rem;
+  margin-top: 8rem;
 }
 
 .CheckoutRowFlex {
@@ -139,9 +169,10 @@ p {
   border-radius: 0.5rem;
   color: white;
   font-family: "Open Sans", sans-serif;
-  font-weight: lighter;
+  font-weight: 500;
   outline: none;
   width: 100%;
+  padding: 0.7rem;
 }
 
 .Main {
@@ -368,6 +399,18 @@ p {
   justify-content: space-between;
 }
 
+.CartItemCard {
+  display: flex;
+  width: 9rem;
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
+  -o-object-fit: contain;
+  object-fit: contain;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+
 .CheckoutItemContainer {
   display: flex;
   width: 100%;
@@ -377,11 +420,24 @@ p {
   margin-bottom: 0.5rem;
 }
 
+.CheckoutItemCard {
+  display: flex;
+  width: 5rem;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  -o-object-fit: contain;
+  object-fit: contain;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */
 .CustomInputContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .ShopItemContainer {

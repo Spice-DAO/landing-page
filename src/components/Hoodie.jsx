@@ -65,7 +65,7 @@ const Hoodie = (props) => {
       <div className='ShopItemDetails' >
         <div className='ShopItemCardContainer'>
           <div className="ShopItemBigCard">
-            <img src={activeImage} style={{ height: "30rem" }} className="ObjectFitContain" onClick={() => setViewActive(!viewActive)} ></img>
+            <img src={activeImage} style={{ height: "30rem" }} className="ObjectFitContain" onClick={() => {activeImage === hoodie? setActiveImage(hoodieBack) : setActiveImage(hoodie)}} ></img>
           </div>
           <div className='ShopItemSmallCardContainer'>
             <div className="ShopItemSmallCard">

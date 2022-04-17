@@ -17,8 +17,8 @@ function numberWithCommas(x) {
 const Tshirt = (props) => {
 
   const [activeImage, setActiveImage] = useState(tshirt);
-  const [inActiveImage, setinActiveImage] = useState(tshirtBack);
-  const [viewActive, setViewActive] = useState(true);
+  const [inActiveFront, setinActiveFront] = useState(tshirt);
+  const [inActiveBack, setinActiveBack] = useState(tshirtBack);
 
   const [windowDimenion, detectHW] = useState({
     winWidth: window.innerWidth,
@@ -57,12 +57,17 @@ const Tshirt = (props) => {
 
       />
       <div className='ShopItemDetails' >
-        <div className='ShopItemCardContainer'>
+      <div className='ShopItemCardContainer'>
           <div className="ShopItemBigCard">
-            <img src={viewActive ? tshirt : tshirtBack} style={{ height: "30rem" }} className="ObjectFitContain" onClick={() => setViewActive(!viewActive)} ></img>
+            <img src={activeImage} style={{ height: "30rem" }} className="ObjectFitContain" onClick={() => {activeImage === tshirt? setActiveImage(tshirtBack ) : setActiveImage(tshirt)}} ></img>
           </div>
-          <div className="ShopItemSmallCard">
-            <img src={viewActive ? tshirtBack : tshirt} style={{ height: "11.5rem" }} className="ObjectFitContain" onClick={() => setViewActive(!viewActive)}></img>
+          <div className='ShopItemSmallCardContainer'>
+            <div className="ShopItemSmallCard">
+              <img src={tshirt} style={{ height: "11.5rem" }} className="ObjectFitContain" onClick={() => setActiveImage(tshirt)}></img>
+            </div>
+            <div className="ShopItemSmallCard">
+              <img src={tshirtBack} style={{ height: "11.5rem" }} className="ObjectFitContain" onClick={() => setActiveImage(tshirtBack)}></img>
+            </div>
           </div>
         </div>
 

@@ -10,8 +10,8 @@ import Tshirt from "../components/Tshirt"
 
 const Main = () => {
 
-  const [hoodieCount, setHoodieCount] = useState(0);
-  const [tshirtCount, setTshirtCount] = useState(0);
+  const [hoodieCount, setHoodieCount] = useState(false);
+  const [tshirtCount, setTshirtCount] = useState(false);
 
 
   return (

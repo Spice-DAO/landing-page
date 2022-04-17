@@ -155,14 +155,14 @@ const Checkout = (props) => {
           {windowDimenion.winWidth < 700 ?
 
 <div className='CheckoutDetailsContainer'>
-  <div className='Bold24Text' style={{ marginBottom: "1.5rem" }}>In your cart</div>
+  <div className='Bold24Text' style={{ marginBottom: "1.5rem" }}>In Your Cart</div>
   <div className='CheckoutItemRowFlex'>
     <div>Subtotal</div>
     <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
   </div>
   <div className='CheckoutItemRowFlex'>
 
-    <div>Estimated Shipping Costs</div>
+    <div>Worldwide Shipping</div>
     <div>FREE</div>
   </div>
 
@@ -185,7 +185,7 @@ const Checkout = (props) => {
           <div className='BoldBigText' style={{ marginBottom: "1rem" }}>Checkout</div>
           <form onSubmit={handleSubmit}>
             <div className='CheckoutRowFlex'>
-              <CustomInput label="Name" name="fullname" input={inputs.fullname} override="" change={handleChange} />
+              <CustomInput label="Name" name="fullname" input={inputs.fullname} override="Spice DAO Member" change={handleChange} />
               <div style={{ marginLeft: '1rem', marginRight: '1rem' }}></div>
               <CustomInput label="Transaction Number" name="txn" input={inputs.txn} override="" change={handleChange} />
               {/* <form><input className='CleanForm' type="text"></input></form> */}
@@ -220,14 +220,14 @@ const Checkout = (props) => {
       {windowDimenion.winWidth > 700 ?
 
         <div className='CheckoutDetailsContainer'>
-          <div className='Bold24Text' style={{ marginBottom: "1.5rem" }}>In your cart</div>
+          <div className='Bold24Text' style={{ marginBottom: "1.5rem" }}>In Your Cart</div>
           <div className='CheckoutItemRowFlex'>
             <div>Subtotal</div>
             <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
           </div>
           <div className='CheckoutItemRowFlex'>
 
-            <div>Estimated Shipping Costs</div>
+            <div>Worldwide Shipping</div>
             <div>FREE</div>
           </div>
 

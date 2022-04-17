@@ -32,7 +32,7 @@ const Cart = (props) => {
       />
       </div>
       <div className="CartContainer">
-        <div className="ShoppingCartTextContainer">Shopping Cart</div>
+        <div className="ShoppingCartTextContainer">Spring 2022 Drop</div>
 
         {/* Do a map over numbers to generate our card things */}
         <div className='ScrollBox'>
@@ -43,12 +43,11 @@ const Cart = (props) => {
         <div className='BottomContainer'>
           {/* This must be a flex with space around. */}
           <div className='SubtotalContainer'>
-            <div className='BoldMidText'>Subtotal</div>
+          <div className='BoldMidText'>Subtotal: <span style={{fontWeight:500}}>Free Shipping Worldwide</span></div>
             <div className='BiggerMediumText'>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
           </div>
-          <div style={{fontWeight:"500", marginBottom: "1rem"}}>Shipping Costs Are Included</div>
           <div className="Main__links">
-            <NavLink to="/checkout" style={{ width: "100%", padding: "0.5rem", fontWeight: "500"}}>Checkout</NavLink>
+            <NavLink to="/checkout" style={{ width: "100%", padding: "0.5rem", marginTop: "0.5rem", fontWeight: "500"}}>Checkout</NavLink>
           </div>
         </div>
       </div>

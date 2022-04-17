@@ -20,12 +20,6 @@ const Hoodie = (props) => {
   const [inActiveImage, setinActiveImage] = useState(hoodieBack);
   const [viewActive, setViewActive] = useState(true);
 
-  const [tempCount, setTempCount] = useState(0);
-
-  function handleAdd() {
-    props.setHoodieCount(tempCount + props.hoodieCount);
-    setTempCount(0);
-  };
 
 
   const [windowDimenion, detectHW] = useState({
@@ -80,11 +74,11 @@ const Hoodie = (props) => {
         <div className='ShopItemTextContainer'>
           {windowDimenion.winWidth > 700 ? <NavLink to="/shop" style={{ marginTop: "10rem", marginBottom: "1rem", textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink> : <div></div>}
 
-          <div className='BoldBigText' style={{ marginBottom: "0.75rem" }}>Spice DAO Hoodie</div>
+          <div className='BoldBigText' style={{ marginBottom: "0.75rem" }}>Member Hoodie</div>
           <div className='LargeMediumText' style={{ marginBottom: "1.5rem" }}>50,000 $SPICE</div>
-          <div className='DescriptionText'>Quality and feel of Carhartt brand. 320 GSM. Thick and warm. 100% Cotton.
-          </div>
-          <div className='DescriptionText'>Generous fit with a larger silhouette. Good for layering.</div> <div className='DescriptionText'>Oil-based screen print graphic to ensure longevity.</div>
+          <div className='DescriptionText'>Quality and feel of Carhartt brand. 320 GSM. Thick and warm. 100% Cotton.</div>
+          <div className='DescriptionText' style={{marginBottom:"1rem", marginTop: "1rem"}}>Generous fit with a larger silhouette. Good for layering.</div>
+          <div className='DescriptionText'>Oil-based screen print graphic to ensure longevity.</div>
 
           <div className='ShopItemDetailFlex' style={{ marginTop: "1rem" }}>
             <div >
@@ -112,21 +106,21 @@ const Hoodie = (props) => {
               Quantity
             </div>
             <div className='ShopItemDetailFlex'>
-              <div className='ShopItemTinyCard' style={{ marginRight: "1.25rem" }} onClick={() => ((tempCount + props.hoodieCount) > 0) ? setTempCount(tempCount - 1) : setTempCount(tempCount)}>-</div>
-              <div className='BiggerMediumText'>{tempCount + props.hoodieCount}</div>
-              <div className='ShopItemTinyCard' style={{ marginLeft: "1.25rem" }} onClick={() => setTempCount(tempCount + 1)}>+</div>
+              <div className='ShopItemTinyCard' style={{ marginRight: "1.25rem" }} onClick={() => props.setHoodieCount(false)}>-</div>
+              <div className='BiggerMediumText'>{props.hoodieCount? 1: 0}</div>
+              <div className='ShopItemTinyCard' style={{ marginLeft: "1.25rem" }} onClick={() => props.setHoodieCount(true)}>+</div>
             </div>
           </div>
 
           {windowDimenion.winWidth > 700 ?
             <div className="Main__links" style={{ marginTop: "2rem", width: "50rem", height: "3.7rem" }}>
-              <button onClick={() => handleAdd()}>Add to Cart</button>
+              <NavLink to="/shop" style={{fontWeight: "500"}}>Add To Cart</NavLink>
             </div>
 
             :
 
             <div className="Main__links" style={{ marginTop: "2rem", textAlign:'center',  alignContent:"center", height: "3.7rem" }}>
-              <a href="#0" style={{fontWeight: "500"}} onClick={() => handleAdd()}>Add to Cart</a>
+              <NavLink to="/shop" style={{fontWeight: "500"}}>Add To Cart</NavLink>
             </div>
           }
 

@@ -429,18 +429,18 @@ p {
 @media only screen and (max-width: 48em) {
   .CardContainer {
     flex-direction: column;
-    margin-top: 12rem;
     margin-left: 0rem;
     margin-right: 0rem;
+    height:auto
   }
 }
 
 @media only screen and (max-width: 37.5em) {
   .CardContainer {
     flex-direction: column;
-    margin-top: 12rem;
     margin-left: 0rem;
     margin-right: 0rem;
+    height:auto
   }
 }
 
@@ -509,7 +509,7 @@ p {
   height: 2.5rem;
 }
 
-@media only screen and (max-width: 48em) {
+/* @media only screen and (max-width: 42em) {
   .ShopButtonStyle {
     margin-top: 0.2rem;
     margin-left: 10%;
@@ -518,7 +518,7 @@ p {
     text-align: center;
   }
 
-}
+} */
 
 @media only screen and (max-width: 37.5em) {
   .ShopButtonStyle {

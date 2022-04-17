@@ -142,7 +142,7 @@ const Checkout = (props) => {
 
         <div className="CheckoutInputSpacer">
 
-          {windowDimenion.winWidth > 700 ? <NavLink to="/shop" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink> : <div></div>}
+          {windowDimenion.winWidth > 700 ? <NavLink to="/cart" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink> : <div></div>}
 
           {/* <NavLink to="/shop" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink> */}
           <div className='CheckoutThanksContainer'>

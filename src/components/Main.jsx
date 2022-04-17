@@ -12,7 +12,7 @@ const Main = () => {
 
   const [hoodieCount, setHoodieCount] = useState(false);
   const [tshirtCount, setTshirtCount] = useState(false);
-  const [soldOut, setSoldOut] = useState(true);
+  const [soldOut, setSoldOut] = useState(false);
 
 
 

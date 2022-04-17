@@ -27,7 +27,7 @@ const NavBar = (props) => {
 
     return (
         <div className='NavContainer'>
-            <img className='Nav__logo' src={logo} alt="Spice DAO logo" />
+            <NavLink to="/"><img className='Nav__logo' src={logo} alt="Spice DAO logo" /></NavLink>
             <div className='NavContainer__icon_container'>
             <div className='NavContainer__icon_group'>
             <NavLink to="/"><FaHome size={30} className='NavContainer__icons' style={{color: props.homeColor}}  /></NavLink>

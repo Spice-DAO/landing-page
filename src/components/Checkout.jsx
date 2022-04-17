@@ -237,9 +237,11 @@ const Checkout = (props) => {
           </div>
 
           {/* Two ternarys here on if hoodieCount != 0 */}
-          {props.hoodieCount === 0 ? <div></div> : <CheckoutItem cardImg={hoodie} itemName={"Member Hoodie"} itemCount={props.hoodieCount} itemCost={50000} />}
+          {props.hoodieCount === false ? <div></div> : <CheckoutItem cardImg={hoodie} itemName={"Member Hoodie"} itemCount={props.hoodieCount} itemCost={50000} />}
           {/* Add Grey Line here */}
-          {props.tshirtCount === 0 ? <div></div> : <CheckoutItem cardImg={tshirt} itemName={"Member T-Shirt"} itemCount={props.tshirtCount} itemCost={25000} />}
+          {(props.hoodieCount && props.tshirtCount)? <div style={{marginTop: "1rem", marginBottom: "1rem"}} className='BorderBottom'></div>: <div></div>}
+
+          {props.tshirtCount === false ? <div></div> : <CheckoutItem cardImg={tshirt} itemName={"Member T-Shirt"} itemCount={props.tshirtCount} itemCost={25000} />}
           {/* Add Grey Line here */}
         </div>
 

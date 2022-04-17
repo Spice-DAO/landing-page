@@ -60,3 +60,37 @@ p {
   margin: 1.5rem 0;
   text-align: left;
 }
+
+.BoldBigText{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.LargeMediumText{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  font-weight: medium;
+}
+
+.Bold24Text{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.BoldMidText{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.BiggerMediumText{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: medium;
+}
+
+.BorderBottom{
+  border-bottom: 1px solid grey;
+}

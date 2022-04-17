@@ -15,6 +15,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap");
 a,
 button {
   text-decoration: none;
@@ -63,7 +65,114 @@ img {
 p {
   margin: 1.5rem 0;
   text-align: left;
-  color: red;
+}
+
+.BoldBigText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.LargeMediumText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px;
+  font-weight: medium;
+}
+
+.Bold24Text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.BoldMidText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.BiggerMediumText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: medium;
+}
+
+.BorderBottom {
+  border-bottom: 1px solid grey;
+}
+
+.Checkout {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+  background: rgb(245, 221, 183);
+  background: linear-gradient(0deg, rgb(245, 221, 183) 0%, rgb(131, 171, 155) 9%, rgb(62, 141, 138) 52%, rgb(34, 129, 131) 86%);
+}
+
+.CheckoutInputContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100rem;
+  margin-left: 15rem;
+  margin-right: 5rem;
+}
+
+.CheckoutDetailsContainer {
+  display: flex;
+  width: 50rem;
+  flex-direction: column;
+  margin-right: 15rem;
+  margin-top: 8rem;
+}
+
+.CheckoutCenter {
+  display: flex;
+  width: 100%;
+  height: 65%;
+  justify-content: center;
+}
+
+.CheckoutThanksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #3c8083;
+  width: 100%;
+  height: 40%;
+  margin-top: 1rem;
+  background: rgb(220, 235, 231);
+  background: linear-gradient(0deg, rgb(220, 235, 231) 6%, rgb(167, 237, 239) 82%);
+  border-radius: 1rem;
+}
+
+.CheckoutRowFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+}
+
+.CheckoutRowFlexBorder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  border-bottom: 1px solid #FFF;
+}
+
+.CleanForm {
+  background-color: inherit !important;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  outline: none;
+  width: 100%;
+  padding: 0.7rem;
 }
 
 .Main {
@@ -143,4 +252,303 @@ p {
 .Main__social_icons > *:hover {
   transform: scale(1.3);
   color: rgb(34, 129, 131);
+}
+
+.NavContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+.NavContainer__icons {
+  display: flex;
+  justify-content: center;
+}
+.NavContainer__icons > * {
+  margin: 0.7rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.4rem;
+  color: #fff;
+}
+.NavContainer__icons > *:hover {
+  transform: scale(1.3);
+  color: rgb(34, 129, 131);
+}
+
+.Shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+}
+
+.CardContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.TextCenter {
+  text-align: center;
+}
+
+.ButtonSpacer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ButtonThemer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  font-weight: lighter;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.3rem;
+  color: rgb(34, 129, 131);
+  width: 30%;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  border: 1px solid #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.OppositeButtonThemer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  font-weight: lighter;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.3rem;
+  color: rgb(34, 129, 131);
+  margin-bottom: 1rem;
+  text-decoration: none;
+  border: 1px solid #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.CustomCard {
+  width: 20rem;
+  height: 30rem;
+  background-color: rgba(172, 196, 183, 0.4392156863) !important;
+}
+
+.Cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+  background: rgb(234, 216, 180);
+  background: linear-gradient(0deg, rgb(234, 216, 180) 2%, rgb(142, 176, 157) 11%, rgb(124, 168, 153) 20%, rgb(91, 154, 145) 60%, rgb(68, 144, 139) 80%, rgb(34, 129, 131) 94%);
+}
+
+.CartContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border: 1px solid red;
+}
+
+.SubtotalContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.BottomContainer {
+  margin-top: auto;
+  margin-bottom: 5rem;
+}
+
+.ShoppingCartTextContainer {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ScrollBox {
+  height: auto;
+  width: auto;
+  overflow-y: auto;
+  padding-left: 1rem;
+}
+
+.CartItemContainer {
+  display: flex;
+  height: 10rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid grey;
+}
+
+.CartItemDetailsContainer {
+  display: flex;
+  margin-left: 5rem;
+  flex-direction: column;
+  width: auto;
+}
+
+.CartItemSpacer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CartItemCard {
+  display: flex;
+  width: 9rem;
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
+  -o-object-fit: contain;
+  object-fit: contain;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+
+.CheckoutItemContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.CheckoutItemCard {
+  display: flex;
+  width: 7rem;
+  height: 6.5rem;
+  justify-content: center;
+  -o-object-fit: contain;
+  object-fit: contain;
+  background-color: #FFF;
+  border-radius: 1rem;
+  margin-right: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+.CheckoutItemRowFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.CheckoutItemRowFlexBorder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  font-weight: 600;
+  border-bottom: 1px solid #FFF;
+}
+
+/*# sourceMappingURL=main.css.map */
+.CustomInputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.ShopItemContainer {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.ShopItemDetails {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.ShopItemBigCard {
+  height: 30rem;
+  width: 35rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-left: 4rem;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.ShopItemSmallCard {
+  height: 12.5rem;
+  width: 15rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-left: 4rem;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.ShopItemCardContainer {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.ShopItemTextContainer {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.ShopItemTinyCard {
+  background-color: #fff;
+  color: #000;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.1rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ShopItemCircleOuter {
+  border: 2px solid black;
+  height: 33px;
+  width: 33px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+
+.ShopItemCircleInner {
+  background-color: #000;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+}
+
+.ShopItemDetailFlex {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

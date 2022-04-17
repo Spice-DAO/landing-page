@@ -1,0 +1,33 @@
+.CartItemContainer{
+    display: flex;
+    height: 10rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid grey;
+}
+
+.CartItemDetailsContainer{
+    display: flex;
+    margin-left: 5rem;
+    flex-direction: column;
+    width: auto;
+}
+
+.CartItemSpacer{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.CartItemCard{
+    display: flex;
+    width: 9rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
+    -o-object-fit: contain;
+    object-fit: contain;
+    background-color: #FFF;
+    border-radius: 1rem;
+  }
+  

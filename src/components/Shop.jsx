@@ -19,13 +19,13 @@ const Shop = (props) => {
   return (
     <div className='Shop'>
       <div className='ShopNavFix'>
-      <NavBar
-        hoodieCount={props.hoodieCount}
-        tshirtCount={props.tshirtCount}
-        homeColor={"#ffffff65"}
-        bagColor={"#ffffff"}
-        cartColor={"#ffffff65"}
-      />
+        <NavBar
+          hoodieCount={props.hoodieCount}
+          tshirtCount={props.tshirtCount}
+          homeColor={"#ffffff65"}
+          bagColor={"#ffffff"}
+          cartColor={"#ffffff65"}
+        />
       </div>
       <div className="CardContainer">
 
@@ -38,8 +38,14 @@ const Shop = (props) => {
 
           <div className='ButtonSpacer'>
 
-            <div className="Main__links" style={{ marginTop: "auto", width:"100%", justifyContent: "space-around" }}>
-              <a href="#0" className='ShopButtonStyle' onClick={() => props.setHoodieCount(props.hoodieCount + 1)}>Add To Cart</a>
+            <div className="Main__links" style={{ marginTop: "auto", width: "100%", justifyContent: "space-around" }}>
+              {!props.hoodieCount ?
+                <a href="#0" className='ShopButtonStyle' onClick={() => props.setHoodieCount(true)}>Add To Cart</a>
+                :
+                <a href="#0" className='ShopButtonStyle' onClick={() => props.setHoodieCount(true)}>Added</a>
+              }
+
+
               <NavLink to="/hoodie" className='ShopButtonStyle'>Product Details</NavLink>
             </div>
             {/* <a href='#2'>Add To Cart</a> */}
@@ -58,9 +64,14 @@ const Shop = (props) => {
           <div style={{ marginTop: "1rem" }}>Black</div>
 
           <div className='ButtonSpacer'>
-          <div className="Main__links" style={{ marginTop: "auto", width:"100%", justifyContent: "space-around" }}>
-            
-              <a href="#0" className='ShopButtonStyle' onClick={() => props.setTshirtCount(props.tshirtCount + 1)}>Add To Cart</a>
+            <div className="Main__links" style={{ marginTop: "auto", width: "100%", justifyContent: "space-around" }}>
+
+
+            {!props.tshirtCount ?
+                <a href="#0" className='ShopButtonStyle' onClick={() => props.setTshirtCount(true)}>Add To Cart</a>
+                :
+                <a href="#0" className='ShopButtonStyle' onClick={() => props.setTshirtCount(true)}>Added</a>
+              }
               <NavLink to="/tshirt" className='ShopButtonStyle'>Product Details</NavLink>
             </div>
           </div>

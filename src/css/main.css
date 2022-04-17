@@ -509,16 +509,6 @@ p {
   height: 2.5rem;
 }
 
-/* @media only screen and (max-width: 42em) {
-  .ShopButtonStyle {
-    margin-top: 0.2rem;
-    margin-left: 10%;
-    width: 80%;
-    height: 2.5rem;
-    text-align: center;
-  }
-
-} */
 
 @media only screen and (max-width: 37.5em) {
   .ShopButtonStyle {
@@ -688,7 +678,7 @@ p {
 
 @media only screen and (max-width: 48em) {
   .CheckoutThanksContainer {
-    width: 24rem;
+    width: 30rem;
     height: 20%;
   }
 }

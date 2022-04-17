@@ -40,6 +40,13 @@ const Tshirt = (props) => {
     }
   }, [windowDimenion])
 
+  function getButton(soldOut){
+    if(soldOut){
+      return(<NavLink to="/cart" style={{ fontWeight: "500" }}>Sold Out</NavLink>)
+    } else {
+      return(<NavLink to="/cart" style={{ fontWeight: "500" }}>Add To Cart</NavLink>)
+    }
+  }
 
 
   // onClick={() => props.setHoodieCount(props.hoodieCount + 1)}
@@ -111,15 +118,14 @@ const Tshirt = (props) => {
 
           {windowDimenion.winWidth > 700 ?
             <div className="Main__links" style={{ marginTop: "2rem", width: "50rem", height: "3.7rem" }}>
-              <NavLink to="/cart" style={{ fontWeight: "500" }}>Add To Cart</NavLink>
+              {getButton(props.soldOut)}
             </div>
-
             :
-
             <div className="Main__links" style={{ marginTop: "2rem", textAlign: 'center', alignContent: "center", height: "3.7rem" }}>
-              <NavLink to="/cart" style={{ fontWeight: "500" }}>Add To Cart</NavLink>
+              {getButton(props.soldOut)}
             </div>
           }
+
           
         </div>
       </div>

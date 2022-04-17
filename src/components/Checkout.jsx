@@ -74,6 +74,50 @@ const Checkout = (props) => {
     return inputs.fullname;
   }
 
+  function getCheckoutButton(soldOut) {
+    if (soldOut) {
+      return (<button type='submit' style={{ width: "100%", padding: "0.5rem", fontWeight: "500" }}>Sold Out</button>
+      )
+    } else {
+      return (<button type='submit' style={{ width: "100%", padding: "0.5rem", fontWeight: "500" }} onClick={() => handleSubmit()}>{msg}</button>
+      )
+    }
+  }
+
+
+  function getMessage(soldOut, orderSubmitted) {
+    if (soldOut) {
+      return (
+        <div className='CheckoutThanksContainer'>
+          <div className='LargeMediumText'>This Campaign Has Ended</div>
+          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Thanks For Your Interest</div>
+          <div style={{ marginTop: "1rem", fontWeight: "800" }}></div>
+          <div style={{ marginTop: "1rem", fontWeight: "400" }}></div>
+        </div>
+      )
+    } else if (orderSubmitted) {
+      return (
+        <div className='CheckoutThanksContainer'>
+          <div className='LargeMediumText'>Your Order Has Been Submitted!</div>
+          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Thank you for your vision.</div>
+          <div style={{ marginTop: "1rem", fontWeight: "800" }}>Building a new internet isn't simple.</div>
+          <div style={{ marginTop: "1rem", fontWeight: "400" }}>We're glad you're here for the journey.</div>
+        </div>
+      )
+    } else {
+      return (
+        <div className='CheckoutThanksContainer'>
+        <div className='LargeMediumText'>Thanks For Your Purchase!</div>
+        <div style={{ marginTop: "1rem", fontWeight: "400" }}>Please send the total amount of your order in $SPICE to the DAO:</div>
+        <div style={{ marginTop: "1rem", fontWeight: "800" }}>0x1175185e62db6cea2517d14297333a63908c0cac</div>
+        <div style={{ marginTop: "1rem", fontWeight: "400" }}>Copy and paste the transaction number into the field below.</div>
+      </div>
+      )
+    }
+
+  }
+
+
   const handleSubmit = (event) => {
     if ((
       inputs.txn === "" ||
@@ -147,62 +191,38 @@ const Checkout = (props) => {
 
           {windowDimenion.winWidth > 700 ? <NavLink to="/cart" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To Cart</NavLink> : <div></div>}
 
-          {!orderSubmitted?           
-          <div className='CheckoutThanksContainer'>
-            <div className='LargeMediumText'>Thanks For Your Purchase!</div>
-            <div style={{ marginTop: "1rem", fontWeight: "400" }}>Please send the total amount of your order in $SPICE to the DAO:</div>
-            <div style={{ marginTop: "1rem", fontWeight: "800" }}>0x1175185e62db6cea2517d14297333a63908c0cac</div>
-            <div style={{ marginTop: "1rem", fontWeight: "400" }}>Copy and paste the transaction number into the field below.</div>
-          </div>
-          
-          :
+          {getMessage(props.soldOut, orderSubmitted)}
 
-        <div className='CheckoutThanksContainer'>
-          <div className='LargeMediumText'>Your Order Has Been Submitted!</div>
-          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Thank you for your vision.</div>
-          <div style={{ marginTop: "1rem", fontWeight: "800" }}>Building a new internet isn't simple.</div>
-          <div style={{ marginTop: "1rem", fontWeight: "400" }}>We're glad you're here for the journey.</div>
-        </div>
-          
-        }          
-
-
-          {/* <div className='CheckoutThanksContainer'>
-            <div className='LargeMediumText'>Thanks for your purchase!</div>
-            <div style={{ marginTop: "1rem", fontWeight: "400" }}>Please send the total amount of your order in $SPICE to the DAO:</div>
-            <div style={{ marginTop: "1rem", fontWeight: "800" }}>0x1175185e62db6cea2517d14297333a63908c0cac</div>
-            <div style={{ marginTop: "1rem", fontWeight: "400" }}>Copy and paste the transaction number into the field below.</div>
-          </div> */}
 
           {windowDimenion.winWidth < 700 ?
 
-<div className='CheckoutDetailsContainer'>
-  <div className='Bold24Text' style={{ marginBottom: "1.5rem" }}>In Your Cart</div>
-  <div className='CheckoutItemRowFlex'>
-    <div>Subtotal</div>
-    <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
-  </div>
-  <div className='CheckoutItemRowFlex'>
+            <div className='CheckoutDetailsContainer'>
+              <div className='Bold24Text' style={{ marginBottom: "1.5rem" }}>In Your Cart</div>
+              <div className='CheckoutItemRowFlex'>
+                <div>Subtotal</div>
+                <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
+              </div>
+              <div className='CheckoutItemRowFlex'>
 
-    <div>Worldwide Shipping</div>
-    <div>FREE</div>
-  </div>
+                <div>Worldwide Shipping</div>
+                <div>FREE</div>
+              </div>
 
-  <div className='CheckoutItemRowFlexBorder'>
-    <div className='BoldMidText'>TOTAL</div>
-    <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
-  </div>
+              <div className='CheckoutItemRowFlexBorder'>
+                <div className='BoldMidText'>TOTAL</div>
+                <div>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
+              </div>
 
-  {/* Two ternarys here on if hoodieCount != 0 */}
-  {props.hoodieCount === 0 ? <div></div> : <CheckoutItem cardImg={hoodie} itemName={"Member Hoodie"} itemCount={props.hoodieCount} itemCost={50000} />}
-  {/* Add Grey Line here */}
-  {props.tshirtCount === 0 ? <div></div> : <CheckoutItem cardImg={tshirt} itemName={"Member T-Shirt"} itemCount={props.tshirtCount} itemCost={25000} />}
-  {/* Add Grey Line here */}
-</div>
+              {/* Two ternarys here on if hoodieCount != 0 */}
+              {props.hoodieCount === 0 ? <div></div> : <CheckoutItem cardImg={hoodie} itemName={"Member Hoodie"} itemCount={props.hoodieCount} itemCost={50000} />}
+              {/* Add Grey Line here */}
+              {props.tshirtCount === 0 ? <div></div> : <CheckoutItem cardImg={tshirt} itemName={"Member T-Shirt"} itemCount={props.tshirtCount} itemCost={25000} />}
+              {/* Add Grey Line here */}
+            </div>
 
-:
+            :
 
-<div></div>}
+            <div></div>}
 
           <div className='BoldBigText' style={{ marginBottom: "1rem" }}>Checkout</div>
           <form onSubmit={handleSubmit}>
@@ -232,7 +252,7 @@ const Checkout = (props) => {
           {/*         <a href='#0' onClick={() => setMsg('Coming Soon')} >{msg}</a>
  */}
           <div className="Main__links">
-            <button type='submit' style={{ width: "100%", padding: "0.5rem", fontWeight: "500" }} onClick={() => handleSubmit()}>{msg}</button>
+            {getCheckoutButton(props.soldOut)}
           </div>
 
 
@@ -261,7 +281,7 @@ const Checkout = (props) => {
           {/* Two ternarys here on if hoodieCount != 0 */}
           {props.hoodieCount === false ? <div></div> : <CheckoutItem cardImg={hoodie} itemName={"Member Hoodie"} itemCount={props.hoodieCount} itemCost={50000} />}
           {/* Add Grey Line here */}
-          {(props.hoodieCount && props.tshirtCount)? <div style={{marginTop: "1rem", marginBottom: "1rem"}} className='BorderBottom'></div>: <div></div>}
+          {(props.hoodieCount && props.tshirtCount) ? <div style={{ marginTop: "1rem", marginBottom: "1rem" }} className='BorderBottom'></div> : <div></div>}
 
           {props.tshirtCount === false ? <div></div> : <CheckoutItem cardImg={tshirt} itemName={"Member T-Shirt"} itemCount={props.tshirtCount} itemCost={25000} />}
           {/* Add Grey Line here */}

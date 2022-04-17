@@ -99,7 +99,6 @@ const Shop = (props) => {
               <NavLink to="/tshirt" className='ShopButtonStyle'>Product Details</NavLink>
             </div>
           </div>
-
         </div>
 
 

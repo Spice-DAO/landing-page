@@ -59,7 +59,7 @@ const Shop = (props) => {
 
           <div className='ButtonSpacer'>
 
-            <div className="Main__links" style={{ marginTop: "auto", width: "100%", justifyContent: "space-around" }}>
+            <div className="Main__links" style={{ marginTop: "auto", marginLeft: "1rem", marginRight: "1rem", width: "100%", justifyContent: "space-around" }}>
               {/* {!props.hoodieCount ?
                 <a href="#0" className='ShopButtonStyle' onClick={() => props.setHoodieCount(true)}>Add To Cart</a>
                 :
@@ -86,7 +86,7 @@ const Shop = (props) => {
           <div style={{ marginTop: "1rem" }}>Black</div>
 
           <div className='ButtonSpacer'>
-            <div className="Main__links" style={{ marginTop: "auto", width: "100%", justifyContent: "space-around" }}>
+            <div className="Main__links" style={{ marginTop: "auto", marginLeft: "1rem", marginRight: "1rem", width: "100%", justifyContent: "space-around" }}>
 
             {getProperButton(props.soldOut, props.tshirtCount, props.setTshirtCount)}
 

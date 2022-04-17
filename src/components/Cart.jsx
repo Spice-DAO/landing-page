@@ -46,7 +46,7 @@ const Cart = (props) => {
         <div className='BottomContainer'>
           {/* This must be a flex with space around. */}
           <div className='SubtotalContainer'>
-          <div className='BoldMidText'>Subtotal: <span style={{fontWeight:500}}>Free Shipping Worldwide</span></div>
+          <div className='BoldMidText'>Subtotal <span>Includes Free Shipping Worldwide</span></div>
             <div className='BiggerMediumText'>{numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000))} $SPICE</div>
           </div>
           <div className="Main__links">
@@ -54,7 +54,6 @@ const Cart = (props) => {
           </div>
         </div>
       </div>
-
     </div>
   )
 }

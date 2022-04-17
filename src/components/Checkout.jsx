@@ -89,8 +89,8 @@ const Checkout = (props) => {
     if (soldOut) {
       return (
         <div className='CheckoutThanksContainer'>
-          <div className='LargeMediumText'>This Campaign Has Ended</div>
-          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Thanks For Your Interest</div>
+          <div className='LargeMediumText'>Spring 2022 Drop Has Sold Out</div>
+          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Join the waitlist for our next drop in our Discord!</div>
           <div style={{ marginTop: "1rem", fontWeight: "800" }}></div>
           <div style={{ marginTop: "1rem", fontWeight: "400" }}></div>
         </div>
@@ -99,9 +99,7 @@ const Checkout = (props) => {
       return (
         <div className='CheckoutThanksContainer'>
           <div className='LargeMediumText'>Your Order Has Been Submitted!</div>
-          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Thank you for your vision.</div>
-          <div style={{ marginTop: "1rem", fontWeight: "800" }}>Building a new internet isn't simple.</div>
-          <div style={{ marginTop: "1rem", fontWeight: "400" }}>We're glad you're here for the journey.</div>
+          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Your items will be shipped at the end of May.</div>
         </div>
       )
     } else {
@@ -132,11 +130,19 @@ const Checkout = (props) => {
       inputs.city === "" ||
       inputs.city === undefined ||
 
+      inputs.twitter === "" ||
+      inputs.twitter === undefined ||
+
+      inputs.discord === "" ||
+      inputs.discord === undefined ||
+
       inputs.country === "" ||
       inputs.country === undefined)
 
+
+
     ) {
-      alert("Please Fill Required Fields and Resubmit")
+      alert("Please Fill Fields and Resubmit. If you dont have Discord or Twitter please enter N/A.")
     } else {
       setMsg("Submitting Order");
 
@@ -148,7 +154,7 @@ const Checkout = (props) => {
       )
         .then((response) => {
           console.log('SUCCESS!', response.status, response.text);
-          setMsg("Order Submittied");
+          setMsg("Order Submitted");
           setOrderSubmitted(true);
 
         })
@@ -224,7 +230,7 @@ const Checkout = (props) => {
 
             <div></div>}
 
-          <div className='BoldBigText' style={{ marginBottom: "1rem" }}>Checkout</div>
+          <div className='BoldBigText' style={{ marginBottom: "0.5rem" }}>Checkout</div>
           <form onSubmit={handleSubmit}>
             <div className='CheckoutRowFlex'>
               <CustomInput label="Name" name="fullname" input={inputs.fullname} override="Spice DAO Member" change={handleChange} />
@@ -233,7 +239,7 @@ const Checkout = (props) => {
               {/* <form><input className='CleanForm' type="text"></input></form> */}
             </div>
             <div>
-              <CustomInput label="Address (Number and street name)" name="address" input={inputs.address} override="" change={handleChange} />
+              <CustomInput label="Mailing Address" name="address" input={inputs.address} override="" change={handleChange} />
             </div>
             <div className='CheckoutRowFlex'>
               <CustomInput label="Postal Code" name="postalCode" input={inputs.postalCode} override="" change={handleChange} />

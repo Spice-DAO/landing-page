@@ -417,9 +417,8 @@ p {
 
 .CardContainer {
   display: flex;
-  justify-content: space-around;
   margin-left: 15rem;
-  margin-right: 20rem;
+  margin-right: 30rem;
   align-items: center;
   height: 100vh;
   width: 100%;
@@ -584,7 +583,7 @@ p {
 
 
 .CheckoutInputSpacer{
-  margin-top: 6rem;
+  margin-top: 4.5rem;
 }
 
 
@@ -637,7 +636,7 @@ p {
   width: 50rem;
   flex-direction: column;
   margin-right: 15rem;
-  margin-top: 8rem;
+  margin-top: 7rem;
 }
 
 @media only screen and (max-width: 48em) {

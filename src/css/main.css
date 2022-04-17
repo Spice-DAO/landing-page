@@ -1081,8 +1081,8 @@ p {
   display: flex;
   height: 100vh;
   margin-left: 8rem;
+  margin-top: 9.5rem;
   flex-direction: column;
-  justify-content: center;
 }
 
 

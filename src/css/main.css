@@ -853,9 +853,7 @@ p {
 
 .CartItemContainer {
   display: flex;
-  height: 9rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #FFFFFF90;
+  height: auto;
 }
 
 

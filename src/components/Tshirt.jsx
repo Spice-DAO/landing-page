@@ -20,13 +20,6 @@ const Tshirt = (props) => {
   const [inActiveImage, setinActiveImage] = useState(tshirtBack);
   const [viewActive, setViewActive] = useState(true);
 
-  const [tempCount, setTempCount] = useState(0);
-
-  function handleAdd() {
-    props.setTshirtCount(tempCount + props.tshirtCount);
-    setTempCount(0);
-  };
-
   const [windowDimenion, detectHW] = useState({
     winWidth: window.innerWidth,
     winHeight: window.innerHeight,
@@ -85,48 +78,41 @@ const Tshirt = (props) => {
           <div className='DescriptionText' style={{marginBottom:"1rem", marginTop: "1rem"}}>Relaxed fit with a roomy silhouette.</div>
           <div className='DescriptionText'>Oil-based screen print graphic to ensure longevity.</div>
 
-          <div className='ShopItemDetailFlex' style={{ marginTop: "1rem" }}>
-            <div >
-              <div className='LargeMediumText' style={{marginBottom: "0.35rem"}}>
-                Color
-              </div>
-              <div className='ShopItemDetailFlex'>
-                <div className="ShopItemCircleOuter"><div className='ShopItemCircleInner'></div></div>  <div style={{ marginRight: "2rem", fontSize:"18px"}}>(only)</div>
+          <div className='ShopItemDetailFlex' style={{ marginTop: "1rem", marginBottom: "0.35rem" }}>
+            <div>
+              <div className='LargeMediumText'>
+                Color: Black
               </div>
             </div>
 
             <div>
-              <div className='LargeMediumText' style={{marginBottom: "0.35rem"}}>
-                Size
-              </div>
-              <div className='ShopItemDetailFlex'>
-                <div className='ShopItemTinyCard' style={{ marginRight: "0.5rem" }}>M</div> 
-                <div style={{fontSize: "18px"}}>(only)</div>
+              <div className='LargeMediumText' style={{marginLeft: "3rem" }}>
+                Size: Medium
               </div>
             </div>
           </div>
 
-          <div style={{marginTop: "1.25rem"}}>
-            <div className='LargeMediumText' style={{marginBottom: "0.4rem"}}>
+          <div>
+            <div className='LargeMediumText' style={{ marginBottom: "0.4rem" }}>
               Quantity
             </div>
             <div className='ShopItemDetailFlex'>
-              <div className='ShopItemTinyCard' style={{ marginRight: "1.25rem" }} onClick={() => ((tempCount + props.tshirtCount) > 0) ? setTempCount(tempCount - 1) : setTempCount(tempCount)}>-</div>
-              <div className='BiggerMediumText'>{tempCount + props.tshirtCount}</div>
-              <div className='ShopItemTinyCard' style={{ marginLeft: "1.25rem" }} onClick={() => setTempCount(tempCount + 1)}>+</div>
+              <div className='ShopItemTinyCard' style={{ marginRight: "1.25rem" }} onClick={() => props.setTshirtCount(false)}>-</div>
+              <div className='BiggerMediumText'>{props.tshirtCount ? 1 : 0}</div>
+              <div className='ShopItemTinyCard' style={{ marginLeft: "1.25rem" }} onClick={() => props.setTshirtCount(true)}>+</div>
             </div>
           </div>
 
 
           {windowDimenion.winWidth > 700 ?
             <div className="Main__links" style={{ marginTop: "2rem", width: "50rem", height: "3.7rem" }}>
-              <button onClick={() => handleAdd()}>Add to Cart</button>
+              <NavLink to="/cart" style={{ fontWeight: "500" }}>Add To Cart</NavLink>
             </div>
 
             :
 
-            <div className="Main__links" style={{ marginTop: "2rem", textAlign:'center',  alignContent:"center", height: "3.7rem" }}>
-              <a href="#0" style={{fontWeight: "500"}} onClick={() => handleAdd()}>Add to Cart</a>
+            <div className="Main__links" style={{ marginTop: "2rem", textAlign: 'center', alignContent: "center", height: "3.7rem" }}>
+              <NavLink to="/cart" style={{ fontWeight: "500" }}>Add To Cart</NavLink>
             </div>
           }
           

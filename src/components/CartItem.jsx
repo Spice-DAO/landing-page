@@ -31,7 +31,7 @@ const CartItem = (props) => {
           </div>
           <div className='CartItemSpacer'>
             <div style={{fontWeight:"400"}}>{props.itemColor}</div>
-            <div style={{color: "#ded5b5", fontWeight:"700", cursor: "pointer"}} onClick={() => props.setCount(props.count - 1)}>Remove</div>
+            <div style={{color: "#ded5b5", fontWeight:"700", cursor: "pointer"}} onClick={() => props.setCount(false)}>Remove</div>
             </div>
           <div style={{fontWeight:"400"}}>{props.itemSize}</div>
         </div>

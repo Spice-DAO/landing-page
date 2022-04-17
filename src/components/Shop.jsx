@@ -14,6 +14,27 @@ const Shop = (props) => {
   const [tshirtDetails, setTshirtDetails] = useState(false);
 
 
+  function getProperButton(soldOut, itemCount, setCount){
+    if(soldOut){
+      return (
+        <a href="#0" className='ShopButtonStyle'>Sold Out</a>
+
+      )
+    } else if (!itemCount){
+      return (
+        <a href="#0" className='ShopButtonStyle' onClick={() => setCount(true)}>Add To Cart</a>
+      )
+    } else{
+      return (
+        <a href="#0" className='ShopButtonStyle' onClick={() => props.setTshirtCount(true)}>Added</a>
+      )
+    }
+    
+    // return (
+      
+    // )
+  }
+
 
 
   return (
@@ -39,11 +60,12 @@ const Shop = (props) => {
           <div className='ButtonSpacer'>
 
             <div className="Main__links" style={{ marginTop: "auto", width: "100%", justifyContent: "space-around" }}>
-              {!props.hoodieCount ?
+              {/* {!props.hoodieCount ?
                 <a href="#0" className='ShopButtonStyle' onClick={() => props.setHoodieCount(true)}>Add To Cart</a>
                 :
                 <a href="#0" className='ShopButtonStyle' onClick={() => props.setHoodieCount(true)}>Added</a>
-              }
+              } */}
+              {getProperButton(props.soldOut, props.hoodieCount, props.setHoodieCount)}
 
 
               <NavLink to="/hoodie" className='ShopButtonStyle'>Product Details</NavLink>
@@ -66,12 +88,14 @@ const Shop = (props) => {
           <div className='ButtonSpacer'>
             <div className="Main__links" style={{ marginTop: "auto", width: "100%", justifyContent: "space-around" }}>
 
+            {getProperButton(props.soldOut, props.tshirtCount, props.setTshirtCount)}
 
-            {!props.tshirtCount ?
+
+            {/* {!props.tshirtCount ?
                 <a href="#0" className='ShopButtonStyle' onClick={() => props.setTshirtCount(true)}>Add To Cart</a>
                 :
                 <a href="#0" className='ShopButtonStyle' onClick={() => props.setTshirtCount(true)}>Added</a>
-              }
+              } */}
               <NavLink to="/tshirt" className='ShopButtonStyle'>Product Details</NavLink>
             </div>
           </div>

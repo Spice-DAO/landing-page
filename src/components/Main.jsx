@@ -12,6 +12,9 @@ const Main = () => {
 
   const [hoodieCount, setHoodieCount] = useState(false);
   const [tshirtCount, setTshirtCount] = useState(false);
+  const [soldOut, setSoldOut] = useState(false);
+
+
 
 
   return (
@@ -21,7 +24,9 @@ const Main = () => {
         setHoodieCount={setHoodieCount}
         setTshirtCount={setTshirtCount}
         hoodieCount={hoodieCount}
-        tshirtCount={tshirtCount} />} />
+        tshirtCount={tshirtCount}
+        soldOut={soldOut}
+        />} />
       <Route path='/cart' element={<Cart 
               setHoodieCount={setHoodieCount}
               setTshirtCount={setTshirtCount}
@@ -29,14 +34,16 @@ const Main = () => {
               tshirtCount={tshirtCount} />} />
       <Route path='/checkout' element={<Checkout 
               hoodieCount={hoodieCount}
-              tshirtCount={tshirtCount} />} />
+              tshirtCount={tshirtCount}
+              soldOut={soldOut}
+              />} />
               
       <Route path="/hoodie" element={
         <Hoodie
         setHoodieCount={setHoodieCount}
         hoodieCount={hoodieCount}
         tshirtCount={tshirtCount}
-
+        soldOut={soldOut}
         />} />
       
       <Route path="/tshirt" element={
@@ -44,6 +51,7 @@ const Main = () => {
         setTshirtCount={setTshirtCount}
         hoodieCount={hoodieCount}
         tshirtCount={tshirtCount}
+        soldOut={soldOut}
         />} />
       
 

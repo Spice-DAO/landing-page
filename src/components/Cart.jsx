@@ -26,8 +26,8 @@ const Cart = (props) => {
       <NavBar
         hoodieCount={props.hoodieCount}
         tshirtCount={props.tshirtCount}
-        homeColor={"#ffffff65"}
-        bagColor={"#ffffff65"}
+        homeColor={"#ffffff"}
+        bagColor={"#ffffff"}
         cartColor={"#ffffff"}
       />
       </div>

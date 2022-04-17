@@ -75,8 +75,7 @@ const Checkout = (props) => {
   }
 
   const handleSubmit = (event) => {
-    if ((inputs.fullname === "" ||
-      inputs.fullname === undefined ||
+    if ((
       inputs.txn === "" ||
       inputs.txn === undefined ||
 
@@ -93,7 +92,7 @@ const Checkout = (props) => {
       inputs.country === undefined)
 
     ) {
-      alert("Please Fill Out Required Fields and Resubmit")
+      alert("Please Fill Required Fields and Resubmit")
     } else {
       setMsg("Submitting Order");
 
@@ -106,6 +105,7 @@ const Checkout = (props) => {
         .then((response) => {
           console.log('SUCCESS!', response.status, response.text);
           setMsg("Order Submittied");
+          setOrderSubmitted(true);
 
         })
         .catch((err) => {
@@ -147,13 +147,32 @@ const Checkout = (props) => {
 
           {windowDimenion.winWidth > 700 ? <NavLink to="/cart" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To Cart</NavLink> : <div></div>}
 
-          {/* <NavLink to="/shop" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink> */}
+          {!orderSubmitted?           
           <div className='CheckoutThanksContainer'>
-            <div className='LargeMediumText'>Thanks for your purchase!</div>
+            <div className='LargeMediumText'>Thanks For Your Purchase!</div>
             <div style={{ marginTop: "1rem", fontWeight: "400" }}>Please send the total amount of your order in $SPICE to the DAO:</div>
             <div style={{ marginTop: "1rem", fontWeight: "800" }}>0x1175185e62db6cea2517d14297333a63908c0cac</div>
             <div style={{ marginTop: "1rem", fontWeight: "400" }}>Copy and paste the transaction number into the field below.</div>
           </div>
+          
+          :
+
+        <div className='CheckoutThanksContainer'>
+          <div className='LargeMediumText'>Your Order Has Been Submitted!</div>
+          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Thank you for your vision.</div>
+          <div style={{ marginTop: "1rem", fontWeight: "800" }}>Building a new internet isn't simple.</div>
+          <div style={{ marginTop: "1rem", fontWeight: "400" }}>We're glad you're here for the journey.</div>
+        </div>
+          
+        }          
+
+
+          {/* <div className='CheckoutThanksContainer'>
+            <div className='LargeMediumText'>Thanks for your purchase!</div>
+            <div style={{ marginTop: "1rem", fontWeight: "400" }}>Please send the total amount of your order in $SPICE to the DAO:</div>
+            <div style={{ marginTop: "1rem", fontWeight: "800" }}>0x1175185e62db6cea2517d14297333a63908c0cac</div>
+            <div style={{ marginTop: "1rem", fontWeight: "400" }}>Copy and paste the transaction number into the field below.</div>
+          </div> */}
 
           {windowDimenion.winWidth < 700 ?
 

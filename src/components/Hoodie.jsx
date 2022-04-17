@@ -17,7 +17,9 @@ function numberWithCommas(x) {
 const Hoodie = (props) => {
 
   const [activeImage, setActiveImage] = useState(hoodie);
-  const [inActiveImage, setinActiveImage] = useState(hoodieBack);
+  const [inActiveFront, setinActiveFront] = useState(hoodie);
+  const [inActiveBack, setinActiveBack] = useState(hoodieBack);
+
   const [viewActive, setViewActive] = useState(true);
 
 
@@ -63,16 +65,21 @@ const Hoodie = (props) => {
       <div className='ShopItemDetails' >
         <div className='ShopItemCardContainer'>
           <div className="ShopItemBigCard">
-            <img src={viewActive ? hoodie : hoodieBack} style={{ height: "30rem" }} className="ObjectFitContain" onClick={() => setViewActive(!viewActive)} ></img>
+            <img src={activeImage} style={{ height: "30rem" }} className="ObjectFitContain" onClick={() => setViewActive(!viewActive)} ></img>
           </div>
-          <div className="ShopItemSmallCard">
-            <img src={viewActive ? hoodieBack : hoodie} style={{ height: "11.5rem" }} className="ObjectFitContain" onClick={() => setViewActive(!viewActive)}></img>
+          <div className='ShopItemSmallCardContainer'>
+            <div className="ShopItemSmallCard">
+              <img src={hoodie} style={{ height: "11.5rem" }} className="ObjectFitContain" onClick={() => setActiveImage(hoodie)}></img>
+            </div>
+            <div className="ShopItemSmallCard">
+              <img src={hoodieBack} style={{ height: "11.5rem" }} className="ObjectFitContain" onClick={() => setActiveImage(hoodieBack)}></img>
+            </div>
           </div>
         </div>
 
 
         <div className='ShopItemTextContainer'>
-          {windowDimenion.winWidth > 700 ? <NavLink to="/shop" style={{ marginTop: "10rem", marginBottom: "1rem", textAlign: 'left', color: "#ffffff90" }} >&lt; Back To Cart</NavLink> : <div></div>}
+          {windowDimenion.winWidth > 700 ? <NavLink to="/shop" style={{ marginTop: "7rem", marginBottom: "1rem", textAlign: 'left', color: "#ffffff90" }} >&lt; Back To Cart</NavLink> : <div></div>}
 
           <div className='BoldBigText' style={{ marginBottom: "0.75rem" }}>Member Hoodie</div>
           <div className='LargeMediumText' style={{ marginBottom: "1.5rem" }}>50,000 $SPICE</div>
@@ -88,7 +95,7 @@ const Hoodie = (props) => {
             </div>
 
             <div>
-              <div className='LargeMediumText' style={{marginLeft: "3rem" }}>
+              <div className='LargeMediumText' style={{ marginLeft: "3rem" }}>
                 Size: Medium
               </div>
             </div>

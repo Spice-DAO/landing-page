@@ -1054,9 +1054,15 @@ p {
   object-fit: contain;
 }
 
+
+.ShopItemSmallCardContainer{
+  display:flex;
+  justify-content: space-between;
+}
+
 .ShopItemSmallCard {
   height: 12.5rem;
-  width: 15rem;
+  width: 14rem;
   background-color: #fff;
   border-radius: 1rem;
   display: flex;
@@ -1066,6 +1072,8 @@ p {
   -o-object-fit: contain;
   object-fit: contain;
 }
+
+
 
 .ShopItemCardContainer {
   display: flex;

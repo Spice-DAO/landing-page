@@ -10,7 +10,7 @@ import CustomInput from '../components/CustomInput';
 import { send } from 'emailjs-com';
 
 import hoodie from '../../src/hoodie.png';
-import tshirt from '../../src/tshirtresize2.png';
+import tshirt from '../../src/tshirt.png';
 
 
 function numberWithCommas(x) {

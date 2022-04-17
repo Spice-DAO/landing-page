@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import NavBar from "../components/NavBar"
 import hoodie from '../../src/hoodie.png';
-import tshirt from '../../src/tshirtresize2.png';
+import tshirt from '../../src/tshirt.png';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';

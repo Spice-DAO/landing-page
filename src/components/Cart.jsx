@@ -7,7 +7,7 @@ import NavBar from "../components/NavBar"
 import { NavLink } from 'react-router-dom';
 import CartItem from '../components/CartItem';
 import hoodie from '../../src/hoodie.png';
-import tshirt from '../../src/tshirtresize.png';
+import tshirt from '../../src/tshirt.png';
 
 
 function numberWithCommas(x) {

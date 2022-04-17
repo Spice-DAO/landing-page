@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import NavBar from "../components/NavBar"
 import { NavLink } from 'react-router-dom';
 
-import tshirt from '../../src/tshirtresize2.png';
+import tshirt from '../../src/tshirt.png';
 import tshirtBack from '../../src/tshirtBack.png';
 
 

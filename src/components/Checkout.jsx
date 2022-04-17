@@ -90,7 +90,7 @@ const Checkout = (props) => {
       return (
         <div className='CheckoutThanksContainer'>
           <div className='LargeMediumText'>Spring 2022 Drop Has Sold Out</div>
-          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Join the waitlist for our next drop in our Discord!</div>
+          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Join the waitlist for our next drop in our <span style={{textDecoration: "underline", cursor:"pointer"}} onClick={() => window.location = "https://discord.com/invite/spicedao"}>Discord!</span></div>
           <div style={{ marginTop: "1rem", fontWeight: "800" }}></div>
           <div style={{ marginTop: "1rem", fontWeight: "400" }}></div>
         </div>

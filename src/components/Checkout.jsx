@@ -20,7 +20,7 @@ function numberWithCommas(x) {
 
 const Checkout = (props) => {
   const [inputs, setInputs] = useState({});
-  const [msg, setMsg] = useState('Save and continue');
+  const [msg, setMsg] = useState('Submit Order');
 
   const [windowDimenion, detectHW] = useState({
     winWidth: window.innerWidth,
@@ -148,7 +148,7 @@ const Checkout = (props) => {
           <div className='CheckoutThanksContainer'>
             <div className='LargeMediumText'>Thanks for your purchase!</div>
             <div style={{ marginTop: "1rem", fontWeight: "400" }}>Please send the total amount of your order in $SPICE to the DAO:</div>
-            <div style={{ marginTop: "1rem", fontWeight: "800" }}>[multisig alpha numeric address]</div>
+            <div style={{ marginTop: "1rem", fontWeight: "800" }}>0x1175185e62db6cea2517d14297333a63908c0cac</div>
             <div style={{ marginTop: "1rem", fontWeight: "400" }}>Copy and paste the transaction number into the field below.</div>
           </div>
 

@@ -21,6 +21,8 @@ function numberWithCommas(x) {
 const Checkout = (props) => {
   const [inputs, setInputs] = useState({});
   const [msg, setMsg] = useState('Submit Order');
+  const [orderSubmitted, setOrderSubmitted] = useState(false);
+
 
   const [windowDimenion, detectHW] = useState({
     winWidth: window.innerWidth,
@@ -73,7 +75,7 @@ const Checkout = (props) => {
   }
 
   const handleSubmit = (event) => {
-    if (inputs.fullname === "" ||
+    if ((inputs.fullname === "" ||
       inputs.fullname === undefined ||
       inputs.txn === "" ||
       inputs.txn === undefined ||
@@ -88,7 +90,8 @@ const Checkout = (props) => {
       inputs.city === undefined ||
 
       inputs.country === "" ||
-      inputs.country === undefined
+      inputs.country === undefined)
+
     ) {
       alert("Please Fill Out Required Fields and Resubmit")
     } else {
@@ -142,7 +145,7 @@ const Checkout = (props) => {
 
         <div className="CheckoutInputSpacer">
 
-          {windowDimenion.winWidth > 700 ? <NavLink to="/cart" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink> : <div></div>}
+          {windowDimenion.winWidth > 700 ? <NavLink to="/cart" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To Cart</NavLink> : <div></div>}
 
           {/* <NavLink to="/shop" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To cart</NavLink> */}
           <div className='CheckoutThanksContainer'>

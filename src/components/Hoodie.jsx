@@ -64,9 +64,9 @@ const Hoodie = (props) => {
         <NavBar
           hoodieCount={props.hoodieCount}
           tshirtCount={props.tshirtCount}
-          homeColor={"#ffffff65"}
+          homeColor={"#ffffff"}
           bagColor={"#ffffff"}
-          cartColor={"#ffffff65"}
+          cartColor={"#ffffff"}
         />
       </div>
       <div className='ShopItemDetails' >

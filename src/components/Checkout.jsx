@@ -121,6 +121,7 @@ const Checkout = (props) => {
     if ((
       inputs.txn === "" ||
       inputs.txn === undefined ||
+      inputs.txn.length < 35 ||
 
       inputs.address === "" ||
       inputs.address === undefined ||

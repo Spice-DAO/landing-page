@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.9afbe839.css",
-    "main.js": "/static/js/main.0ddf846c.js",
+    "main.css": "/static/css/main.689a7c50.css",
+    "main.js": "/static/js/main.d965f849.js",
+    "static/media/hoodie.png": "/static/media/hoodie.5accdd5e96c6da29ad31.png",
+    "static/media/hoodieBack.png": "/static/media/hoodieBack.d8106df17d8a0075ed2f.png",
+    "static/media/tshirtBack.png": "/static/media/tshirtBack.f5827b6308ce201ff6ef.png",
+    "static/media/tshirt.png": "/static/media/tshirt.b8e8857133b9589f294d.png",
     "static/media/logo2.png": "/static/media/logo2.73d981fd36c5639c7a6f.png",
     "index.html": "/index.html",
-    "main.9afbe839.css.map": "/static/css/main.9afbe839.css.map",
-    "main.0ddf846c.js.map": "/static/js/main.0ddf846c.js.map"
+    "main.689a7c50.css.map": "/static/css/main.689a7c50.css.map",
+    "main.d965f849.js.map": "/static/js/main.d965f849.js.map"
   },
   "entrypoints": [
-    "static/css/main.9afbe839.css",
-    "static/js/main.0ddf846c.js"
+    "static/css/main.689a7c50.css",
+    "static/js/main.d965f849.js"
   ]
 }

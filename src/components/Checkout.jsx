@@ -245,7 +245,7 @@ const Checkout = (props) => {
             <div className='CheckoutRowFlex'>
               <CustomInput label="Postal Code" name="postalCode" input={inputs.postalCode} override="" change={handleChange} />
               <div style={{ marginLeft: '1rem', marginRight: '1rem' }}></div>
-              <CustomInput label="City / Province" name="city" input={inputs.city} override="" change={handleChange} />
+              <CustomInput label="City / State / Province" name="city" input={inputs.city} override="" change={handleChange} />
               <div style={{ marginLeft: '1rem', marginRight: '1rem' }}></div>
               <CustomInput label="Country" name="country" input={inputs.country} override="" change={handleChange} />
             </div>

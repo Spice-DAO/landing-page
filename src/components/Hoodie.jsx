@@ -111,7 +111,7 @@ const Hoodie = (props) => {
           </div> */}
 
           <div>
-            <div className='LargeMediumText' style={{ marginTop: "0.4rem" }}>
+            <div className='LargeMediumText' style={{ marginBottom: "0.4rem" }}>
               Quantity
             </div>
             <div className='ShopItemDetailFlex'>

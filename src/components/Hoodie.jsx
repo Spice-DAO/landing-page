@@ -93,8 +93,10 @@ const Hoodie = (props) => {
           <div className='DescriptionText'>Quality and feel of Carhartt brand. 320 GSM. Thick and warm. 100% Cotton.</div>
           <div className='DescriptionText' style={{ marginBottom: "1rem", marginTop: "1rem" }}>Generous fit with a larger silhouette. Good for layering.</div>
           <div className='DescriptionText'>Oil-based screen print graphic to ensure longevity.</div>
+          <div className='ColorTextContainer'><div>Color: Black</div> <div style={{marginLeft: "2rem"}}>Size: Men's Medium</div></div>
 
-          <div className='ShopItemDetailFlex' style={{ marginTop: "1rem", marginBottom: "0.35rem" }}>
+
+          {/* <div className='ShopItemDetailFlex' style={{ marginTop: "1rem", marginBottom: "0.35rem" }}>
             <div>
               <div className='LargeMediumText'>
                 Color: Black
@@ -106,10 +108,10 @@ const Hoodie = (props) => {
                 Size: Men's Medium
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div>
-            <div className='LargeMediumText' style={{ marginBottom: "0.4rem" }}>
+            <div className='LargeMediumText' style={{ marginTop: "0.4rem" }}>
               Quantity
             </div>
             <div className='ShopItemDetailFlex'>

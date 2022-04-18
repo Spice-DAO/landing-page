@@ -19,6 +19,8 @@ const Tshirt = (props) => {
   const [activeImage, setActiveImage] = useState(tshirt);
   const [inActiveFront, setinActiveFront] = useState(tshirt);
   const [inActiveBack, setinActiveBack] = useState(tshirtBack);
+  const [itemToBePurchased, setItemToBePurchased] = useState(false);
+
 
   const [windowDimenion, detectHW] = useState({
     winWidth: window.innerWidth,
@@ -44,7 +46,7 @@ const Tshirt = (props) => {
     if(soldOut){
       return(<NavLink to="/cart" style={{ fontWeight: "500" }}>Sold Out</NavLink>)
     } else {
-      return(<NavLink to="/cart" style={{ fontWeight: "500" }}>Add To Cart</NavLink>)
+      return(<a href="#0" onClick={() => props.setTshirtCount(itemToBePurchased)} style={{ fontWeight: "500" }}>Add To Cart</a>)
     }
   }
 
@@ -110,9 +112,9 @@ const Tshirt = (props) => {
               Quantity
             </div>
             <div className='ShopItemDetailFlex'>
-              <div className='ShopItemTinyCard' style={{ marginRight: "1.25rem" }} onClick={() => props.setTshirtCount(false)}>-</div>
-              <div className='BiggerMediumText'>{props.tshirtCount ? 1 : 0}</div>
-              <div className='ShopItemTinyCard' style={{ marginLeft: "1.25rem" }} onClick={() => props.setTshirtCount(true)}>+</div>
+            <div className='ShopItemTinyCard' style={{ marginRight: "1.25rem" }} onClick={() => setItemToBePurchased(false)}>-</div>
+              <div className='BiggerMediumText'>{itemToBePurchased ? 1 : 0}</div>
+              <div className='ShopItemTinyCard' style={{ marginLeft: "1.25rem" }} onClick={() => setItemToBePurchased(true)}>+</div>
             </div>
           </div>
 

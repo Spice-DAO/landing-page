@@ -22,6 +22,8 @@ const Hoodie = (props) => {
 
   const [viewActive, setViewActive] = useState(true);
 
+  const [itemToBePurchased, setItemToBePurchased] = useState(false);
+
 
 
   const [windowDimenion, detectHW] = useState({
@@ -48,7 +50,7 @@ const Hoodie = (props) => {
     if(soldOut){
       return(<NavLink to="/cart" style={{ fontWeight: "500" }}>Sold Out</NavLink>)
     } else {
-      return(<NavLink to="/cart" style={{ fontWeight: "500" }}>Add To Cart</NavLink>)
+      return(<a href="#0" onClick={() => props.setHoodieCount(itemToBePurchased)} style={{ fontWeight: "500" }}>Add To Cart</a>)
     }
   }
 
@@ -115,21 +117,21 @@ const Hoodie = (props) => {
               Quantity
             </div>
             <div className='ShopItemDetailFlex'>
-              <div className='ShopItemTinyCard' style={{ marginRight: "1.25rem" }} onClick={() => props.setHoodieCount(false)}>-</div>
-              <div className='BiggerMediumText'>{props.hoodieCount ? 1 : 0}</div>
-              <div className='ShopItemTinyCard' style={{ marginLeft: "1.25rem" }} onClick={() => props.setHoodieCount(true)}>+</div>
+              <div className='ShopItemTinyCard' style={{ marginRight: "1.25rem" }} onClick={() => setItemToBePurchased(false)}>-</div>
+              <div className='BiggerMediumText'>{itemToBePurchased ? 1 : 0}</div>
+              <div className='ShopItemTinyCard' style={{ marginLeft: "1.25rem" }} onClick={() => setItemToBePurchased(true)}>+</div>
             </div>
           </div>
 
           {windowDimenion.winWidth > 700 ?
             <div className="Main__links" style={{ marginTop: "2rem", width: "50rem", height: "3.7rem" }}>
-              {getButton(props.soldOut)}
+              {getButton(props.soldOut, props.setItemToBePurchased)}
             </div>
 
             :
 
             <div className="Main__links" style={{ marginTop: "2rem", textAlign: 'center', alignContent: "center", height: "3.7rem" }}>
-              {getButton(props.soldOut)}
+              {getButton(props.soldOut, props.setItemToBePurchased)}
             </div>
           }
 

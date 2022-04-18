@@ -105,10 +105,11 @@ const Checkout = (props) => {
     } else {
       return (
         <div className='CheckoutThanksContainer'>
-        <div className='LargeMediumText'>Thanks For Your Purchase!</div>
-        <div style={{ marginTop: "1rem", fontWeight: "400" }}>Please send the total amount of your order in $SPICE to the DAO:</div>
+        <div className='LargeMediumText'>Please send the total amount of your order in $SPICE to the DAO:</div>
         <div style={{ marginTop: "1rem", fontWeight: "800" }}>0x1175185e62db6cea2517d14297333a63908c0cac</div>
         <div style={{ marginTop: "1rem", fontWeight: "400" }}>Copy and paste the transaction number into the field below.</div>
+        <div style={{ marginTop: "1rem", fontWeight: "400" }}>Submit your order.</div>
+
       </div>
       )
     }
@@ -244,7 +245,7 @@ const Checkout = (props) => {
             <div className='CheckoutRowFlex'>
               <CustomInput label="Postal Code" name="postalCode" input={inputs.postalCode} override="" change={handleChange} />
               <div style={{ marginLeft: '1rem', marginRight: '1rem' }}></div>
-              <CustomInput label="City" name="city" input={inputs.city} override="" change={handleChange} />
+              <CustomInput label="City / Province" name="city" input={inputs.city} override="" change={handleChange} />
               <div style={{ marginLeft: '1rem', marginRight: '1rem' }}></div>
               <CustomInput label="Country" name="country" input={inputs.country} override="" change={handleChange} />
             </div>

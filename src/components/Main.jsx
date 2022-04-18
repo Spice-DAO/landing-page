@@ -20,7 +20,7 @@ const Main = () => {
   return (
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
       <Route path='/' element={<Home />} />
-      <Route path='/shop' element={<Shop
+      {/* <Route path='/shop' element={<Shop
         setHoodieCount={setHoodieCount}
         setTshirtCount={setTshirtCount}
         hoodieCount={hoodieCount}
@@ -52,7 +52,7 @@ const Main = () => {
         hoodieCount={hoodieCount}
         tshirtCount={tshirtCount}
         soldOut={soldOut}
-        />} />
+        />} /> */}
       
 
     </Routes>

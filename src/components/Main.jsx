@@ -21,11 +21,17 @@ const Main = () => {
 
   countapi.get('spiceinternalhoodie', 'af4a9612-e8b2-4df3-9496-935ac3d8c42c').then((results) => {
     console.log("FROMAPI::", results.value);
-    if(results.value >= 59){
+    if(results.value >= 3){
       setSoldOutHoodie(true);
     };
   })
 
+  countapi.get('spiceinternaltshirt', '75664dbd-e10b-457d-9a32-44f6a8685dea').then((results) => {
+    console.log("FROMAPI::", results.value);
+    if(results.value >= 3){
+      setSoldOutTshirt(true);
+    };
+  })
 
 
 
@@ -46,6 +52,8 @@ const Main = () => {
               hoodieCount={hoodieCount}
               tshirtCount={tshirtCount} />} />
       <Route path='/checkout' element={<Checkout 
+              setHoodieCount={setHoodieCount}
+              setTshirtCount={setTshirtCount}
               hoodieCount={hoodieCount}
               tshirtCount={tshirtCount}
               soldOutHoodie={soldOutHoodie}

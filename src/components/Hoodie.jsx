@@ -48,7 +48,7 @@ const Hoodie = (props) => {
 
   function getButton(soldOut){
     if(soldOut){
-      return(<NavLink to="/cart" style={{ fontWeight: "500" }}>Sold Out</NavLink>)
+      return(<a href="#0" style={{ fontWeight: "500" }}>Sold Out</a>)
     } else {
       return(<a href="#0" onClick={() => props.setHoodieCount(itemToBePurchased)} style={{ fontWeight: "500" }}>Add To Cart</a>)
     }

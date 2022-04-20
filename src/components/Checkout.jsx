@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 import CheckoutItem from '../components/CheckoutItem';
 import CustomInput from '../components/CustomInput';
 import { send } from 'emailjs-com';
-
+import countapi from 'countapi-js';
 import hoodie from '../../src/hoodie.png';
 import tshirt from '../../src/tshirt.png';
 
@@ -55,8 +55,8 @@ const Checkout = (props) => {
     country: '',
     twitter: '',
     discord: '',
-    hoodieCount: props.hoodieCount,
-    tshirtCount: props.tshirtCount,
+    hoodieCount: Number(props.hoodieCount),
+    tshirtCount: Number(props.tshirtCount),
     totalCost: numberWithCommas((props.hoodieCount * 50000) + (props.tshirtCount * 25000)),
   });
 
@@ -117,6 +117,8 @@ const Checkout = (props) => {
   }
 
 
+
+  //Increment sales counts here and verify that the order is good to go. 
   const handleSubmit = (event) => {
     if ((
       inputs.txn === "" ||
@@ -141,8 +143,6 @@ const Checkout = (props) => {
       inputs.country === "" ||
       inputs.country === undefined)
 
-
-
     ) {
       alert("Please Fill Fields and Resubmit. If you dont have Discord or Twitter please enter N/A.")
     } else {
@@ -158,7 +158,16 @@ const Checkout = (props) => {
           console.log('SUCCESS!', response.status, response.text);
           setMsg("Order Submitted");
           setOrderSubmitted(true);
+          if(props.hoodieCount){
+            countapi.hit('spiceinternalhoodie', 'af4a9612-e8b2-4df3-9496-935ac3d8c42c');
+            props.setHoodieCount(false);
+          }
+          if(props.tshirtCount){
+            countapi.hit('spiceinternaltshirt', '75664dbd-e10b-457d-9a32-44f6a8685dea');
+            props.setTshirtCount(false);
+          }
 
+        
         })
         .catch((err) => {
           console.log('FAILED...', err);
@@ -172,6 +181,7 @@ const Checkout = (props) => {
     }
 
   }
+
 
 
 
@@ -199,7 +209,7 @@ const Checkout = (props) => {
 
           {windowDimenion.winWidth > 700 ? <NavLink to="/cart" style={{ textAlign: 'left', color: "#ffffff90" }} >&lt; Back To Cart</NavLink> : <div></div>}
 
-          {getMessage(props.soldOut, orderSubmitted)}
+          {getMessage(props.soldOutHoodie, props.soldOutTshirt, orderSubmitted)}
 
 
           {windowDimenion.winWidth < 700 ?

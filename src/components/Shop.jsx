@@ -4,6 +4,8 @@ import NavBar from "../components/NavBar"
 import hoodie from '../../src/hoodie.png';
 import tshirt from '../../src/tshirt.png';
 
+import countapi from 'countapi-js';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
 
@@ -12,6 +14,14 @@ const Shop = (props) => {
 
   const [hoodieDetails, setHoodieDetails] = useState(false);
   const [tshirtDetails, setTshirtDetails] = useState(false);
+  const [availableHoodie, setAvailableHoodie] = useState(60);
+  const [availableShirt, setAvailableShirt] = useState(60);
+
+
+  countapi.get('spiceinternalhoodie', 'af4a9612-e8b2-4df3-9496-935ac3d8c42c').then((results) => {
+    console.log("FROMAPI::", results.value);
+    setAvailableHoodie(60 - results.value);
+  })
 
 
   function getProperButton(soldOut, itemCount, setCount){
@@ -54,6 +64,7 @@ const Shop = (props) => {
           <img src={hoodie} className="ObjectFitContain" style={{ height: "20rem" }} />
           <div className='BiggerMediumText'>Member Hoodie</div>
           <div style={{ marginTop: "1rem", fontWeight: "500" }}>50,000 $SPICE</div>
+          <div style={{ marginTop: "1rem" }}>{availableHoodie} Avalilable</div>
           <div style={{ marginTop: "1rem" }}>Men's Medium</div>
           <div style={{ marginTop: "1rem" }}>Black</div>
 
@@ -65,7 +76,7 @@ const Shop = (props) => {
                 :
                 <a href="#0" className='ShopButtonStyle' onClick={() => props.setHoodieCount(true)}>Added</a>
               } */}
-              {getProperButton(props.soldOut, props.hoodieCount, props.setHoodieCount)}
+              {getProperButton(props.soldOutHoodie, props.hoodieCount, props.setHoodieCount)}
 
 
               <NavLink to="/hoodie" className='ShopButtonStyle'>Product Details</NavLink>
@@ -88,7 +99,7 @@ const Shop = (props) => {
           <div className='ButtonSpacer'>
             <div className="Main__links" style={{ marginTop: "auto", marginLeft: "1rem", marginRight: "1rem", width: "100%", justifyContent: "space-around" }}>
 
-            {getProperButton(props.soldOut, props.tshirtCount, props.setTshirtCount)}
+            {getProperButton(props.soldOutTshirt, props.tshirtCount, props.setTshirtCount)}
 
 
             {/* {!props.tshirtCount ?

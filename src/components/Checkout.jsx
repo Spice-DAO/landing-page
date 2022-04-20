@@ -74,8 +74,8 @@ const Checkout = (props) => {
     return inputs.fullname;
   }
 
-  function getCheckoutButton(soldOut) {
-    if (soldOut) {
+  function getCheckoutButton(soldOutHoodie, soldOutTshirt) {
+    if (soldOutHoodie && soldOutTshirt) {
       return (<button type='submit' style={{ width: "100%", padding: "0.5rem", fontWeight: "500" }}>Sold Out</button>
       )
     } else {
@@ -85,8 +85,8 @@ const Checkout = (props) => {
   }
 
 
-  function getMessage(soldOut, orderSubmitted) {
-    if (soldOut) {
+  function getMessage(soldOutHoodie, soldOutTshirt, orderSubmitted) {
+    if (soldOutHoodie && soldOutTshirt) {
       return (
         <div className='CheckoutThanksContainer'>
           <div className='LargeMediumText'>Spring 2022 Drop Has Sold Out</div>
@@ -260,7 +260,7 @@ const Checkout = (props) => {
           {/*         <a href='#0' onClick={() => setMsg('Coming Soon')} >{msg}</a>
  */}
           <div className="Main__links">
-            {getCheckoutButton(props.soldOut)}
+            {getCheckoutButton(props.soldOutHoodie, props.soldOutTshirt)}
           </div>
 
 

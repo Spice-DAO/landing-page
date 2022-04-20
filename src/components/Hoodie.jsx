@@ -125,13 +125,13 @@ const Hoodie = (props) => {
 
           {windowDimenion.winWidth > 700 ?
             <div className="Main__links" style={{ marginTop: "2rem", width: "50rem", height: "3.7rem" }}>
-              {getButton(props.soldOut, props.setItemToBePurchased)}
+              {getButton(props.soldOutHoodie, props.setItemToBePurchased)}
             </div>
 
             :
 
             <div className="Main__links" style={{ marginTop: "2rem", textAlign: 'center', alignContent: "center", height: "3.7rem" }}>
-              {getButton(props.soldOut, props.setItemToBePurchased)}
+              {getButton(props.soldOutHoodie, props.setItemToBePurchased)}
             </div>
           }
 

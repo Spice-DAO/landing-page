@@ -17,8 +17,8 @@ const Home = () => {
       <div className="Landing__links">
         <a href="https://forum.spicedao.xyz/">Forum</a>
         <a href="https://snapshot.org/#/dunedao.eth">Governance</a>
-        <a href="#0" onClick={() => setMsg("Coming Soon")}>{msg}</a>
-        {/* <NavLink to="/shop">{msg}</NavLink> */}
+        {/* <a href="#0" onClick={() => setMsg("Coming Soon")}>{msg}</a> */}
+        <NavLink to="/shop">{msg}</NavLink>
       </div>
       <div className="Main__text">
       <p> <b>Spice DAO </b> is a Web3 production studio publishing sci-fi animation and NFTs from established writers and artists.

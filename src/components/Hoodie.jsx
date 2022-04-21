@@ -88,7 +88,7 @@ const Hoodie = (props) => {
 
 
         <div className='ShopItemTextContainer'>
-          {windowDimenion.winWidth > 700 ? <NavLink to="/shop" style={{ marginTop: "9.5rem", marginBottom: "1rem", textAlign: 'left', color: "#ffffff90" }} >&lt; Back To Cart</NavLink> : <div></div>}
+          {windowDimenion.winWidth > 700 ? <NavLink to="/cart" style={{ marginTop: "9.5rem", marginBottom: "1rem", textAlign: 'left', color: "#ffffff90" }} >&lt; Back To Cart</NavLink> : <div></div>}
 
           <div className='BoldBigText' style={{ marginBottom: "0.75rem" }}>Member Hoodie</div>
           <div className='LargeMediumText' style={{ marginBottom: "1.5rem" }}>50,000 $SPICE</div>

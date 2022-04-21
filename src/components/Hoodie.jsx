@@ -96,6 +96,7 @@ const Hoodie = (props) => {
           <div className='DescriptionText' style={{ marginBottom: "1rem", marginTop: "1rem" }}>Generous fit with a larger silhouette. Good for layering.</div>
           <div className='DescriptionText'>Oil-based screen print graphic to ensure longevity.</div>
           <div className='ColorTextContainer'><div>Color: Black</div> <div style={{marginLeft: "2rem"}}>Size: Men's Medium</div></div>
+          <div className='AvailableContainer'>{props.availableHoodie} Available.</div>
 
 
           {/* <div className='ShopItemDetailFlex' style={{ marginTop: "1rem", marginBottom: "0.35rem" }}>

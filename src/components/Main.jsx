@@ -17,18 +17,23 @@ const Main = () => {
   const [tshirtCount, setTshirtCount] = useState(false);
   const [soldOutHoodie, setSoldOutHoodie] = useState(false);
   const [soldOutTshirt, setSoldOutTshirt] = useState(false);
+  const [availableHoodie, setAvailableHoodie] = useState(60);
+  const [availableTshirt, setAvailableTshirt] = useState(60);
 
 
   countapi.get('spiceinternalhoodie', 'af4a9612-e8b2-4df3-9496-935ac3d8c42c').then((results) => {
-    console.log("FROMAPI::", results.value);
-    if(results.value >= 3){
+    console.log("FROMAPI HOODIE::", results.value);
+    setAvailableHoodie(60- results.value)
+    if (results.value >= 59) {
       setSoldOutHoodie(true);
     };
   })
 
   countapi.get('spiceinternaltshirt', '75664dbd-e10b-457d-9a32-44f6a8685dea').then((results) => {
-    console.log("FROMAPI::", results.value);
-    if(results.value >= 3){
+    console.log("FROMAPI SHIRT::", results.value);
+    setAvailableTshirt(60- results.value)
+
+    if (results.value >= 59) {
       setSoldOutTshirt(true);
     };
   })
@@ -45,37 +50,43 @@ const Main = () => {
         tshirtCount={tshirtCount}
         soldOutHoodie={soldOutHoodie}
         soldOutTshirt={soldOutTshirt}
-        />} />
-      <Route path='/cart' element={<Cart 
-              setHoodieCount={setHoodieCount}
-              setTshirtCount={setTshirtCount}
-              hoodieCount={hoodieCount}
-              tshirtCount={tshirtCount} />} />
-      <Route path='/checkout' element={<Checkout 
-              setHoodieCount={setHoodieCount}
-              setTshirtCount={setTshirtCount}
-              hoodieCount={hoodieCount}
-              tshirtCount={tshirtCount}
-              soldOutHoodie={soldOutHoodie}
-              soldOutTshirt={soldOutTshirt}
-                            />} />
-              
-      <Route path="/hoodie" element={
-        <Hoodie
+        availableHoodie={availableHoodie}
+        availableTshirt={availableTshirt}
+      />} />
+      <Route path='/cart' element={<Cart
         setHoodieCount={setHoodieCount}
+        setTshirtCount={setTshirtCount}
         hoodieCount={hoodieCount}
-        tshirtCount={tshirtCount}
-        soldOutHoodie={soldOutHoodie}
-                />} />
-      
-      <Route path="/tshirt" element={
-        <Tshirt
+        tshirtCount={tshirtCount} />} />
+      <Route path='/checkout' element={<Checkout
+        setHoodieCount={setHoodieCount}
         setTshirtCount={setTshirtCount}
         hoodieCount={hoodieCount}
         tshirtCount={tshirtCount}
+        soldOutHoodie={soldOutHoodie}
         soldOutTshirt={soldOutTshirt}
-                />} />
-      
+      />} />
+
+      <Route path="/hoodie" element={
+        <Hoodie
+          setHoodieCount={setHoodieCount}
+          hoodieCount={hoodieCount}
+          tshirtCount={tshirtCount}
+          soldOutHoodie={soldOutHoodie}
+          availableHoodie={availableHoodie}
+
+        />} />
+
+      <Route path="/tshirt" element={
+        <Tshirt
+          setTshirtCount={setTshirtCount}
+          hoodieCount={hoodieCount}
+          tshirtCount={tshirtCount}
+          soldOutTshirt={soldOutTshirt}
+          availableTshirt={availableTshirt}
+
+        />} />
+
 
     </Routes>
   );

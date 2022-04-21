@@ -12,22 +12,18 @@ import { NavLink } from 'react-router-dom';
 
 const Shop = (props) => {
 
-  const [hoodieDetails, setHoodieDetails] = useState(false);
-  const [tshirtDetails, setTshirtDetails] = useState(false);
-  const [availableHoodie, setAvailableHoodie] = useState(60);
-  const [availableTshirt, setAvailableTshirt] = useState(60);
 
 
-  countapi.get('spiceinternalhoodie', 'af4a9612-e8b2-4df3-9496-935ac3d8c42c').then((results) => {
-    console.log("FROMAPI::", results.value);
-    setAvailableHoodie(3 - results.value);
-  })
 
+  // countapi.get('spiceinternalhoodie', 'af4a9612-e8b2-4df3-9496-935ac3d8c42c').then((results) => {
+  //   console.log("FROMAPI::", results.value);
+  //   setAvailableHoodie(60 - results.value);
+  // })
 
-  countapi.get('spiceinternaltshirt', '75664dbd-e10b-457d-9a32-44f6a8685dea').then((results) => {
-    console.log("FROMAPI::", results.value);
-    setAvailableTshirt(3 - results.value);
-  })
+  // countapi.get('spiceinternaltshirt', '75664dbd-e10b-457d-9a32-44f6a8685dea').then((results) => {
+  //   console.log("FROMAPI::", results.value);
+  //   setAvailableTshirt(60 - results.value);
+  // })
 
 
   function getProperButton(soldOut, itemCount, setCount){
@@ -70,7 +66,7 @@ const Shop = (props) => {
           <img src={hoodie} className="ObjectFitContain" style={{ height: "20rem" }} />
           <div className='BiggerMediumText'>Member Hoodie</div>
           <div style={{ marginTop: "0.5rem", fontWeight: "500" }}>50,000 $SPICE</div>
-          <div style={{ marginTop: "1rem" }}>{availableHoodie} Avalilable</div>
+          <div style={{ marginTop: "1rem" }}>{props.availableHoodie} Avalilable</div>
           <div style={{ marginTop: "1rem" }}>Men's Medium</div>
           <div style={{ marginTop: "1rem" }}>Black</div>
 
@@ -99,7 +95,7 @@ const Shop = (props) => {
           <img src={tshirt} className="ObjectFitContain" style={{ height: "20rem" }} />
           <div className='BiggerMediumText'>Member T-Shirt</div>
           <div style={{ marginTop: "0.5rem", fontWeight: "500" }}>25,000 $SPICE</div>
-          <div style={{ marginTop: "1rem" }}>{availableTshirt} Avalilable</div>
+          <div style={{ marginTop: "1rem" }}>{props.availableTshirt} Avalilable</div>
           <div style={{ marginTop: "1rem" }}>Men's Medium</div>
           <div style={{ marginTop: "1rem" }}>Black</div>
 

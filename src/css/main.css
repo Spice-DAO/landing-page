@@ -417,10 +417,13 @@ p {
 
 .ColorTextContainer{
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   margin-top: 1rem;
   font-weight: 700;
+}
 
+.AvailableContainer{
+  font-weight: 700;
 }
 
 .CardContainer {
@@ -1088,7 +1091,7 @@ p {
 
 .ShopItemCardContainer {
   display: flex;
-  height: 100vh;
+  height: auto;
   margin-left: 8rem;
   margin-top: 9.5rem;
   flex-direction: column;

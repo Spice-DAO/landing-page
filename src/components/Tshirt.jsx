@@ -85,13 +85,14 @@ const Tshirt = (props) => {
         {windowDimenion.winWidth > 700 ? <NavLink to="/shop" style={{ marginTop: "9.5rem", marginBottom: "1rem", textAlign: 'left', color: "#ffffff90" }} >&lt; Back To Cart</NavLink> : <div></div>}
 
 
-          <div className='BoldBigText' style={{ marginBottom: "0.75rem" }}>Member T-Shirt</div>
+          <div className='BoldBigText' style={{ marginBottom: "0.5rem" }}>Member T-Shirt</div>
           <div className='LargeMediumText' style={{ marginBottom: "1.5rem" }}>25,000 $SPICE</div>
           <div className='DescriptionText'>Quality and feel of Champion brand. 200 GSM. Thick and warm. 100% Cotton.
           </div>
           <div className='DescriptionText' style={{marginBottom:"1rem", marginTop: "1rem"}}>Relaxed fit with a roomy silhouette.</div>
           <div className='DescriptionText'>Oil-based screen print graphic to ensure longevity.</div>
           <div className='ColorTextContainer'><div>Color: Black</div> <div style={{marginLeft: "2rem"}}>Size: Men's Medium</div></div>
+          <div className='AvailableContainer'>{props.availableTshirt} Available.</div>
 
           {/* <div className='ShopItemDetailFlex' style={{ marginTop: "1rem", marginBottom: "0.35rem" }}>
             <div>

@@ -19,7 +19,7 @@ const Tshirt = (props) => {
   const [activeImage, setActiveImage] = useState(tshirt);
   const [inActiveFront, setinActiveFront] = useState(tshirt);
   const [inActiveBack, setinActiveBack] = useState(tshirtBack);
-  const [itemToBePurchased, setItemToBePurchased] = useState(false);
+  const [itemToBePurchased, setItemToBePurchased] = useState(props.tshirtCount);
 
 
   const [windowDimenion, detectHW] = useState({
@@ -91,8 +91,8 @@ const Tshirt = (props) => {
           </div>
           <div className='DescriptionText' style={{marginBottom:"1rem", marginTop: "1rem"}}>Relaxed fit with a roomy silhouette.</div>
           <div className='DescriptionText'>Oil-based screen print graphic to ensure longevity.</div>
-          <div className='ColorTextContainer'><div>Color: Black</div> <div style={{marginLeft: "2rem"}}>Size: Men's Medium</div></div>
-          <div className='AvailableContainer'>{props.availableTshirt} Available.</div>
+          <div className='ColorTextContainer'><div>Men's Medium In Black.</div></div>
+          {/* <div className='AvailableContainer'>{props.availableTshirt} Available.</div> */}
 
           {/* <div className='ShopItemDetailFlex' style={{ marginTop: "1rem", marginBottom: "0.35rem" }}>
             <div>

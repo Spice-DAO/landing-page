@@ -17,8 +17,8 @@ const Home = () => {
       <div className="Landing__links">
         <a href="https://forum.spicedao.xyz/">Forum</a>
         <a href="https://snapshot.org/#/dunedao.eth">Governance</a>
-        {/* <a href="#0" onClick={() => setMsg("Coming Soon")}>{msg}</a> */}
-        <NavLink to="/shop">{msg}</NavLink>
+        <a href="#0" onClick={() => setMsg("Coming Soon")}>{msg}</a>
+        {/* <NavLink to="/shop">{msg}</NavLink> */}
       </div>
       <div className="Main__text">
       <p> <b>Spice DAO </b> is a Web3 production studio publishing sci-fi animation and NFTs from established writers and artists.
@@ -31,7 +31,7 @@ const Home = () => {
       </p>
       </div>
       <div className="Main__social_icons">
-      <a href="https://twitter.com/spicedao"> { <FontAwesomeIcon icon={ faTwitter } /> } </a>
+      <a href="https://twitter.com/TheSpiceDao"> { <FontAwesomeIcon icon={ faTwitter } /> } </a>
       <a href="http://discord.gg/SPICEDAO">{ <FontAwesomeIcon icon={ faDiscord } /> }</a>
       <a href="https://medium.com/@TheSpiceDao">{ <FontAwesomeIcon icon={ faMedium } /> }</a>
       <a href="mailto:team@spicedao.xyz">< FaEnvelope/></a>

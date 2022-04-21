@@ -21,19 +21,19 @@ const Main = () => {
   const [availableTshirt, setAvailableTshirt] = useState(60);
 
 
-  countapi.get('spiceinternalhoodie', 'af4a9612-e8b2-4df3-9496-935ac3d8c42c').then((results) => {
+  countapi.get('spicedao.hoodie', '82e12bc6-f99e-42ea-80e5-6eda087c59ca').then((results) => {
     console.log("FROMAPI HOODIE::", results.value);
-    setAvailableHoodie(60- results.value)
-    if (results.value >= 59) {
+    setAvailableHoodie(60 - results.value)
+    if (results.value >= 60) {
       setSoldOutHoodie(true);
     };
   })
 
-  countapi.get('spiceinternaltshirt', '75664dbd-e10b-457d-9a32-44f6a8685dea').then((results) => {
+  countapi.get('spicedao.tshirt', 'cb02f5cc-9ada-4604-bf16-e4c0ee44f7bd').then((results) => {
     console.log("FROMAPI SHIRT::", results.value);
-    setAvailableTshirt(60- results.value)
+    setAvailableTshirt(60 - results.value)
 
-    if (results.value >= 59) {
+    if (results.value >= 60) {
       setSoldOutTshirt(true);
     };
   })
@@ -43,7 +43,7 @@ const Main = () => {
   return (
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
       <Route path='/' element={<Home />} />
-      <Route path='/shop' element={<Shop
+      {/* <Route path='/shop' element={<Shop
         setHoodieCount={setHoodieCount}
         setTshirtCount={setTshirtCount}
         hoodieCount={hoodieCount}
@@ -85,7 +85,7 @@ const Main = () => {
           soldOutTshirt={soldOutTshirt}
           availableTshirt={availableTshirt}
 
-        />} />
+        />} /> */}
 
 
     </Routes>

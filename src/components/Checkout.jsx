@@ -99,13 +99,15 @@ const Checkout = (props) => {
       return (
         <div className='CheckoutThanksContainer'>
           <div className='LargeMediumText'>Your Order Has Been Submitted!</div>
-          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Your items will be shipped at the end of May.</div>
+          <div style={{ marginTop: "1rem", fontWeight: "400" }}>Your items will be shipped by May 31st.</div>
         </div>
       )
     } else {
       return (
         <div className='CheckoutThanksContainer'>
-        <div className='LargeMediumText'>Please send the total amount of your order in $SPICE to the DAO:</div>
+        <div className='LargeMediumText'>Please send the total amount of your order</div>
+        <div className='LargeMediumText'>in $SPICE to the DAO:</div>
+
         <div style={{ marginTop: "1rem", fontWeight: "800" }}>0x1175185e62db6cea2517d14297333a63908c0cac</div>
         <div style={{ marginTop: "1rem", fontWeight: "400" }}>Copy and paste the transaction number into the field below.</div>
         <div style={{ marginTop: "1rem", fontWeight: "400" }}>Submit your order.</div>
@@ -159,11 +161,11 @@ const Checkout = (props) => {
           setMsg("Order Submitted");
           setOrderSubmitted(true);
           if(props.hoodieCount){
-            countapi.hit('spiceinternalhoodie', 'af4a9612-e8b2-4df3-9496-935ac3d8c42c');
+            countapi.hit('spicedao.hoodie', '82e12bc6-f99e-42ea-80e5-6eda087c59ca');
             props.setHoodieCount(false);
           }
           if(props.tshirtCount){
-            countapi.hit('spiceinternaltshirt', '75664dbd-e10b-457d-9a32-44f6a8685dea');
+            countapi.hit('spicedao.tshirt', 'cb02f5cc-9ada-4604-bf16-e4c0ee44f7bd');
             props.setTshirtCount(false);
           }
 

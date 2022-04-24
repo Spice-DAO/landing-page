@@ -58,6 +58,8 @@ const Checkout = (props) => {
   });
 
   const templateID = "template_tx2r16l";
+  //const templateID = "template_2za2q2t";
+
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -125,9 +127,9 @@ const Checkout = (props) => {
   
     countapi.get('spicedao.tshirt', 'cb02f5cc-9ada-4604-bf16-e4c0ee44f7bd').then((results) => {
       console.log("FROMAPI SHIRT::", results.value);
-      setTshirt(50 - results.value)
+      setTshirt(49 - results.value)
   
-      if (results.value >= 50) {
+      if (results.value >= 49) {
         setSoldTshirt(true);
       };
     })
@@ -139,6 +141,10 @@ const Checkout = (props) => {
   //Increment sales counts here and verify that the order is good to go. 
   const handleSubmit = (event) => {
     //updateCounts(props.setAvailableHoodie, props.setSoldOutHoodie, props.setAvailableTshirt, props.setSoldOutTshirt);
+    if(!props.hoodieCount && !props.tshirtCount){
+      alert("Please Add Your Items To Cart.")
+    }
+
     if ((
       inputs.txn === "" ||
       inputs.txn === undefined ||
@@ -163,7 +169,7 @@ const Checkout = (props) => {
       inputs.country === undefined)
 
     ) {
-      alert("Please Fill Fields and Resubmit. If you dont have Discord or Twitter please enter N/A.")
+      alert("Please Fill Fields and Resubmit.")
     } else {
       setMsg("Submitting Order");
       
@@ -178,10 +184,12 @@ const Checkout = (props) => {
           setMsg("Order Submitted");
           setOrderSubmitted(true);
           if(props.hoodieCount){
+            //countapi.hit('spicedao.hoodie.test', '3cee1f92-c8ef-46fc-8378-5d330ee911f7');
             countapi.hit('spicedao.hoodie', '82e12bc6-f99e-42ea-80e5-6eda087c59ca');
             props.setHoodieCount(false);
-          }
+          } 
           if(props.tshirtCount){
+            //countapi.hit('spicedao.tshirt.test', '5c0ce0ca-2786-419e-9c3f-d7eff5c152e0');
             countapi.hit('spicedao.tshirt', 'cb02f5cc-9ada-4604-bf16-e4c0ee44f7bd');
             props.setTshirtCount(false);
           }

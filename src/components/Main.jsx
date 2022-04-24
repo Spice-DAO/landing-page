@@ -17,23 +17,23 @@ const Main = () => {
   const [tshirtCount, setTshirtCount] = useState(false);
   const [soldOutHoodie, setSoldOutHoodie] = useState(false);
   const [soldOutTshirt, setSoldOutTshirt] = useState(false);
-  const [availableHoodie, setAvailableHoodie] = useState(60);
-  const [availableTshirt, setAvailableTshirt] = useState(60);
+  const [availableHoodie, setAvailableHoodie] = useState(50);
+  const [availableTshirt, setAvailableTshirt] = useState(50);
 
 
   countapi.get('spicedao.hoodie', '82e12bc6-f99e-42ea-80e5-6eda087c59ca').then((results) => {
-    console.log("FROMAPI HOODIE::", results.value);
-    setAvailableHoodie(60 - results.value)
-    if (results.value >= 60) {
+    //console.log("FROMAPI HOODIE::", results.value);
+    setAvailableHoodie(50 - results.value)
+    if (results.value >= 50) {
       setSoldOutHoodie(true);
     };
   })
 
   countapi.get('spicedao.tshirt', 'cb02f5cc-9ada-4604-bf16-e4c0ee44f7bd').then((results) => {
-    console.log("FROMAPI SHIRT::", results.value);
-    setAvailableTshirt(60 - results.value)
+    //console.log("FROMAPI SHIRT::", results.value);
+    setAvailableTshirt(50 - results.value)
 
-    if (results.value >= 60) {
+    if (results.value >= 50) {
       setSoldOutTshirt(true);
     };
   })
@@ -86,7 +86,6 @@ const Main = () => {
           availableTshirt={availableTshirt}
 
         />} />
-
 
     </Routes>
   );

@@ -157,7 +157,7 @@ const Checkout = (props) => {
         "83UFMfSgMOuGdFG5Q"
       )
         .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
+          // console.log('SUCCESS!', response.status, response.text);
           setMsg("Order Submitted");
           setOrderSubmitted(true);
           if(props.hoodieCount){
@@ -172,7 +172,7 @@ const Checkout = (props) => {
         
         })
         .catch((err) => {
-          console.log('FAILED...', err);
+          // console.log('FAILED...', err);
           setMsg("Order Failed Please Try Again");
         });
 

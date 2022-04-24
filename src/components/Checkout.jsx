@@ -7,6 +7,7 @@ import { send } from 'emailjs-com';
 import countapi from 'countapi-js';
 import hoodie from '../../src/hoodie.png';
 import tshirt from '../../src/tshirt.png';
+import DisabledInput from "../components/DisabledInput"
 
 
 function numberWithCommas(x) {
@@ -262,7 +263,7 @@ const Checkout = (props) => {
           <div className='BoldBigText' style={{ marginBottom: "0.5rem" }}>Checkout</div>
           <form onSubmit={handleSubmit}>
             <div className='CheckoutRowFlex'>
-              <CustomInput label="Name" name="fullname" input={inputs.fullname} override="Spice DAO Member" change={handleChange} />
+              <DisabledInput label="Name" name="fullname" input={inputs.fullname} override="Spice DAO Member" change={handleChange} />
               <div style={{ marginLeft: '1rem', marginRight: '1rem' }}></div>
               <CustomInput label="Transaction Number" name="txn" input={inputs.txn} override="" change={handleChange} />
               {/* <form><input className='CleanForm' type="text"></input></form> */}

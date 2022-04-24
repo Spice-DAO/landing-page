@@ -378,7 +378,7 @@ p {
 .Shop {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -573,7 +573,7 @@ p {
 .Checkout {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
   background: rgb(234, 216, 180);
   background: linear-gradient(0deg, rgba(234, 216, 180, 1) 2%, rgba(142, 176, 157, 1) 11%, rgba(124, 168, 153, 1) 20%, rgba(91, 154, 145, 1) 60%, rgba(68, 144, 139, 1) 80%, rgba(34, 129, 131, 1) 94%);
@@ -779,7 +779,7 @@ p {
 .Cart {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
   background: rgb(234, 216, 180);
   background: linear-gradient(0deg, rgba(234, 216, 180, 1) 2%, rgba(142, 176, 157, 1) 11%, rgba(124, 168, 153, 1) 20%, rgba(91, 154, 145, 1) 60%, rgba(68, 144, 139, 1) 80%, rgba(34, 129, 131, 1) 94%);

@@ -11,6 +11,9 @@ import countapi from 'countapi-js';
 
 
 
+
+
+
 const Main = () => {
 
   const [hoodieCount, setHoodieCount] = useState(false);
@@ -65,6 +68,10 @@ const Main = () => {
         tshirtCount={tshirtCount}
         soldOutHoodie={soldOutHoodie}
         soldOutTshirt={soldOutTshirt}
+        setSoldOutHoodie={setSoldOutHoodie}
+        setSoldOutTshirt={setSoldOutTshirt}
+        setAvailableHoodie={setAvailableHoodie}
+        setAvailableTshirt={setAvailableTshirt}
       />} />
 
       <Route path="/hoodie" element={

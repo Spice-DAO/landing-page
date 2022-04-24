@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faTwitter, faDiscord, faMedium } from '@fortawesome/free-brands-svg-icons'
-// import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
-// import logo from '../../src/logo2.png'
 import NavBar from "../components/NavBar"
 import { NavLink } from 'react-router-dom';
 import CheckoutItem from '../components/CheckoutItem';
@@ -70,9 +66,6 @@ const Checkout = (props) => {
 
   }
 
-  function getFullname() {
-    return inputs.fullname;
-  }
 
   function getCheckoutButton(soldOutHoodie, soldOutTshirt) {
     if (soldOutHoodie && soldOutTshirt) {
@@ -120,8 +113,31 @@ const Checkout = (props) => {
 
 
 
+  function updateCounts(setHoodie, setSoldHoodie, setTshirt, setSoldTshirt){
+    countapi.get('spicedao.hoodie', '82e12bc6-f99e-42ea-80e5-6eda087c59ca').then((results) => {
+      console.log("FROMAPI HOODIE::", results.value);
+      setHoodie(50 - results.value)
+      if (results.value >= 50) {
+        setSoldHoodie(true);
+      };
+    })
+  
+    countapi.get('spicedao.tshirt', 'cb02f5cc-9ada-4604-bf16-e4c0ee44f7bd').then((results) => {
+      console.log("FROMAPI SHIRT::", results.value);
+      setTshirt(50 - results.value)
+  
+      if (results.value >= 50) {
+        setSoldTshirt(true);
+      };
+    })
+  }
+
+
+
+
   //Increment sales counts here and verify that the order is good to go. 
   const handleSubmit = (event) => {
+    updateCounts(props.setAvailableHoodie, props.setSoldOutHoodie, props.setAvailableTshirt, props.setSoldOutTshirt);
     if ((
       inputs.txn === "" ||
       inputs.txn === undefined ||
@@ -149,7 +165,7 @@ const Checkout = (props) => {
       alert("Please Fill Fields and Resubmit. If you dont have Discord or Twitter please enter N/A.")
     } else {
       setMsg("Submitting Order");
-
+      
       send(
         "service_epu7tsc",
         templateID,
@@ -168,7 +184,6 @@ const Checkout = (props) => {
             countapi.hit('spicedao.tshirt', 'cb02f5cc-9ada-4604-bf16-e4c0ee44f7bd');
             props.setTshirtCount(false);
           }
-
         
         })
         .catch((err) => {

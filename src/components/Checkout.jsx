@@ -137,7 +137,7 @@ const Checkout = (props) => {
 
   //Increment sales counts here and verify that the order is good to go. 
   const handleSubmit = (event) => {
-    updateCounts(props.setAvailableHoodie, props.setSoldOutHoodie, props.setAvailableTshirt, props.setSoldOutTshirt);
+    //updateCounts(props.setAvailableHoodie, props.setSoldOutHoodie, props.setAvailableTshirt, props.setSoldOutTshirt);
     if ((
       inputs.txn === "" ||
       inputs.txn === undefined ||

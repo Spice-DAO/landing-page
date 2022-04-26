@@ -66,7 +66,6 @@ const Shop = (props) => {
           <img src={hoodie} className="ObjectFitContain" style={{ height: "20rem" }} />
           <div className='BiggerMediumText'>Member Hoodie</div>
           <div style={{ marginTop: "0.5rem", fontWeight: "500" }}>50,000 $SPICE</div>
-          <div style={{ marginTop: "1rem" }}>{props.availableHoodie} Avalilable</div>
           <div style={{ marginTop: "1rem" }}>Men's Medium</div>
           <div style={{ marginTop: "1rem" }}>Black</div>
 
@@ -95,7 +94,6 @@ const Shop = (props) => {
           <img src={tshirt} className="ObjectFitContain" style={{ height: "20rem" }} />
           <div className='BiggerMediumText'>Member T-Shirt</div>
           <div style={{ marginTop: "0.5rem", fontWeight: "500" }}>25,000 $SPICE</div>
-          <div style={{ marginTop: "1rem" }}>{props.availableTshirt} Avalilable</div>
           <div style={{ marginTop: "1rem" }}>Men's Medium</div>
           <div style={{ marginTop: "1rem" }}>Black</div>
 

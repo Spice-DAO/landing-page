@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Home from '../components/Home';
-import Shop from '../components/Shop';
-import Cart from "../components/Cart";
-import Checkout from "../components/Checkout";
-import Hoodie from "../components/Hoodie"
-import Tshirt from "../components/Tshirt"
+// import Shop from '../components/Shop';
+// import Cart from "../components/Cart";
+// import Checkout from "../components/Checkout";
+// import Hoodie from "../components/Hoodie"
+// import Tshirt from "../components/Tshirt"
 import countapi from 'countapi-js';
 
 
@@ -73,7 +73,7 @@ const Main = () => {
   return (
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
       <Route path='/' element={<Home />} />
-      <Route path='/shop' element={<Shop
+      {/* <Route path='/shop' element={<Shop
         setHoodieCount={setHoodieCount}
         setTshirtCount={setTshirtCount}
         hoodieCount={hoodieCount}
@@ -119,7 +119,7 @@ const Main = () => {
           soldOutTshirt={soldOutTshirt}
           availableTshirt={availableTshirt}
 
-        />} />
+        />} /> */}
 
     </Routes>
   );

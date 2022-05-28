@@ -17,7 +17,9 @@ const Home = () => {
       <div className="Landing__links">
         <a href="https://forum.spicedao.xyz/">Forum</a>
         <a href="https://snapshot.org/#/dunedao.eth">Governance</a>
-        <a href="#0" onMouseOver={() => setMsg("Coming Soon")}>{msg}</a>
+        <a href="#0" onMouseOver={() => setMsg("Coming Soon")}
+        onMouseLeave={() => setMsg("Animation")}
+        >{msg}</a>
         {/* <NavLink to="/shop">{msg}</NavLink> */}
       </div>
       <div className="Main__text">

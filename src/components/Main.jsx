@@ -8,13 +8,71 @@ import Checkout from "../components/Checkout";
 import Hoodie from "../components/Hoodie"
 import Tshirt from "../components/Tshirt"
 import countapi from 'countapi-js';
-
+import { ethers } from 'ethers';
+import erc20ABI from "./genericABI.json";
 
 
 
 
 
 const Main = () => {
+
+
+  const [walletConnected, setWalletConnected] = useState(false);
+  const [walletAndSpice, setWalletAndSpice] = useState(false);
+  const spiceTokenAddress = "0x9b6dB7597a74602a5A806E33408e7E2DAFa58193";
+  const [provider, setProvider] = useState(null);
+  const [connectedAddress, setConnectedAddress] = useState(null);
+
+  const contract = new ethers.Contract(spiceTokenAddress, erc20ABI, ethers.getDefaultProvider());
+
+  const [buttonText, setButtonText] = useState('Connect Wallet');
+  const [defaultAccount, setDefaultAccount] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
+
+
+
+
+  const connectWalletHandler = () => {
+    if ((window).ethereum) {
+      (window).ethereum.request({ method: 'eth_requestAccounts' })
+        .then((result) => {
+          //Provides a list of connected eth
+          accountChangedHandler(result[0]);
+          setConnectedAddress(result[0]);
+          setWalletConnected(true);
+          setButtonText('Check For $SPICE');
+
+        })
+    } else {
+      setErrorMessage("Please Install A Wallet!");
+    }
+  }
+
+  const checkSpiceHandler = async () => {
+    connectWalletHandler();
+    if ((window).ethereum) {
+      await contract.balanceOf(connectedAddress)
+        .then((result) => {
+          setButtonText("Checking...");
+          if (result.toString() !== "0") {
+            setWalletAndSpice(true);
+          }
+          else {
+            setButtonText("$SPICE Needed To View This");
+          }
+        })
+    } else {
+      setErrorMessage("Please Install A Wallet!");
+    }
+
+  }
+
+
+  const accountChangedHandler = (newAccount) => {
+    setDefaultAccount(newAccount);
+  }
+
 
   const [hoodieCount, setHoodieCount] = useState(false);
   const [tshirtCount, setTshirtCount] = useState(false);
@@ -72,7 +130,12 @@ const Main = () => {
 
   return (
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
-      <Route path='/' element={<Home />} />
+      <Route path='/' element={<Home
+      walletAndSpice={walletAndSpice}
+      walletConnected={walletConnected} 
+      connectWalletHandler={connectWalletHandler}
+      buttonText={buttonText}
+      checkSpiceHandler={checkSpiceHandler}/>} />
       <Route path='/shop' element={<Shop
         setHoodieCount={setHoodieCount}
         setTshirtCount={setTshirtCount}

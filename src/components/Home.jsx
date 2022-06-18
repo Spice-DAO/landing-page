@@ -4,22 +4,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faDiscord, faMedium } from '@fortawesome/free-brands-svg-icons'
 import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
 import logo from '../../src/logo2.png';
+import SeriesBible from './SeriesBible';
+import WalletCheck from './WalletCheck';
 
 
-
-const Home = () => {
+const Home = (props) => {
 
   const [msg, setMsg] = useState('Animation');
 
   return (
-    <div className='Main'>
+    <div className='LandingFix'>
+    {props.walletAndSpice? (<SeriesBible/>) : ( <div className='Main'>
       <img className='Main__logo' src={logo} alt="Spice DAO logo" />
       <div className="Landing__links">
         <a href="https://forum.spicedao.xyz/">Forum</a>
         <a href="https://snapshot.org/#/dunedao.eth">Governance</a>
-        <a href="#0" onMouseOver={() => setMsg("Coming Soon")}
+        {/* <a href="#0" onMouseOver={() => setMsg("Coming Soon")}
         onMouseLeave={() => setMsg("Animation")}
-        >{msg}</a>
+        >{msg}</a> */}
+        {props.walletConnected ? (<div className="TransitionButton" onClick={props.checkSpiceHandler}> {props.buttonText}</div>) : (<div className="TransitionButton" onClick={props.connectWalletHandler}> {props.buttonText}</div>)}
         {/* <NavLink to="/shop">{msg}</NavLink> */}
       </div>
       <div className="Main__text">
@@ -39,7 +42,9 @@ const Home = () => {
       <a href="mailto:team@spicedao.xyz">< FaEnvelope/></a>
     </div>
     {/* <Shop /> */}
+    </div>)}
     </div>
+   
 
   )
 }

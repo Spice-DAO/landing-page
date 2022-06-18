@@ -1259,6 +1259,10 @@ p {
   background-color: #272435;
   border-radius: 1rem;
   padding: 2rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
 }
 
 

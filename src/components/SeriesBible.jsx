@@ -328,7 +328,9 @@ export default function SeriesBible() {
                                 <div style={{ marginBottom: "1rem" }}>And as he watches, as screams and wails and alarms ring in the background, his old friend, the
                                         most powerful person in the universe, melts and dies.</div>
                                 <div className='Border' />
+                                </div> 
 
+                                <div className='BibleTextContainer' style={{ marginTop: "2rem" }}>
 
                                 <div className='SmallHeader' style={{ marginTop: "2rem", marginBottom: "0rem" }}>
                                         EPISODE 2
@@ -415,6 +417,10 @@ export default function SeriesBible() {
                                 <div style={{ marginBottom: "1rem" }}>As soon as she sees him, she runs through the burnt out wreckage of a city. Palis breaks from
                                         the soldiers to give chase.</div>
                                 <div className='Border' />
+                                </div>
+
+                                <div className='BibleTextContainer' style={{ marginTop: "2rem" }}>
+
 
                                 <div className='SmallHeader' style={{ marginTop: "2rem", marginBottom: "0rem" }}>
                                         EPISODE 3
@@ -495,6 +501,9 @@ export default function SeriesBible() {
                                 <div style={{ marginBottom: "1rem" }}>He signs back in.</div>
 
                                 <div className='Border' />
+                                </div>
+
+                                <div className='BibleTextContainer' style={{ marginTop: "2rem" }}>
 
                                 <div className='SmallHeader' style={{ marginTop: "2rem", marginBottom: "0rem" }}>
                                         EPISODE 4
@@ -563,7 +572,9 @@ export default function SeriesBible() {
                                 <div style={{ marginBottom: "1rem" }}>Palis watches as a squad of power-armored soldiers drag Costara from her home.</div>
 
                                 <div className='Border' />
+                                </div>
 
+                                <div className='BibleTextContainer' style={{ marginTop: "2rem" }}>
 
                                 <div className='SmallHeader' style={{ marginTop: "2rem", marginBottom: "0rem" }}>
                                         EPISODE 5
@@ -627,6 +638,9 @@ export default function SeriesBible() {
 
 
                                 <div className='Border' />
+                                </div>
+
+                                <div className='BibleTextContainer' style={{ marginTop: "2rem" }}>
 
                                 <div className='SmallHeader' style={{ marginTop: "2rem", marginBottom: "0rem" }}>
                                         EPISODE 6

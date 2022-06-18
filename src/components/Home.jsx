@@ -19,10 +19,10 @@ const Home = (props) => {
       <div className="Landing__links">
         <a href="https://forum.spicedao.xyz/">Forum</a>
         <a href="https://snapshot.org/#/dunedao.eth">Governance</a>
-        {/* <a href="#0" onMouseOver={() => setMsg("Coming Soon")}
+        {/* <a href="#0" onMouseOver={() => setMsg("Connect Wallet")}
         onMouseLeave={() => setMsg("Animation")}
-        >{msg}</a> */}
-        {props.walletConnected ? (<div className="TransitionButton" onClick={props.checkSpiceHandler}> {props.buttonText}</div>) : (<div className="TransitionButton" onClick={props.connectWalletHandler}> {props.buttonText}</div>)}
+        >{msg}</a>  */}
+        {props.walletConnected ? (<div className="TransitionButton" onClick={props.checkSpiceHandler}> Read Series Bible</div>) : (<div className="TransitionButton" onMouseOver={() => setMsg("Connect Wallet")} onClick={props.connectWalletHandler}> {msg}</div>)}
         {/* <NavLink to="/shop">{msg}</NavLink> */}
       </div>
       <div className="Main__text">

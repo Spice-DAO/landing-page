@@ -59,7 +59,7 @@ const Main = () => {
             setWalletAndSpice(true);
           }
           else {
-            setButtonText("$SPICE Needed To View This");
+            setButtonText("No $SPICE Found");
           }
         })
     } else {

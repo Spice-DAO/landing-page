@@ -41,7 +41,7 @@ const Main = () => {
           accountChangedHandler(result[0]);
           setConnectedAddress(result[0]);
           setWalletConnected(true);
-          setButtonText('Check For $SPICE');
+          setButtonText('Read Series Bible');
 
         })
     } else {

@@ -8,6 +8,7 @@ import SeriesBible from './SeriesBible';
 import WalletCheck from './WalletCheck';
 import { set } from 'countapi-js';
 import VideoPage from './VideoPage';
+import StateButton from './StateButton';
 
 
 const Home = (props) => {
@@ -38,10 +39,23 @@ const Home = (props) => {
       <img className='Main__logo' src={logo} alt="Spice DAO logo" />
       <div className="Landing__links">
         <a href="/#" onMouseOver={() => setDuneMsg("July 1")} onMouseLeave={() => setDuneMsg("Dune Bible")}>{duneMsg}</a>
-        {props.walletConnected ? (<div className="TransitionButton" onClick={() => {props.checkSpiceHandler("dolkoroth");}}>{props.dolkorothButtonText}</div>) : (<div className="TransitionButton" onMouseOver={() => setDolkorothMsg("Connect Wallet")}  onClick={() => {props.connectWalletHandler();}}> {dolkorothMsg}</div>)}
-        {props.walletConnected ? (<div className="TransitionButton" onClick={() => {props.checkSpiceHandler("tashka");}}>{props.buttonText}</div>) : (<div className="TransitionButton" onMouseOver={() => setTashkaMsg("Connect Wallet")}  onClick={() => {props.connectWalletHandler();}}> {tashkaMsg}</div>)}
+        <StateButton
+        checkSpiceHandler={props.checkSpiceHandler}
+        connectWalletHandler={props.connectWalletHandler} 
+        walletConnected={props.walletConnected}
+        flagHandler={"dolkoroth"}
+        spiceFound={props.spiceFound}
+        action={"Read"}
+        buttonText={"Dolkoroth"}  />
 
-        {/*  */}
+        <StateButton
+        checkSpiceHandler={props.checkSpiceHandler}
+        connectWalletHandler={props.connectWalletHandler} 
+        walletConnected={props.walletConnected}
+        flagHandler={"tashka"}
+        spiceFound={props.spiceFound}
+        action={"Watch"}
+        buttonText={"Tashka"}  />
 
 
 

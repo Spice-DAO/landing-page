@@ -23,6 +23,7 @@ const Main = () => {
   const spiceTokenAddress = "0x9b6dB7597a74602a5A806E33408e7E2DAFa58193";
   const [provider, setProvider] = useState(null);
   const [connectedAddress, setConnectedAddress] = useState(null);
+  const [spiceFound, setSpiceFound] = useState(false);
 
 
   const [dolkorothFlag, setDolkorothFlag] = useState(false);
@@ -36,6 +37,8 @@ const Main = () => {
 
   const [dolkorothButtonText, setDolkorothButtonText] = useState('Connect Wallet');
   const [taskhaButtonText, setTashkaButtonText] = useState('Connect Wallet');
+
+
 
   const [defaultAccount, setDefaultAccount] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
@@ -65,9 +68,9 @@ const Main = () => {
     if ((window).ethereum) {
       await contract.balanceOf(connectedAddress)
         .then((result) => {
-          setDolkorothButtonText("Checking...");
           if (result.toString() !== "0") {
             setWalletAndSpice(true);
+            setSpiceFound(true);
             if(props === "dolkoroth"){
               setDolkorothFlag(true);
             }
@@ -80,27 +83,7 @@ const Main = () => {
           }
           else {
             setDolkorothButtonText("No $SPICE Found");
-          }
-        })
-    } else {
-      setErrorMessage("Please Install A Wallet!");
-    }
-
-  }
-
-
-  const checkSpiceHandlerDolkoroth = async () => {
-    connectWalletHandler();
-    if ((window).ethereum) {
-      await contract.balanceOf(connectedAddress)
-        .then((result) => {
-          setDolkorothButtonText("Checking...");
-          if (result.toString() !== "0") {
-            setWalletAndSpice(true);
-            setDolkorothFlag(true);
-          }
-          else {
-            setDolkorothButtonText("No $SPICE Found");
+            setSpiceFound(false)
           }
         })
     } else {
@@ -179,6 +162,7 @@ const Main = () => {
       dolkorothFlag={dolkorothFlag}
       tashkaFlag={tashkaFlag}
       duneFlag={duneFlag}
+      spiceFound={spiceFound}
       checkSpiceHandler={checkSpiceHandler}/>}
        />
       <Route path='/shop' element={<Shop

@@ -24,9 +24,19 @@ const Main = () => {
   const [provider, setProvider] = useState(null);
   const [connectedAddress, setConnectedAddress] = useState(null);
 
+
+  const [dolkorothFlag, setDolkorothFlag] = useState(false);
+  const [duneFlag,  setDuneFlag] = useState(false);
+  const [tashkaFlag, setTashkaFlag] = useState(false);
+
+
+
+
   const contract = new ethers.Contract(spiceTokenAddress, erc20ABI, ethers.getDefaultProvider());
 
-  const [buttonText, setButtonText] = useState('Connect Wallet');
+  const [dolkorothButtonText, setDolkorothButtonText] = useState('Connect Wallet');
+  const [taskhaButtonText, setTashkaButtonText] = useState('Connect Wallet');
+
   const [defaultAccount, setDefaultAccount] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -41,7 +51,7 @@ const Main = () => {
           accountChangedHandler(result[0]);
           setConnectedAddress(result[0]);
           setWalletConnected(true);
-          setButtonText('Read Series Bible');
+          setDolkorothButtonText('Read Series Bible');
 
         })
     } else {
@@ -49,17 +59,48 @@ const Main = () => {
     }
   }
 
-  const checkSpiceHandler = async () => {
+  //Needs a variable to set pages on afterwards
+  const checkSpiceHandler = async (props) => {
     connectWalletHandler();
     if ((window).ethereum) {
       await contract.balanceOf(connectedAddress)
         .then((result) => {
-          setButtonText("Checking...");
+          setDolkorothButtonText("Checking...");
           if (result.toString() !== "0") {
             setWalletAndSpice(true);
+            if(props === "dolkoroth"){
+              setDolkorothFlag(true);
+            }
+            if(props === "dune"){
+              setDuneFlag(true);
+            }
+            if(props === "tashka"){
+              setTashkaFlag(true);
+            }
           }
           else {
-            setButtonText("No $SPICE Found");
+            setDolkorothButtonText("No $SPICE Found");
+          }
+        })
+    } else {
+      setErrorMessage("Please Install A Wallet!");
+    }
+
+  }
+
+
+  const checkSpiceHandlerDolkoroth = async () => {
+    connectWalletHandler();
+    if ((window).ethereum) {
+      await contract.balanceOf(connectedAddress)
+        .then((result) => {
+          setDolkorothButtonText("Checking...");
+          if (result.toString() !== "0") {
+            setWalletAndSpice(true);
+            setDolkorothFlag(true);
+          }
+          else {
+            setDolkorothButtonText("No $SPICE Found");
           }
         })
     } else {
@@ -134,8 +175,12 @@ const Main = () => {
       walletAndSpice={walletAndSpice}
       walletConnected={walletConnected} 
       connectWalletHandler={connectWalletHandler}
-      buttonText={buttonText}
-      checkSpiceHandler={checkSpiceHandler}/>} />
+      dolkorothButtonText={dolkorothButtonText}
+      dolkorothFlag={dolkorothFlag}
+      tashkaFlag={tashkaFlag}
+      duneFlag={duneFlag}
+      checkSpiceHandler={checkSpiceHandler}/>}
+       />
       <Route path='/shop' element={<Shop
         setHoodieCount={setHoodieCount}
         setTshirtCount={setTshirtCount}

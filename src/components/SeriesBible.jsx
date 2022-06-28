@@ -24,7 +24,7 @@ export default function SeriesBible() {
 
                                 <div className="Credits">Written and Created by Phil Gelatt</div>
                                 <div className="Credits">Story by Default Triangle</div>
-                                <div className="Credits" style={{ marginBottom: "2rem" }}>Executive Produced by Spice DAO</div>
+                                <div className="Credits" style={{ marginBottom: "2rem" }}>Produced by Spice DAO</div>
 
                                 <div className='Border' />
                         </div>

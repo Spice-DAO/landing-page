@@ -10,10 +10,15 @@ export default function VideoPage(props) {
 
   return (
     <div className="VideoPage">
-      <div className='BibleTextContainer' style={{ marginTop: "2rem", marginBottom: "2rem" }}>
+      <div className='VideoTextContainer' style={{ marginTop: "-2rem", marginBottom: "3rem" }}>
         <div className='HeaderText'>
           TASHKA
         </div>
+        <div className="Credits">Written, Directed and Animated by Ben Clarkson</div>
+        <div className="Credits">Based on “Frontier South” by Manxome</div>
+        <div className="Credits" style={{ marginBottom: "0.5rem" }}>Produced by Spice DAO</div>
+
+
       </div>
 
 

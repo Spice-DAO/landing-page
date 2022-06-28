@@ -1285,4 +1285,11 @@ p {
   font-weight: 500;
 }
 
+.VideoPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=main.css.map */

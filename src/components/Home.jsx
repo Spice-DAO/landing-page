@@ -9,7 +9,8 @@ import WalletCheck from './WalletCheck';
 import { set } from 'countapi-js';
 import VideoPage from './VideoPage';
 import StateButton from './StateButton';
-
+import TashkaVid from "./Videos/tashka.mp4";
+import TashkaThumb from "./Videos/tashkaThumb.png";
 
 const Home = (props) => {
 
@@ -31,7 +32,7 @@ const Home = (props) => {
       return(<VideoPage videoURL="DUNETEST"/>)
     }
     else if(props.walletAndSpice && props.tashkaFlag){
-      return(<VideoPage videoURL="TASHKATEST"/>)
+      return(<VideoPage thumb={TashkaThumb} vid={TashkaVid}/>)
     }
     else{
         return(

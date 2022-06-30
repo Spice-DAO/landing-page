@@ -10,7 +10,7 @@ import { set } from 'countapi-js';
 import VideoPage from './VideoPage';
 import StateButton from './StateButton';
 import TashkaVid from "./Videos/tashka.mp4";
-import TashkaThumb from "./Videos/tashkaThumb.png";
+import DuneBibleVideo from "./Videos/dune_bible_video.mp4";
 
 const Home = (props) => {
 
@@ -29,17 +29,26 @@ const Home = (props) => {
       return(<SeriesBible/>)
     }
     else if(props.walletAndSpice && props.duneFlag){
-      return(<VideoPage videoURL="DUNETEST"/>)
+      return(<VideoPage flag={"dune"} vid={DuneBibleVideo}/>)
     }
     else if(props.walletAndSpice && props.tashkaFlag){
-      return(<VideoPage thumb={TashkaThumb} vid={TashkaVid}/>)
+      return(<VideoPage flag={"tashka"} vid={TashkaVid}/>)
     }
     else{
         return(
           <div className='Main'>
       <img className='Main__logo' src={logo} alt="Spice DAO logo" />
       <div className="Landing__links">
-        <a href="/#" onMouseOver={() => setDuneMsg("July 1")} onMouseLeave={() => setDuneMsg("Dune Bible")}>{duneMsg}</a>
+        {/* <a href="/#" onMouseOver={() => setDuneMsg("July 1")} onMouseLeave={() => setDuneMsg("Dune Bible")}>{duneMsg}</a> */}
+        <StateButton
+        checkSpiceHandler={props.checkSpiceHandler}
+        connectWalletHandler={props.connectWalletHandler} 
+        walletConnected={props.walletConnected}
+        flagHandler={"dune"}
+        spiceFound={props.spiceFound}
+        action={"Watch"}
+        buttonText={"Dune Bible"}  />
+
         <StateButton
         checkSpiceHandler={props.checkSpiceHandler}
         connectWalletHandler={props.connectWalletHandler} 

@@ -46,7 +46,7 @@ const Home = (props) => {
         walletConnected={props.walletConnected}
         flagHandler={"dune"}
         spiceFound={props.spiceFound}
-        action={"Watch"}
+        action={"View"}
         buttonText={"Dune Bible"}  />
 
         <StateButton

@@ -14,14 +14,14 @@ export default function VideoPage(props) {
   function VidSizer(){
     if (props.flag === "tashka") {
       return (
-        <video height="60%" width="60%" controls controlsList="nodownload">
+        <video loop autoPlay height="55%" width="55%" controls controlsList="nodownload">
         <source src={props.vid} type="video/mp4" />
       </video>
       )}
     
       if (props.flag === "dune") {
         return(
-          <video height="75%" width="75%" controls controlsList="nodownload">
+          <video loop autoPlay height="75%" width="75%" controls controlsList="nodownload">
           <source src={props.vid} type="video/mp4" />
         </video>
         )}

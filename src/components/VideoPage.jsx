@@ -21,7 +21,7 @@ export default function VideoPage(props) {
     
       if (props.flag === "dune") {
         return(
-          <video loop autoPlay height="75%" width="75%" controls controlsList="nodownload">
+          <video loop autoPlay height="70%" width="70%" controls controlsList="nodownload">
           <source src={props.vid} type="video/mp4" />
         </video>
         )}
@@ -44,17 +44,18 @@ export default function VideoPage(props) {
     }
     if (props.flag === "dune") {
       return(
-      <div className='VideoTextContainer' style={{marginTop: "-2rem", marginBottom: "3rem", width: "100%" }}>
-        <div className='HeaderText'>
+      <div className='VideoTextContainer' style={{marginTop: "0rem", marginBottom: "3rem", width: "80%" }}>
+        <div className='HeaderText' style={{marginBottom: "0.6rem"}}>
           DUNE BIBLE
         </div>
-        <div className="Credits">Michel Seydoux presents Alejandro Jodorowsky’s Dune from Frank Herbert's novel. Design by Jean Giraud.  
-        </div>
-        <div className="Credits">Machines by Chris Foss. Special effects by Dan O’Bannon. Dialogue by M. Demuth and A. Jodorowsky</div>
-        <div className="Credits">Edition 5 printed in 1975
+        <div className="Credits" style={{fontSize: "18px"}}>Michel Seydoux presents Alejandro Jodorowsky’s Dune from Frank Herbert's novel</div>
+        <div className="Credits"  style={{fontSize: "18px"}}>Design by Jean Giraud Machines by Chris Foss Special effects by Dan O’Bannon </div>
+        <div className="Credits" style={{fontSize: "18px", marginBottom: "0.6rem"}}>Dialogue by M. Demuth and A. Jodorowsky</div>
+
+        <div className="Credits" style={{fontSize: "18px", marginBottom: "0.6rem"}}>Edition 5 printed in 1975
         </div>
         
-        <div className="Credits" style={{ marginBottom: "0.5rem" }}>Acquired at auction at Christie's Paris on Nov. 21, 2021 for €2,660,000 by Spice DAO</div>
+        <div className="Credits" style={{fontSize: "18px", marginBottom: "0.5rem" }}>Acquired at auction at Christie's Paris on Nov. 21, 2021 for €2,660,000 by Spice DAO</div>
       </div>
       )
     }

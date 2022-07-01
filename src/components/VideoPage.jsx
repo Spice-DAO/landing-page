@@ -4,11 +4,11 @@ export default function VideoPage(props) {
 
   //RE-ENABLE BEFORE LAUNCH
 
-  // useEffect(() => {
-  //   document.addEventListener('contextmenu', (e) => {
-  //     e.preventDefault();
-  //   });
-  // })
+  useEffect(() => {
+    document.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    });
+  })
 
 
   function VidSizer(){

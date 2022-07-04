@@ -80,7 +80,7 @@ const Home = (props) => {
         {/* <a href="#0" onMouseOver={() => setMsg("Connect Wallet")}
         onMouseLeave={() => setMsg("Animation")}
         >{msg}</a>  */}
-        <a href="https://forum.spicedao.xyz/t/redemption-option-and-timeline/231/4">Redemptions</a>
+        <a href="https://forum.spicedao.xyz/t/liquidate-dao-treasury/234">Redemptions</a>
         {/* <NavLink to="/shop">{msg}</NavLink> */}
       </div>
       <div className="Main__text">

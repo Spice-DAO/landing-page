@@ -17,10 +17,10 @@ import erc20ABI from "./genericABI.json";
 
 const Main = () => {
 
+  const spiceTokenAddress = "0x9b6dB7597a74602a5A806E33408e7E2DAFa58193";
 
   const [walletConnected, setWalletConnected] = useState(false);
   const [walletAndSpice, setWalletAndSpice] = useState(false);
-  const spiceTokenAddress = "0x9b6dB7597a74602a5A806E33408e7E2DAFa58193";
   const [provider, setProvider] = useState(null);
   const [connectedAddress, setConnectedAddress] = useState(null);
   const [spiceFound, setSpiceFound] = useState(false);
@@ -29,6 +29,7 @@ const Main = () => {
   const [dolkorothFlag, setDolkorothFlag] = useState(false);
   const [duneFlag,  setDuneFlag] = useState(false);
   const [tashkaFlag, setTashkaFlag] = useState(false);
+  const [redemptionFlag, setRedemptionFlag] = useState(false);
 
 
 
@@ -79,6 +80,9 @@ const Main = () => {
             }
             if(props === "tashka"){
               setTashkaFlag(true);
+            }
+            if(props === "redemptions"){
+              setRedemptionFlag(true);
             }
           }
           else {
@@ -162,6 +166,7 @@ const Main = () => {
       dolkorothFlag={dolkorothFlag}
       tashkaFlag={tashkaFlag}
       duneFlag={duneFlag}
+      redemptionFlag={redemptionFlag}
       spiceFound={spiceFound}
       checkSpiceHandler={checkSpiceHandler}/>}
        />

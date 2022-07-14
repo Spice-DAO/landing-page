@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.916c462f.css",
-    "main.js": "/static/js/main.ece00f1d.js",
+    "main.js": "/static/js/main.b192e32e.js",
     "static/media/dune_bible_video.mp4": "/static/media/dune_bible_video.d142ed89884bed5616f1.mp4",
     "static/media/tashka.mp4": "/static/media/tashka.fe2b34011fcafbf915c5.mp4",
     "static/media/hoodie.png": "/static/media/hoodie.f1f51c53312bd27f6520.png",
@@ -11,10 +11,10 @@
     "static/media/logo2.png": "/static/media/logo2.73d981fd36c5639c7a6f.png",
     "index.html": "/index.html",
     "main.916c462f.css.map": "/static/css/main.916c462f.css.map",
-    "main.ece00f1d.js.map": "/static/js/main.ece00f1d.js.map"
+    "main.b192e32e.js.map": "/static/js/main.b192e32e.js.map"
   },
   "entrypoints": [
     "static/css/main.916c462f.css",
-    "static/js/main.ece00f1d.js"
+    "static/js/main.b192e32e.js"
   ]
 }

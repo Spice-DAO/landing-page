@@ -1312,4 +1312,25 @@ p {
        user-select: none;
 }
 
+.Redemptions {
+  display: flex;
+  border: 1px solid red;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SwapSpicePanel {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid yellow;
+  background-color: #FFFFFF;
+  color: #000;
+  height: 20rem;
+  width: 30rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  justify-content: space-between;
+}
+
 /*# sourceMappingURL=main.css.map */

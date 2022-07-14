@@ -25,6 +25,7 @@
     "react-scripts": "5.0.0",
     "save-dev": "^0.0.1-security",
     "styled-components": "^5.3.5",
+    "wagmi": "^0.5.9",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

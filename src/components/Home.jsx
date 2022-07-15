@@ -18,7 +18,8 @@ const Home = (props) => {
   const [dolkorothMsg, setDolkorothMsg] = useState('Dolkoroth');
   const [duneMsg, setDuneMsg] = useState('Dune Bible');
   const [tashkaMsg, setTashkaMsg] = useState('Tashka');
-
+  const [fmpButton, setFmpButton] = useState("FMP: AE");
+ 
 
   //These flags will be used to determine what shows on the homepage. Will need a complex ternary or some function to determine what is output
 
@@ -35,10 +36,6 @@ const Home = (props) => {
     else if (props.walletAndSpice && props.tashkaFlag) {
       return (<VideoPage flag={"tashka"} vid={TashkaVid} />)
     }
-    else if (props.walletAndSpice && props.redemptionFlag) {
-      return (<Redemptions />)
-    }
-    
     else {
       return (
         <div className='Main'>
@@ -82,19 +79,18 @@ const Home = (props) => {
           <div className="Landing__links">
             <a href="https://forum.spicedao.xyz/">Forum</a>
             <a href="https://snapshot.org/#/dunedao.eth">Governance</a>
-            {/* <a href="#0" onMouseOver={() => setMsg("Connect Wallet")}
-        onMouseLeave={() => setMsg("Animation")}
-        >{msg}</a>  */}
-            <StateButton
+            <a href="#0" onMouseOver={() => setFmpButton("Coming Soon")}
+        onMouseLeave={() => setFmpButton("FMP: AE")}
+        >{fmpButton}</a> 
+            {/* <StateButton
               checkSpiceHandler={props.checkSpiceHandler}
               connectWalletHandler={props.connectWalletHandler}
               walletConnected={props.walletConnected}
               flagHandler={"redemptions"}
               spiceFound={props.spiceFound}
               action={"Redeem"}
-              buttonText={"Redemptions"} />
+              buttonText={"Redemptions"} /> */}
 
-            {/* <a href="https://forum.spicedao.xyz/t/liquidate-dao-treasury/234">Redemptions</a> */}
             {/* <NavLink to="/shop">{msg}</NavLink> */}
           </div>
           <div className="Main__text">
@@ -108,7 +104,7 @@ const Home = (props) => {
             </p>
           </div>
           <div className="Main__social_icons">
-            <a href="https://twitter.com/TheSpiceDao"> {<FontAwesomeIcon icon={faTwitter} />} </a>
+            <a href="https://twitter.com/FrankMillerFMP"> {<FontAwesomeIcon icon={faTwitter} />} </a>
             <a href="http://discord.gg/SPICEDAO">{<FontAwesomeIcon icon={faDiscord} />}</a>
             <a href="https://medium.com/@SpiceDao">{<FontAwesomeIcon icon={faMedium} />}</a>
             <a href="mailto:team@spicedao.xyz">< FaEnvelope /></a>

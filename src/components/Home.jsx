@@ -79,9 +79,7 @@ const Home = (props) => {
           <div className="Landing__links">
             <a href="https://forum.spicedao.xyz/">Forum</a>
             <a href="https://snapshot.org/#/dunedao.eth">Governance</a>
-            <a href="#0" onMouseOver={() => setFmpButton("Coming Soon")}
-        onMouseLeave={() => setFmpButton("FMP: AE")}
-        >{fmpButton}</a> 
+            <a href="https://twitter.com/FrankMillerFMP">{fmpButton}</a> 
             {/* <StateButton
               checkSpiceHandler={props.checkSpiceHandler}
               connectWalletHandler={props.connectWalletHandler}
@@ -104,7 +102,7 @@ const Home = (props) => {
             </p>
           </div>
           <div className="Main__social_icons">
-            <a href="https://twitter.com/FrankMillerFMP"> {<FontAwesomeIcon icon={faTwitter} />} </a>
+            <a href="https://twitter.com/TheSpiceDao"> {<FontAwesomeIcon icon={faTwitter} />} </a>
             <a href="http://discord.gg/SPICEDAO">{<FontAwesomeIcon icon={faDiscord} />}</a>
             <a href="https://medium.com/@SpiceDao">{<FontAwesomeIcon icon={faMedium} />}</a>
             <a href="mailto:team@spicedao.xyz">< FaEnvelope /></a>

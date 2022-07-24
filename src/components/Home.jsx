@@ -77,7 +77,7 @@ const Home = (props) => {
             {/* <NavLink to="/shop">{msg}</NavLink> */}
           </div>
           <div className="Landing__links">
-            <a href="https://forum.spicedao.xyz/">Forum</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdiUr4yfQnc0XBymqlLkU1_XVpzl7nIkk7zJVb4yFEJ6e31Dg/viewform">Redemption</a>
             <a href="https://snapshot.org/#/dunedao.eth">Governance</a>
             <a href="https://twitter.com/FMPWeb3">{fmpButton}</a> 
             {/* <StateButton

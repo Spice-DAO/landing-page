@@ -104,7 +104,6 @@ const Home = (props) => {
           <div className="Main__social_icons">
             <a href="https://twitter.com/TheSpiceDao"> {<FontAwesomeIcon icon={faTwitter} />} </a>
             <a href="http://discord.gg/SPICEDAO">{<FontAwesomeIcon icon={faDiscord} />}</a>
-            <a href="https://medium.com/@SpiceDao">{<FontAwesomeIcon icon={faMedium} />}</a>
             <a href="mailto:team@spicedao.xyz">< FaEnvelope /></a>
           </div>
           {/* <Shop /> */}
